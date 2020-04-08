@@ -107,10 +107,6 @@ class Timer extends React.Component {
         }
     }
 
-    zeroInput = (stateInput) => {
-
-    }
-
     render() {
         return (
             <div className="Timer">
