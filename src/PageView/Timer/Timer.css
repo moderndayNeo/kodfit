@@ -6,12 +6,12 @@
 
 .Timer .grid-container {
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr;
     grid-gap: 10px 6px;
 }
 
 .Timer .digit-timer {
-    grid-column: 1 / 3;
+    grid-column: 1 / 4;
     justify-self: center;
     font-size: 120px;
 }
@@ -38,13 +38,24 @@
     padding-left: 2px;
 }
 
-.Timer .submit {
+.Timer .center {
     justify-self: center;
-    grid-column: 1/3;
 }
 
-.Timer .submit button {
-    width: 100px;
-    height: 86px;
-    border-radius: 103px;
+.Timer .buttons {
+    grid-column: 1 / 4;
+}
+
+.Timer .inline {
+    display: inline-block;
+    margin: 12px 21px;
+}
+
+.Timer .button {
+    width: 84px;
+    height: 81px;
+    border-radius: 134px;
+    font-size: 42px;
+    padding-top: 12px;
+    padding-left: 8px;
 }
