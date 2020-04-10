@@ -26,17 +26,24 @@
 }
 
 .HeroBanner .btn {
-    font-size: 0.75rem;
-    font-weight: 800;
-    line-height: 1.45;
-    padding: 0.9rem 2.75rem;
-    text-transform: uppercase;
+    height: 46px;
+    padding: 0;
+    width: 185px;
+}
+
+.HeroBanner .btn a {
+    color: #fff;
+    padding: 0.9rem 2.7rem;
 }
 
 .HeroBanner .btn-transparent {
     background: transparent;
     border: 1px solid #fff;
     color: #fff;
+    font-size: 0.75rem;
+    font-weight: 800;
+    line-height: 1.45;
+    text-transform: uppercase;
 }
 
 .HeroBanner .rounded-capsule {

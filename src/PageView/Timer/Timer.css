@@ -10,7 +10,7 @@
     grid-gap: 10px 6px;
 }
 
-.Timer .digit-timer {
+.Timer .display-timer {
     grid-column: 1 / 4;
     justify-self: center;
     font-size: 120px;
@@ -60,13 +60,13 @@
     padding-left: 8px;
 }
 
-.Timer .link-stopwatch {
+.Timer .titles {
     font-size: 42px;
     grid-column: 1 / 4;
     justify-self: center;
 }
 
-.Timer .link-stopwatch span {
+.Timer .titles span {
     margin:10px;
 }
 
@@ -79,13 +79,17 @@
     color: white;
 }
 
+.Timer span a {
+     color: black;
+}
+
 @media only screen and (max-width: 580px) {
-    .Timer .digit-timer {
+    .Timer .display-timer {
         font-size: 16vw;
         margin: 20px 0px;
     }
     
-    .Timer .link-stopwatch, 
+    .Timer .titles, 
     .Timer .active {
         font-size: 27px;
     }
