@@ -42,7 +42,7 @@
 }
 
 .Stopwatch .titles span {
-    margin: 10px;
+    margin:10px;
 }
 
 .Stopwatch .active {
@@ -50,12 +50,11 @@
     border-radius: 34px;
     height: 334px;
     font-size: 38px;
-    padding: 6px 17px 16px 15px;
+    padding: 10px 17px 16px 25px;
     color: white;
 }
-
 .Stopwatch span a {
-    color: black;
+     color: black;
 }
 
 @media only screen and (max-width: 950px) {

@@ -68,13 +68,14 @@ class StopWatch extends React.Component {
                             <button   className="button" onClick={this.stopTimer}> <FaRegStopCircle /> </button>
                         )}
                       
-                        {this.state.timerOn === false && this.state.timerTime > 0 && (
-                            <button   className="button" onClick={this.startTimer}><FaPlay /></button>
-                        )}
+                      
                          {this.state.timerOn === false && this.state.timerTime > 0 && (
                             <button  className="button" onClick={this.resetTimer}> <MdSettingsBackupRestore /></button>
                         )}
-          
+                        
+                        {this.state.timerOn === false && this.state.timerTime > 0 && (
+                            <button   className="button" onClick={this.startTimer}><FaPlay /></button>
+                        )}
                     </div>
 
                 </div>

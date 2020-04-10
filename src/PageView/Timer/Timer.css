@@ -78,11 +78,9 @@
     padding: 10px 17px 16px 25px;
     color: white;
 }
-
 .Timer span a {
      color: black;
 }
-
 @media only screen and (max-width: 580px) {
     .Timer .display-timer {
         font-size: 16vw;

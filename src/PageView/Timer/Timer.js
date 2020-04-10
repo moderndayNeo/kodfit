@@ -10,11 +10,11 @@ class Timer extends React.Component {
         super();
         this.state = {
             timerObject: {},
-            seconds: 0,
+            toSeconds: 0,
             inputHours: 0,
             inputMinutes: 0,
             inputSeconds: "00",
-            runingTimer: 0
+            runningTimer: 0
         };
         this.timer = 0;
     }
@@ -22,7 +22,7 @@ class Timer extends React.Component {
     handleTime = (e, timeUnit, modifier) => {
 
         if (e.target.value > 60) {
-            e.target.value = 59;
+            e.target.value = 0;
         }
 
         if (e.target.value < 10) {
@@ -37,32 +37,32 @@ class Timer extends React.Component {
     }
 
     componentDidMount() {
-        let timeLeftVar = this.secondsToTime(this.state.seconds);
+        let timeLeftVar = this.secondsToTime(this.state.toSeconds);
         this.setState({ timerObject: timeLeftVar });
     }
 
     startTimer = () => {
-        if (this.state.runingTimer === 1 && this.state.seconds > 0) {
+        if (this.state.runningTimer === 1 && this.state.toSeconds > 0) {
             this.setState({
-                runingTimer: 2
+                runningTimer: 2
             });
 
             clearInterval(this.timer);
         } else {
             let total = +this.state.inputHours + +this.state.inputMinutes + +this.state.inputSeconds;
 
-            if (total > 0 && this.state.runingTimer === 0) {
+            if (total > 0 && this.state.runningTimer === 0) {
                 this.setState({
-                    seconds: total,
-                    runingTimer: 1
+                    toSeconds: total,
+                    runningTimer: 1
                 });
 
                 this.timer = setInterval(this.countDown, 1000);
             }
 
-            if (this.state.seconds > 0 && this.state.runingTimer == 2) {
+            if (this.state.toSeconds > 0 && this.state.runningTimer == 2) {
                 this.setState({
-                    runingTimer: 1
+                    runningTimer: 1
                 });
                 this.timer = setInterval(this.countDown, 1000);
             }
@@ -71,13 +71,13 @@ class Timer extends React.Component {
 
 
     countDown = () => {
-        let seconds = this.state.seconds - 1;
+        let countDownSeconds = this.state.toSeconds - 1;
         this.setState({
-            timerObject: this.secondsToTime(seconds),
-            seconds: seconds,
+            timerObject: this.secondsToTime(countDownSeconds),
+            toSeconds: countDownSeconds,
         });
 
-        if (seconds === 0) {
+        if (countDownSeconds === 0) {
             clearInterval(this.timer);
         }
     }
@@ -91,28 +91,24 @@ class Timer extends React.Component {
         let divisorForSeconds = divisorForMinutes % 60;
         let seconds = Math.ceil(divisorForSeconds);
 
-        let zeroAddedMinutes = ('0' + minutes).slice(-2);
-        let zeroAddedSeconds = ('0' + seconds).slice(-2);
-        let zeroAddedHours = ('0' + hours).slice(-2);
-
         let obj = {
-            "h": zeroAddedHours,
-            "m": zeroAddedMinutes,
-            "s": zeroAddedSeconds
+            "h": hours,
+            "m": minutes,
+            "s": seconds
         };
         return obj;
     }
 
     resetTimer = () => {
-        if (this.state.isRunning || this.state.seconds > 0) {
+        if (this.state.isRunning || this.state.toSeconds > 0) {
             this.setState({
                 timerObject : {
                     "h": "00",
                     "m": "00",
                     "s": "00"
                 },
-                seconds: 0,
-                runingTimer: 0
+                toSeconds: 0,
+                runningTimer: 0
             });
             clearInterval(this.timer);
         }
@@ -133,7 +129,9 @@ class Timer extends React.Component {
                     </div>
 
                     <div className="display-timer">
-                        {this.state.timerObject.h}   :  {this.state.timerObject.m}   :  {this.state.timerObject.s}
+                        { ('0' + this.state.timerObject.h ).slice(-2) }   : 
+                        { ('0' + this.state.timerObject.m ).slice(-2) }   : 
+                        {('0' + this.state.timerObject.s ).slice(-2)}
                     </div>
                     <div className="input-hours column">
                         <TimerInput
@@ -166,7 +164,7 @@ class Timer extends React.Component {
                             <button
                                 className="button"
                                 onClick={this.startTimer}>
-                                {this.state.runingTimer === 1  && this.state.seconds ?
+                                {this.state.runningTimer === 1  && this.state.toSeconds ?
                                     <FaRegStopCircle /> :
                                     <FaPlay />}
                             </button>
