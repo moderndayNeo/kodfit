@@ -123,17 +123,7 @@ class Timer extends React.Component {
                     </div>
 
                     <div className="display-timer">
-                        <span className="display-hour">
-                            {this.state.time.h}
-                        </span>
-                         :
-                        <span className="display-minutes">
-                            {this.state.time.m}
-                        </span>
-                         :
-                        <span className="display-seconds">
-                            {this.state.time.s}
-                        </span>
+                        {this.state.time.h}   :  {this.state.time.m}   :  {this.state.time.s}
                     </div>
                     <div className="input-hours column">
                         <TimerInput
@@ -142,7 +132,7 @@ class Timer extends React.Component {
                         />
                         <span>Hours</span>
                     </div>
-                    <div className="input-hminutes column">
+                    <div className="input-minutes column">
                         <TimerInput
                             value={this.state.inputMinutes < 1 ? "00" : this.state.inputMinutes / 60}
                             field={(e) => this.handleTime(e, 'inputMinutes', 60)} />
