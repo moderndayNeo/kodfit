@@ -59,3 +59,40 @@
     padding-top: 12px;
     padding-left: 8px;
 }
+
+.Timer .link-stopwatch {
+    font-size: 42px;
+    grid-column: 1 / 4;
+    justify-self: center;
+}
+
+.Timer .link-stopwatch span {
+    margin:10px;
+}
+
+.Timer .active {
+    background: crimson;
+    border-radius: 34px;
+    height: 334px;
+    font-size: 38px;
+    padding: 10px 17px 16px 25px;
+    color: white;
+}
+
+@media only screen and (max-width: 580px) {
+    .Timer .digit-timer {
+        font-size: 16vw;
+        margin: 20px 0px;
+    }
+    
+    .Timer .link-stopwatch, 
+    .Timer .active {
+        font-size: 27px;
+    }
+
+    .Timer input {
+        width: 98px;
+        font-size: 58px;
+        margin: 2px 4px;
+    }
+}

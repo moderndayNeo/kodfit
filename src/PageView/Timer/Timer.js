@@ -3,6 +3,7 @@ import TimerInput from './TimerInput/TimerInput';
 import './Timer.css';
 import { FaPlay, FaRegStopCircle } from 'react-icons/fa';
 import { MdSettingsBackupRestore } from "react-icons/md";
+import { Link } from 'react-router-dom';
 
 class Timer extends React.Component {
     constructor() {
@@ -18,29 +19,7 @@ class Timer extends React.Component {
         this.timer = 0;
     }
 
-    secondsToTime = (secs) => {
-        let hours = Math.floor(secs / (60 * 60));
-
-        let divisorForMinutes = secs % (60 * 60);
-        let minutes = Math.floor(divisorForMinutes / 60);
-
-        let divisorForSeconds = divisorForMinutes % 60;
-        let seconds = Math.ceil(divisorForSeconds);
-
-        let zeroAddedMinutes = ('0' + minutes).slice(-2);
-        let zeroAddedSeconds = ('0' + seconds).slice(-2);
-        let zeroAddedHours = ('0' + hours).slice(-2);
-
-        let obj = {
-            "h": zeroAddedHours,
-            "m": zeroAddedMinutes,
-            "s": zeroAddedSeconds
-        };
-        return obj;
-    }
-
     handleTime = (e, timeUnit, modifier) => {
-
 
         if (e.target.value > 60) {
             e.target.value = 59;
@@ -82,6 +61,38 @@ class Timer extends React.Component {
         }
     }
 
+    countDown = (secs) => {
+        let seconds = this.state.seconds - 1;
+        this.setState({
+            time: this.secondsToTime(seconds),
+            seconds: seconds,
+        });
+        if (seconds === 0) {
+            clearInterval(this.timer);
+        }
+    }
+
+    secondsToTime = (secs) => {
+        let hours = Math.floor(secs / (60 * 60));
+
+        let divisorForMinutes = secs % (60 * 60);
+        let minutes = Math.floor(divisorForMinutes / 60);
+
+        let divisorForSeconds = divisorForMinutes % 60;
+        let seconds = Math.ceil(divisorForSeconds);
+
+        let zeroAddedMinutes = ('0' + minutes).slice(-2);
+        let zeroAddedSeconds = ('0' + seconds).slice(-2);
+        let zeroAddedHours = ('0' + hours).slice(-2);
+
+        let obj = {
+            "h": zeroAddedHours,
+            "m": zeroAddedMinutes,
+            "s": zeroAddedSeconds
+        };
+        return obj;
+    }
+
     resetTimer = () => {
         if (this.state.isRunning || this.state.seconds > 0) {
             this.setState({
@@ -96,22 +107,22 @@ class Timer extends React.Component {
         }
     }
 
-    countDown = (secs) => {
-        let seconds = this.state.seconds - 1;
-        this.setState({
-            time: this.secondsToTime(seconds),
-            seconds: seconds,
-        });
-        if (seconds === 0) {
-            clearInterval(this.timer);
-        }
-    }
-
+    
     render() {
         return (
             <div className="Timer">
                 <div className="grid-container">
+                    <div className="link-stopwatch">
+                        <span className="active" >Timer   </span >
+                        <span >
+                            <Link to="/stopwatch">
+                                Stopwatch
+                            </Link>
+                        </span >
+                    </div>
+
                     <div className="digit-timer">
+
                         <span className="digit-hour">
                             {this.state.time.h}
                         </span>
