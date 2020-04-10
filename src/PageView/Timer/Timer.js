@@ -41,7 +41,7 @@ class Timer extends React.Component {
         this.setState({ timerObject: timeLeftVar });
     }
 
-    startTimer = (secs) => {
+    startTimer = () => {
         if (this.state.runingTimer === 1 && this.state.seconds > 0) {
             this.setState({
                 runingTimer: 2
@@ -70,13 +70,13 @@ class Timer extends React.Component {
     }
 
 
-    countDown = (secs) => {
+    countDown = () => {
         let seconds = this.state.seconds - 1;
         this.setState({
             timerObject: this.secondsToTime(seconds),
             seconds: seconds,
         });
-        
+
         if (seconds === 0) {
             clearInterval(this.timer);
         }
