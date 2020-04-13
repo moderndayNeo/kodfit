@@ -6,13 +6,26 @@ export default function Tracker() {
         <div className="Tracker">
             <h2 className="trackerTitle">Tracker</h2>
             <main className="container">
-                <div className="graph container-content">
-                    this will be graph
-                </div>
-                <div className="information cotainer-content">
-                    Here will display basic info about goals,
-                    weight gained, lost... etc
-                </div>
+                    <div className="tracker">
+                    Your weight goals:
+                    </div>
+                    <div className="goals">
+                    Your weight goals:
+                    </div>
+                    
+                    <div className="weight">
+                    Your current weight:
+                    </div>
+                    <div className=" ">
+                    Total time spent working out 
+                    7 days 
+                    </div>
+                    <div className="">
+                    Total consecutive days
+                    7 days  
+                    </div>
+                
+                    
             </main>
         </div>
     )

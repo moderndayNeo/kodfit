@@ -28,6 +28,14 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+    margin: 10px 34px;
+}
+
+
+.Timer .inputs {
+    display: flex;
+    grid-column: 1/4;
+    justify-content: center;
 }
 
 .Timer input {
@@ -81,7 +89,8 @@
 .Timer span a {
      color: black;
 }
-@media only screen and (max-width: 580px) {
+
+@media only screen and (max-width: 640px) {
     .Timer .display-timer {
         font-size: 16vw;
         margin: 20px 0px;
@@ -89,12 +98,28 @@
     
     .Timer .titles, 
     .Timer .active {
-        font-size: 27px;
+        font-size: 24px;
     }
 
     .Timer input {
         width: 98px;
         font-size: 58px;
         margin: 2px 4px;
+    }
+
+    .Timer .column {
+        margin: 10px 2%;
+    }
+
+    .Timer .display-timer {
+        font-size: 16vw;
+    }
+
+    .Timer .grid-container {
+        width: 100%;
+    }
+
+    .Timer {
+        margin: 20px;
     }
 }

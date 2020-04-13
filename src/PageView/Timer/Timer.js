@@ -129,10 +129,12 @@ class Timer extends React.Component {
                     </div>
 
                     <div className="display-timer">
-                        { ('0' + this.state.timerObject.h ).slice(-2) }   : 
+                       <span>    { ('0' + this.state.timerObject.h ).slice(-2) }   : 
                         { ('0' + this.state.timerObject.m ).slice(-2) }   : 
                         {('0' + this.state.timerObject.s ).slice(-2)}
+                        </span>
                     </div>
+                    <div className="inputs">
                     <div className="input-hours column">
                         <TimerInput
                             value={this.state.inputHours < 1 ? "00" : this.state.inputHours / 3600}
@@ -151,6 +153,7 @@ class Timer extends React.Component {
                             value={this.state.inputSeconds}
                             field={(e) => this.handleTime(e, 'inputSeconds', 1)} />
                         <span>Seconds</span>
+                    </div>
                     </div>
                     <div className="buttons center">
                         <div className="reset inline">
