@@ -1,1 +1,1 @@
-View the app here: https://kodfit-lyart.now.sh/
+View the app here: https://kodfit.now.sh/

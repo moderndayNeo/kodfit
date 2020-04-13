@@ -9,8 +9,8 @@ export default function Tracker() {
                     <div className="tracker">
                     Your weight goals:
                     </div>
-                    <div className="goals">
-                    Your weight goals:
+                    <div className="">
+                     
                     </div>
                     
                     <div className="weight">
