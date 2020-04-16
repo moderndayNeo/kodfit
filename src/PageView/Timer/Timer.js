@@ -121,7 +121,7 @@ class Timer extends React.Component {
                     <div className="titles">
                         <span className="active" >Timer   </span >
                         <span >
-                            <Link to="/stopwatch">
+                            <Link to="/dashboard/stopwatch">
                                 Stopwatch
                             </Link>
                         </span >
