@@ -1,6 +1,6 @@
 .NavBar {
-  position: fixed;
   display: flex;
+  position: fixed;
   width: 100%;
   justify-content: center;
   align-items: center;

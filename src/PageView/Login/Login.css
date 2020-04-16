@@ -7,6 +7,8 @@
 
 .Login input {
     padding: 10px;
+    border: 0;
+    border-bottom: 1px solid;
 }
 
 .Login .logoBox {
@@ -20,7 +22,7 @@
 }
 
 .Login .container {
-    margin: 50px;
+    display: grid;
 }
 
 .Login .inputBox-content {
@@ -39,12 +41,25 @@
     text-transform: uppercase;
 }
 
-.Login .signInButton {
-    font-size: 16px;
-    font-weight: bold;
+.Login .loginButtons p {
+    margin: 0 auto;
 }
 
-.Login .signUpButton {
-    font-size: 12px;
-    color: grey;
+.Login .signInButton {
+    font-size: 16px;
+    padding: 10px;
+    background-color: #00AAEF;
+    border-radius: 3rem;
+    color: #ffffff;
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+.Login .btn-google {
+    border-radius: 3rem;
+    padding: 10px;
+    font-size: 16px;
+    font-weight: bold;
+    color:#00AAEF;
+    border: 1px solid #00AAEF;
 }

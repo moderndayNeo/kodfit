@@ -1,8 +1,35 @@
+* {
+    box-sizing: border-box;
+  }
+  *::before, *::after {
+    box-sizing: border-box;
+  }
+
+html {
+    font-size: 100%;
+}
+
+body {
+    background: #fefefe;
+    line-height: 1.5;
+    color: #0a0a0a;
+}
+
 img {
     height: auto;
     width: 100%;
 }
 
-a {
-    text-decoration: none;
+
+.container {
+    margin: auto;
+    max-width: 71rem;
+    padding: 0 1rem;
+    width: 100%;
+}
+
+.grid {
+    display: flex;
+    flex-direction: column;
+    /* flex-flow: row wrap; */
 }

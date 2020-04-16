@@ -4,7 +4,7 @@ import './NavBarButton.css'
 
 export default function NavBarButton({ link, name, icon }) {
   return (
-    <NavLink to={`/${link}`} className="NavBarButton" activeClassName='active'>
+    <NavLink to={`/dashboard/${link}`} className="NavBarButton" activeClassName='active'>
       <div className="icon">
         { icon }
       </div>

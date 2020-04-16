@@ -7,7 +7,7 @@ export default function HeroBanner(props) {
         <div className="HeroBanner">
             <div className="hero-overlay text-center">
                 <h1>{props.title}</h1>
-                <button class="btn btn-transparent rounded-capsule">
+                <button className="btn btn-transparent rounded-capsule">
                     <Link to={props.buttonLink}>
                         {props.buttonLabel}
                     </Link>

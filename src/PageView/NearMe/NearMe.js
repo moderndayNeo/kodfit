@@ -6,7 +6,7 @@ export default function NearMe() {
     return (
         <div className="NearMe">
             <div className="container">
-                <Link to="/near-me-gyms">
+                <Link to="/dashboard/near-me-gyms">
                     <div className="container-content">Near by Gym</div>
                 </Link>
                 <Link to="/near-me-trainers">

@@ -1,6 +1,6 @@
 import React from 'react';
 
-export default function TimerInput({field, name,value}) {
+export default function TimerInput({field, name, value}) {
     return (
         <input
              type='number'

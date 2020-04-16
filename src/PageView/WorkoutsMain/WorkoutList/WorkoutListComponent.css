@@ -1,0 +1,38 @@
+
+.WorkoutsMain .containerBottom {
+    display: flex;
+    flex-direction: column;
+    margin: 30px 2%;
+}
+
+.WorkoutsMain .routine {
+    position: relative;  
+    height: 90px;     
+}
+
+.routine {
+    position: absolute;
+    margin-bottom: 12px;
+    box-shadow: 1px 1px 6px silver;  
+}
+
+.routine img {
+    height: 90px;
+}
+
+.WorkoutsMain .routine .text {
+    text-shadow: 3px 2px 10px rgb(8, 8, 8);
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+    position: absolute;
+    top: 20%;
+    left: 2%;
+}
+
+
+@media (min-width: 600px) {
+    .WorkoutsMain .containerBottom {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}

@@ -1,18 +1,29 @@
 import React from 'react';
 import './WorkoutList.css';
+import ExercisesListComponent from './ExercisesListComponent';
+import ExercisesListData from '../../../Data/ExercisesListData';
 
 export default function WorkoutList() {
     return (
-        <div className="WorkoutList">
-            <h2 className="WorkoutListTitle">Exercise List</h2>
-            <main className="container">
-                <div className="container-content">Exercise list A</div>
-                <div className="container-content">Exercise list B</div>
-                <div className="container-content">Exercise list C</div>
-                <div className="container-content">Exercise list D</div>
-                <div className="container-content">Exercise list E</div>
-                <div className="container-content">Exercise list F</div>
-            </main>
+        <div className="WorkoutsList">
+            <div className="containerTop">
+            <a className="button One" href="./Home">Workouts</a>
+            <a className="button Two" href="./workout-list">Exercise List</a>
+            </div>
+            
+            <div className="containerBottom"> {
+                ExercisesListData().map(list => {
+                    return (
+                    <ExercisesListComponent
+                        key={list.listName}
+                        listName={list.listName}
+                        image={list.image}
+                    />
+                    );
+                })
+            }  
+            </div>                    
         </div>
+        
     )
 }
