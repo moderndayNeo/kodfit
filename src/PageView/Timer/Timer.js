@@ -60,7 +60,7 @@ class Timer extends React.Component {
                 this.timer = setInterval(this.countDown, 1000);
             }
 
-            if (this.state.toSeconds > 0 && this.state.runningTimer == 2) {
+            if (this.state.toSeconds > 0 && this.state.runningTimer === 2) {
                 this.setState({
                     runningTimer: 1
                 });
