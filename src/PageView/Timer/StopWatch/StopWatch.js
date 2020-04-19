@@ -51,7 +51,7 @@ class StopWatch extends React.Component {
                 <div className="grid-container">
                 <div className="titles">
                     <span >
-                    <Link to="/dashboard/stopwatch">Timer</Link>
+                    <Link to="/dashboard/timer">Timer</Link>
                     </span >
                     <span className="active">
                         Stopwatch
@@ -62,18 +62,18 @@ class StopWatch extends React.Component {
                     </div>
                     <div className="display-buttons">
                         {this.state.timerOn === false && this.state.timerTime === 0 && (
-                            <button  className="button"  onClick={this.startTimer}><FaPlay /></button>
+                            <button  className="time-buttons"  onClick={this.startTimer}><FaPlay /></button>
                         )}
                         {this.state.timerOn === true && (
-                            <button   className="button" onClick={this.stopTimer}> <FaRegStopCircle /> </button>
+                            <button   className="time-buttons" onClick={this.stopTimer}> <FaRegStopCircle /> </button>
                         )}
                       
                          {this.state.timerOn === false && this.state.timerTime > 0 && (
-                            <button  className="button" onClick={this.resetTimer}> <MdSettingsBackupRestore /></button>
+                            <button  className="time-buttons" onClick={this.resetTimer}> <MdSettingsBackupRestore /></button>
                         )}
                         
                         {this.state.timerOn === false && this.state.timerTime > 0 && (
-                            <button   className="button" onClick={this.startTimer}><FaPlay /></button>
+                            <button   className="time-buttons" onClick={this.startTimer}><FaPlay /></button>
                         )}
                     </div>
 
