@@ -8,7 +8,6 @@ export default function Map({ data, location }) {
 
   return (
     <div className="Map">
-      <div className="map containerOne-content">
         <LoadScript
           id="load-script"
           googleMapsApiKey="AIzaSyAHs3RiKCGgJhll5xXKjLFqprAi6-LW3Rc"
@@ -31,7 +30,6 @@ export default function Map({ data, location }) {
               ))}
           </GoogleMap>
         </LoadScript>
-      </div>
     </div>
   );
 }
