@@ -9,8 +9,8 @@ import { FaDumbbell, FaChartLine, FaHeartbeat } from "react-icons/fa";
 export default function OurGoal() {
   return (
     <div className="OurGoal">
-      <h1>Our Goal</h1>
-      <p className="subtext">
+      <h1 className="block">Our Goal</h1>
+      <p className="separator-center">
         Our goal is to put you in touch with gyms and personal trainers nearby.
         In the age of Kodfit, winning is easier than ever before.
       </p>
@@ -45,11 +45,11 @@ export default function OurGoal() {
         <img className="image" src={jogger} alt="Jogger" />
       </div>
     
-      <p className="quote">
+      <p className="separator-center">
         The fitter, stronger you is closer than you think
       </p>
       <Link to="/login">
-        <button className="hvr-shutter-out-horizontal">
+        <button className="hvr-shutter-out-horizontal button primary">
           Join The Revolution
         </button>
       </Link>

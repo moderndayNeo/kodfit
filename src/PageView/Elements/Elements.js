@@ -20,8 +20,8 @@ export default function Elements() {
             </div>
             <div className="grid">
                 <h1 className="separator-left">Left Separator</h1>
-                <h1 className="separator-center">Left Separator</h1>
-                <h1 className="separator-right">Left Separator</h1>
+                <h1 className="separator-center">Center Separator</h1>
+                <h1 className="separator-right">Right Separator</h1>
             </div>
             <div className="grid">
                 <div>
