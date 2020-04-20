@@ -1,33 +1,23 @@
-.Tracker {
-    margin: 80px 20px;
-}
-
 .Tracker .container {
     display: grid;
+    grid-template-columns: 1fr 1fr;
 }
 
-.Tracker .graph {
-    background-color: grey;
-    height: 45vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+.Tracker  {
+   width: 90%;
+   margin-left: 10px;
 }
 
-.Tracker .information {
-    margin-top: 40px;
-    margin-left: 10px;
-    margin-right: 10px;
+.grid-full {
+    grid-column: 1/3;
 }
 
-@media (min-width: 600px) {
-    .Tracker .container {
-        grid-template-columns: 60% 1fr;
-    }
-
-    .Tracker .information {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-    }
+.margin-bottom {
+    height: 20vw;
 }
+
+.center {
+    justify-self: center;
+}
+
+ 

@@ -34,9 +34,7 @@
 
 .item .detailsName {
     flex: 3;
-    color: silver;
-    font-weight: bold;
-    font-size: 18px;    
+    color: #555; 
     margin-left: 2%;
 }
 

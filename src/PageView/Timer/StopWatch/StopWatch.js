@@ -51,7 +51,7 @@ class StopWatch extends React.Component {
                 <div className="grid-container">
                 <div className="titles">
                     <span >
-                    <Link to="/timer">Timer</Link>
+                    <Link to="/dashboard/stopwatch">Timer</Link>
                     </span >
                     <span className="active">
                         Stopwatch

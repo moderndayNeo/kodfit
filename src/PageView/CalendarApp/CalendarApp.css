@@ -1,7 +1,5 @@
 .calendarTitle {
     padding-bottom: 2px;
-    color: grey;
-    font-size: 18px;
     margin: 0;
     text-align: start;
     margin-left: 2%;
@@ -32,38 +30,36 @@
     height: 26px;
     padding: 0 15px;
     border: none;
-    color: rgb(90, 90, 250);
+    color: #1779ba;
 }
 
 .react-calendar__navigation__label {
-    font-size: 14px;
-    font-weight: bold;
+    font-size: 1rem;
     border: none;
     height: 26px;
 }
 
 .react-calendar__tile {
-    font-size: 16px;
-    margin-bottom: 6px;
-    color: grey;
+    font-size: 1.2rem;
+    height: 26px;
+    color: #555;
     border: none;
     background: none;
 }
 
 .react-calendar__tile--active {
-    font-size: 18px;
-    margin-bottom: 6px;
+    font-size: 1.2rem;
     border: none;
     text-decoration: none;
     color: white;
     width: 22px;
-    height: 22px;
-    background: rgb(90, 90, 250);
+    height: 26px;
+    background: #1779ba;
 }
 
 .react-calendar__month-view__weekdays__weekday {
     font-weight: bold;
-    font-size: 14px;
+    font-size: 1rem;
 }
 
 .react-calendar__month-view__weekdays {
@@ -83,24 +79,17 @@
 }
 
 .ContainerContent .title {
-    color: grey;
     margin: 4% 0 0 2%;
-    text-align: left;
-    font-size: 18px;
-    
+    text-align: left;    
 }
 
 .ContainerContent .button {
-    background-color: rgb(7, 168, 7);
-    color: white;
-    font-size: 14px;
-    font-weight: bold;
     position: absolute;
-    padding: 3px 10px;
-    width: 90px;
-    border-radius: 35px;
+    width: 130px;
     right: 3%;
     top: 3%;
+    font-size: 1rem;
+    padding: 5px;
 }
 
 .calendarExerciseList {
