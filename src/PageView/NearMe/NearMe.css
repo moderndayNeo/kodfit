@@ -1,5 +1,6 @@
 .NearMe {
     padding: 0 20px;
+    display: grid;
 }
 
 .NearMe .map {
@@ -11,7 +12,7 @@
 }
 
 @media (min-width: 600px) {
-    .NearMe .mapContainer {
+    .NearMe {
         grid-template-columns: 2fr 1fr;
     }
 
@@ -19,8 +20,7 @@
         height: 500px;
     }
 
-    .NearMe .list {
-        height: 500px;
-        margin: 0 10px;
+    .NearMe .buttons-and-list {
+        padding: 0 10px;
     }
 }
