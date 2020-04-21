@@ -3,32 +3,7 @@
     --icon-dimensions: 30px;
 }
 
-.OurGoal .container {
-    position: relative;
-}
 
-.OurGoal .overlay {
-    position: absolute;
-    height: 100%;
-    margin-left: 5px;
-    width: 200px;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-evenly;
-}
-
-.OurGoal .icon {
-    display: flex;
-    justify-content: center;
-    color: lightgoldenrodyellow;
-}
-
-.OurGoal .iconAndText .slidingText {
-    color: lightgoldenrodyellow;
-    font-size: 14px;
-    font-weight: bold;
-    margin: 1px;
-}
 
 @media (min-width: 600px) {
     .OurGoal {

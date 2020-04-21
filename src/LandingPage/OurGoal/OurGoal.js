@@ -1,10 +1,9 @@
-import React from "react";
-import "./OurGoal.css";
-import "animate.css";
-import "hover.css";
-import { Link } from "react-router-dom";
-import jogger from "../../common/images/female-jogger.jpg";
-import { FaDumbbell, FaChartLine, FaHeartbeat } from "react-icons/fa";
+import React from 'react';
+import './OurGoal.css';
+import 'animate.css';
+import 'hover.css';
+import CentreImage from './CentreImage/CentreImage';
+import { Link } from 'react-router-dom';
 
 export default function OurGoal() {
   return (
@@ -14,37 +13,7 @@ export default function OurGoal() {
         Our goal is to put you in touch with gyms and personal trainers nearby.
         In the age of Kodfit, winning is easier than ever before.
       </p>
-      <div className="container">
-        <div className="overlay">
-          <div className="iconAndText">
-            <div className="icon animated fadeInLeft delay-1s">
-              <FaDumbbell />
-            </div>
-            <p className="slidingText animated fadeInRight delay-1s">
-              ...Put you in touch with gyms and trainers nearby
-            </p>
-          </div>
-          <div className="iconAndText">
-            <div className="icon animated fadeInLeft delay-2s">
-              <FaHeartbeat />
-            </div>
-            <p className="slidingText animated fadeInRight delay-2s">
-              ...Deliver a workout routine tailored to your goals
-            </p>
-          </div>
-          <div className="iconAndText">
-            <div className="icon animated fadeInLeft delay-3s">
-              {/* <ProgressIcon /> */}
-              <FaChartLine />
-            </div>
-            <p className="slidingText animated fadeInRight delay-3s">
-              ...Keep track of your progress as you get healthier
-            </p>
-          </div>
-        </div>
-        <img className="image" src={jogger} alt="Jogger" />
-      </div>
-    
+      <CentreImage />
       <p className="separator-center">
         The fitter, stronger you is closer than you think
       </p>
