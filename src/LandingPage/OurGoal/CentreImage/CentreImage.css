@@ -1,4 +1,4 @@
-.CentreImage .container {
+.CentreImage {
     position: relative;
     --icon-dimensions: 30px;
 }
