@@ -118,7 +118,6 @@ class Timer extends React.Component {
     render() {
         return (
             <div className="Timer">
-                 <SmallTimer timer={72} />
                 <div className="grid-container">
                     <div className="titles">
                         <span className="active" >Timer   </span >
