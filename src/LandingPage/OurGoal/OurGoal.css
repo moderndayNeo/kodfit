@@ -1,18 +1,9 @@
 .OurGoal {
     text-align: center;
-    --icon-dimensions: 30px;
+    margin: 0 20px;
 }
 
 @media (min-width: 600px) {
-    .OurGoal {
-        padding-bottom: 100px;
-    }
-
-    .OurGoal .icon svg {
-        width: var(--icon-dimensions);
-        height: var(--icon-dimensions);
-    }
-
     .OurGoal button {
         font-size: 20px;
     }

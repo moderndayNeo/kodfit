@@ -1,6 +1,5 @@
 .CentreImage {
     position: relative;
-    --icon-dimensions: 30px;
 }
 
 .CentreImage .overlay {
@@ -11,32 +10,4 @@
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
-}
-
-.CentreImage .icon {
-    display: flex;
-    justify-content: center;
-    color: lightgoldenrodyellow;
-}
-
-.CentreImage .iconAndText .slidingText {
-    color: lightgoldenrodyellow;
-    font-size: 14px;
-    font-weight: bold;
-    margin: 1px;
-}
-
-@media (min-width: 600px) {
-    .CentreImage .overlay {
-        width: 50%;
-    }
-    
-    .CentreImage .iconAndText .slidingText {
-        font-size: 18px;
-    }
-
-    .CentreImage .icon svg {
-        width: var(--icon-dimensions);
-        height: var(--icon-dimensions);
-    }
 }

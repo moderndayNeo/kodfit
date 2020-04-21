@@ -1,11 +1,10 @@
-import React from "react";
-import "./IconAndText.css";
-import { FaDumbbell, FaChartLine, FaHeartbeat } from "react-icons/fa";
+import React from 'react';
+import './IconAndText.css';
+import { FaDumbbell, FaChartLine, FaHeartbeat } from 'react-icons/fa';
 
 export default function IconAndText({ text, delay, icon }) {
     return (
         <div className="IconAndText">
-            <div className="iconAndText">
                 <div className={`icon animated fadeInLeft delay-${delay}`}>
                     {icon === "FaDumbbell" ? (
                         <FaDumbbell />
@@ -20,7 +19,6 @@ export default function IconAndText({ text, delay, icon }) {
                 >
                     {text}
                 </p>
-            </div>
         </div>
     );
 }
