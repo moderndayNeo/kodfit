@@ -8,7 +8,7 @@ import {MdInsertChart, MdAccountCircle, MdLocationOn} from 'react-icons/md'
 export default function NavBar() {
   const navLinks = [
     {name: 'schedule', path: 'calendar', icon: <FaCalendarAlt />},
-    {name: 'nearby', path: 'near-me-gyms', icon: <MdLocationOn />},
+    {name: 'nearby', path: 'near-me', icon: <MdLocationOn />},
     {name: 'workout', path: 'home', icon: <FaDumbbell />},
     {name: 'progress', path: 'tracker', icon: <MdInsertChart />},
     {name: 'profile', path: 'profile', icon: <MdAccountCircle />},

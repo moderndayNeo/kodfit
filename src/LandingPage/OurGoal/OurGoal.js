@@ -48,18 +48,11 @@ export default function OurGoal() {
       <p className="quote">
         The fitter, stronger you is closer than you think
       </p>
-      <Link to="/near-me-gyms">
+      <Link to="/login">
         <button className="hvr-shutter-out-horizontal">
-          Find your nearest gym!
+          Join The Revolution
         </button>
       </Link>
-      <Link to="/near-me-trainers">
-
-        <button className="hvr-shutter-out-horizontal">
-          Find your nearest personal trainer!
-        </button>
-      </Link>
-   
     </div>
   );
 }

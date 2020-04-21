@@ -4,15 +4,27 @@ import ExercisesData from '../../Data/ExercisesData';
 import ExerciseList from '../WorkoutsMain/WorkoutExerciseList/WorkoutExerciseList';
 import './CalendarApp.css';
 
-
-
 export default function CalendarApp() {
   const [date, setDate] = useState(new Date());
 
-  const onChange = date => {
-    setDate(date);
+  const onChange = date => setDate(date);
 
+  const getRandomNumbersArray = (el) => {
+    let randomNumbersArray = [];
+    for(let i = 0; i < el; i++) {
+      let randomNumber = Math.floor(Math.random() * ExercisesData().length);
+      if(randomNumbersArray.includes(randomNumber)){
+        randomNumber === 0 ?
+          randomNumbersArray.push(randomNumber + 1) :
+          randomNumbersArray.push(randomNumber - 1)
+      } else {
+        randomNumbersArray.push(randomNumber)
+      }
+    }
+    return randomNumbersArray
   };
+
+  let positions = getRandomNumbersArray(7);
 
   return (
     <div className="calendarAppContainer">
@@ -35,30 +47,25 @@ export default function CalendarApp() {
         </main>
       </div>
   
-      
-        <div className="calendarWorkoutContainer">
-          <div className="ContainerContent">
-            <h3 className="title">Daily Workout</h3>
-            <button className="button">Start</button>
-
-            <div className="calendarExerciseList"> {
-              
-              ExercisesData().map(exercise => {
-                return (
-                  <ExerciseList
-                  key={exercise.exerciseName}
-                  exerciseName={exercise.exerciseName}
-                  reps={exercise.reps}
-                  />
-                );
-              })
-            }
-            </div>
+      <div className="calendarWorkoutContainer">
+        <div className="ContainerContent">
+          <h3 className="title">Daily Workout</h3>
+          <button className="button primary rounded-capsule">Start</button>
+          <div className="calendarExerciseList"> 
+          {
+            Array.isArray(positions) && positions.map((position, index) => (
+              <ExerciseList
+                key={ExercisesData()[position].exerciseName + index}
+                exerciseName={ExercisesData()[position].exerciseName}
+                reps={ExercisesData()[position].reps}
+              />
+            ))
+          }
           </div>
-        </div> 
-      </div>  
+        </div>
+      </div> 
+    </div>  
   );  
-
 }
 
 

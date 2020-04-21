@@ -1,0 +1,15 @@
+.List {
+  overflow: scroll;
+  height: 300px;
+}
+
+.List .content {
+  display: grid;
+  padding-left: 0;
+}
+
+.List .item {
+  align-items: center;
+  box-shadow: 2px 2px 2px silver;
+  margin-bottom: 8px;
+}
