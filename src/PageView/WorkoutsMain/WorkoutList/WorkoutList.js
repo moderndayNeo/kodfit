@@ -7,7 +7,7 @@ export default function WorkoutList() {
     return (
         <div className="WorkoutsList">
             <div className="containerTop">
-            <a className="button One" href="./Home">Workouts</a>
+            <a className="button One" href="../home">Workouts</a>
             <a className="button Two" href="./workout-list">Exercise List</a>
             </div>
             
@@ -16,6 +16,7 @@ export default function WorkoutList() {
                     return (
                     <ExercisesListComponent
                         key={list.listName}
+                        id={list.id}
                         listName={list.listName}
                         image={list.image}
                     />

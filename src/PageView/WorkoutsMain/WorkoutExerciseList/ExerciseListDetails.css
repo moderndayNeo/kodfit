@@ -1,0 +1,53 @@
+
+.containerTop .button {
+    color: white;
+    font-size: 18px;
+    font-weight: bold;
+    padding: 3px 10px;
+    width: 180px;
+    border-radius: 35px;
+    text-align: center;
+    margin-left: 2%;
+}
+
+.button.Two {
+    background-color: rgb(72, 163, 248);
+}
+
+.ExercisesList .containerBottom {
+    display: flex;
+    flex-direction: column;
+    margin: 30px 2%;
+}
+
+.containerBottom .item {
+    display: flex;
+    flex-direction: row;
+    height: 90px;   
+    margin-bottom: 12px;
+    box-shadow: 1px 1px 6px silver;  
+}
+
+.detailsReps {
+    flex: 1;
+}
+
+.item .detailsName {
+    flex: 3;
+    color: #555; 
+    margin-left: 2%;
+}
+
+
+@media (min-width: 600px) {
+    .WorkoutsMain .containerBottom {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+@media (min-width: 600px) {
+    .WorkoutList .container {
+        grid-template-columns: repeat(3, 1fr);
+        column-gap: 10px;
+    }
+}
