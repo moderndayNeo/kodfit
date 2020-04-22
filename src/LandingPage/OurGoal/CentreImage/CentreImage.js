@@ -14,7 +14,7 @@ export default function CentreImage() {
                 />
                 <IconAndText
                     icon={"FaChartLine"}
-                    text="..Deliver a workout routine tailored to your goals"
+                    text="...Deliver a workout routine tailored to your goals"
                     delay="2s"
                 />
                 <IconAndText
