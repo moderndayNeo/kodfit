@@ -4,6 +4,7 @@ import './Timer.css';
 import { FaPlay, FaRegStopCircle } from 'react-icons/fa';
 import { MdSettingsBackupRestore } from "react-icons/md";
 import { Link } from 'react-router-dom';
+import SmallTimer from './SmallTimer/SmallTimer';
 
 class Timer extends React.Component {
     constructor() {
@@ -50,8 +51,8 @@ class Timer extends React.Component {
             clearInterval(this.timer);
         } else {
             let total = +this.state.inputHours + +this.state.inputMinutes + +this.state.inputSeconds;
-
-            if (total > 0 && this.state.runningTimer === 0) {
+            
+            if (total > 0 && this.state.runningTimer === 0 || !this.state.toSeconds) {
                 this.setState({
                     toSeconds: total,
                     runningTimer: 1
@@ -158,14 +159,14 @@ class Timer extends React.Component {
                     <div className="buttons center">
                         <div className="reset inline">
                             <button
-                                className="button"
+                                className="time-buttons"
                                 onClick={this.resetTimer}>
                                 <MdSettingsBackupRestore />
                             </button>
                         </div>
                         <div className="submit inline">
                             <button
-                                className="button"
+                                className="time-buttons"
                                 onClick={this.startTimer}>
                                 {this.state.runningTimer === 1 && this.state.toSeconds ?
                                     <FaRegStopCircle /> :

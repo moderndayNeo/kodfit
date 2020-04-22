@@ -8,7 +8,7 @@ export default class ExercisesListComponent extends React.Component {
     let { id, listName, image, listAlt } = this.props;
 
     return (
-      <Link to={`/dashboard/workout-list/${id}`}>
+      <Link to={`/dashboard/workouts/workout-list/${id}`}>
           <div className="list">
             <p className="text">{listName}</p>
             <img src={image} alt={listAlt}/>            

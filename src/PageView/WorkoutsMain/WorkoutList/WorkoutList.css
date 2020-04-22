@@ -27,7 +27,7 @@
 .WorkoutsList .containerBottom {
     display: flex;
     flex-direction: column;
-    margin: 30px 2%;
+    margin: 10px 2%;
 }
 
 .WorkoutsList .list {

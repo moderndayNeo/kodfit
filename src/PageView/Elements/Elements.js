@@ -1,11 +1,12 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 export default function Elements() {
     return (
         <div className="container">
             <div className="grid">
-                <h1 className="block">Header 1</h1>
-                <h2 className="block">Header 2</h2>
+                <h1>Header 1</h1>
+                <h2>Header 2</h2>
                 <h3>Header 3</h3>
                 <h4>Header 4</h4>
                 <h5>Header 5</h5>
@@ -25,22 +26,41 @@ export default function Elements() {
             </div>
             <div className="grid">
                 <div>
-                    <a className="" href="/">Simple Link</a>
-                    <a className="button primary" href="/">Primary</a>
-                    <a className="button secondary" href="/">Secondary</a>
-                    <a className="button success" href="/">Success</a>
-                    <a className="button alert" href="/">Alert</a>
+                    <Link className="" to="/">Simple Link</Link>
+                    <button className="button primary" >
+                        <Link to="/">Primary</Link>
+                    </button>
+                    <button className="button secondary" >
+                        <Link to="/">Secondary</Link>
+                    </button>
+                    <button className="button success" >
+                        <Link to="/">Success</Link>
+                    </button>
+                    <button className="button alert" >
+                        <Link to="/">Alert</Link>
+                    </button>
+                    <button className="button btn-transparent">
+                        <Link to="/">Transparent</Link>
+                    </button>
                 </div>
                 <div>
-                    <a className="" href="/">Simple Link</a>
-                    <a className="button primary rounded-capsule" href="/">Primary</a>
-                    <a className="button secondary rounded-capsule" href="/">Secondary</a>
-                    <a className="button success rounded-capsule" href="/">Success</a>
-                    <a className="button alert rounded-capsule" href="/">Alert</a>
+                    <Link className="rounded-capsule" to="/">Simple Link</Link>
+                    <button className="button primary rounded-capsule">
+                        <Link to="/">Primary</Link>
+                    </button>
+                    <button className="button secondary rounded-capsule">
+                        <Link to="/">Secondary</Link>
+                    </button>
+                    <button className="button success rounded-capsule">
+                        <Link to="/">Success</Link>
+                    </button>
+                    <button className="button alert rounded-capsule">
+                        <Link to="/">Alert</Link>
+                    </button>
+                    <button className="button btn-transparent rounded-capsule">
+                        <Link to="/">Transparent</Link>
+                    </button>
                 </div> 
-            </div>
-            <div className="grid">
-                <h1>need to fix this </h1>
             </div>
         </div>
     )

@@ -15,7 +15,7 @@ h1 {
     font-size: 2.5rem;
 }
 
-@media screen and (min-device-width: 641px) {
+@media (min-width: 600px) {
     h1 {
         font-size: 2.44444rem;
     }
@@ -25,7 +25,7 @@ h2 {
     font-size: 1.5rem;
 }
 
-@media screen and (min-device-width: 641px) {
+@media (min-width: 600px) {
     h2 {
         font-size: 2.05556rem;
     }
@@ -35,7 +35,7 @@ h3 {
     font-size: 1.22222rem;
 }
 
-@media screen and (min-device-width: 641px) {
+@media (min-width: 600px) {
     h3 {
         font-size: 1.5rem;
     }
@@ -45,7 +45,7 @@ h4 {
     font-size: 1rem;
 }
 
-@media screen and (min-device-width: 641px) {
+@media (min-width: 600px) {
     h4 {
         font-size: 1.27778rem;
     }
@@ -56,7 +56,7 @@ h5 {
 }
 
 a {
-    color: #008CBA;
+    color: #00AAEF;
     line-height: inherit;
     text-decoration: none;
     cursor: pointer;
@@ -64,7 +64,7 @@ a {
 
 a:hover,
 a:focus {
-    color: #0078a0;
+    color: #0094d0;
 }
 
 a:hover,

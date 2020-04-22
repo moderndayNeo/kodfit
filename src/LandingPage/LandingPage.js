@@ -2,8 +2,8 @@ import React from 'react';
 import './LandingPage.css';
 import HeroBanner from './HeroBanner/HeroBanner';
 import heroImage from './../common/images/hero-image.jpg';
-import about from './../common/images/about.jpg';
-import ourGoal from './../common/images/our-goal.jpg';
+import AboutUs from './AboutUs/AboutUs';
+import OurGoal from './OurGoal/OurGoal';
 
 export default function LandingPage() {
     return (
@@ -15,20 +15,10 @@ export default function LandingPage() {
                 buttonLabel="Register Now"
                 buttonLink="/login"
             />
-            <HeroBanner 
-                title="About Us" 
-                image={about} 
-                imageAlt="placeholder text"
-                buttonLabel="Read More"
-                buttonLink="/about"
-            />
-            <HeroBanner 
-                title="Our Goal" 
-                image={ourGoal} 
-                imageAlt="placeholder text"
-                buttonLabel="Read More"
-                buttonLink="/our-goal"
-            />
+            <div className="container">
+                <AboutUs />
+                <OurGoal />
+            </div>
         </main>
     );
 }

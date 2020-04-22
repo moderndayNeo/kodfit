@@ -13,7 +13,7 @@
 .separator-left:after {
     position: relative !important;
     width: 3rem;
-    border-bottom: 0.125rem solid #1779ba;
+    border-bottom: 0.125rem solid #00AAEF;
     margin: 1rem auto 0;
     margin-left: 0 !important;
 }
@@ -30,14 +30,13 @@
     order: 1;
 }
 
-
 .separator-center {
     text-align: center;
 }
 .separator-center:after {
     position: relative !important;
     width: 3rem;
-    border-bottom: 0.125rem solid #1779ba;
+    border-bottom: 0.125rem solid #00AAEF;
     margin: 1rem auto 0;
 }
 .separator-center:before, 
@@ -59,7 +58,7 @@
 .separator-right:after {
     position: relative !important;
     width: 3rem;
-    border-bottom: 0.125rem solid #1779ba;
+    border-bottom: 0.125rem solid #00AAEF;
     margin: 1rem auto 0;
     margin-right: 0 !important;
 }

@@ -2,18 +2,15 @@ import React from 'react';
 import { BrowserRouter as Router, Route } from 'react-router-dom';
 import CalendarApp from './CalendarApp/CalendarApp';
 import NearMe from './NearMe/NearMe';
-import WorkoutsMain from './WorkoutsMain/WorkoutsMain';
 import WorkoutList from './WorkoutsMain/WorkoutList/WorkoutList';
 import ExerciseListDetails from './WorkoutsMain/WorkoutExerciseList/ExerciseListDetails';
 import WorkoutCurrent from './WorkoutsMain/WorkoutCurrent/WorkoutCurrent';
 import Tracker from './Tracker/Tracker';
 import Login from './Login/Login';
 import Timer from './Timer/Timer';
-import OurGoal from '../LandingPage/OurGoal/OurGoal';
 import LandingPage from '../LandingPage/LandingPage';
 import StopWatch from './Timer/StopWatch/StopWatch';
 import Profile from './Profile/Profile';
-import AboutUs from './AboutUs/AboutUs';
 import Navbar from './NavBar/NavBar';
 import Elements from './Elements/Elements';
 import './PageView.css'
@@ -24,13 +21,11 @@ export default function PageView() {
       <div className="PageView">
         <Route path="/" exact component={LandingPage} />
         <Route path="/login" exact component={Login} />
-        <Route path="/about" exact component={AboutUs} />
-        <Route path="/our-goal" exact component={OurGoal} />
         <Route path="/dashboard/calendar" exact component={CalendarApp} />
         <Route path="/dashboard/near-me" exact component={NearMe} />
-        <Route path="/dashboard/home" exact component={WorkoutsMain} />
-        <Route path="/dashboard/workout-list" exact component={WorkoutList} />
-        <Route path="/dashboard/workout-list/:listId" exact component={ExerciseListDetails} />
+        <Route path="/dashboard/workouts/:view/" exact component={WorkoutList} />
+        <Route path="/dashboard/workouts/home/:listId" exact component={ExerciseListDetails} />
+        <Route path="/dashboard/workouts/workout-list/:listId" exact component={ExerciseListDetails} />
         <Route path="/dashboard/workout-current" exact component={WorkoutCurrent} />
         <Route path="/dashboard/tracker" exact component={Tracker} />
         <Route path="/dashboard/timer" exact component={Timer} />
@@ -38,7 +33,7 @@ export default function PageView() {
         <Route path="/dashboard/profile" exact component={Profile} />
         <Route path="/dashboard/elements" exact component={Elements} />
       </div>
-        <Route path="/dashboard/:slug" exact component={Navbar} />
+        <Route path="/dashboard/:slug" component={Navbar} />
     </Router>
   );
 }

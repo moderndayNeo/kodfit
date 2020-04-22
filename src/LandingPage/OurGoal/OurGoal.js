@@ -1,27 +1,31 @@
 import React from 'react';
 import './OurGoal.css';
-import 'animate.css';
-import 'hover.css';
+import { Link } from "react-router-dom";
+import Goal from "../../common/images/goal.jpg";
 import CentreImage from './CentreImage/CentreImage';
-import { Link } from 'react-router-dom';
 
 export default function OurGoal() {
   return (
     <div className="OurGoal">
-      <h1 className="block">Our Goal</h1>
-      <p className="separator-center">
-        Our goal is to put you in touch with gyms and personal trainers nearby.
-        In the age of Kodfit, winning is easier than ever before.
-      </p>
-      <CentreImage />
-      <p className="separator-center">
-        The fitter, stronger you is closer than you think
-      </p>
-      <Link to="/login">
-        <button className="hvr-shutter-out-horizontal button primary">
-          Join The Revolution
+      <div className="copy">
+        <h1 className="separator-left">Our Goal</h1>
+        <p>
+          Our goal is to put you in touch with gyms and personal trainers nearby.
+          In the age of Kodfit, winning is easier than ever before.
+        </p>
+        <CentreImage />
+        <blockquote>
+          The fitter, stronger you is closer than you think
+        </blockquote>
+        <button className="button primary rounded-capsule">
+          <Link to="/login">
+            Join The Revolution
+          </Link>
         </button>
-      </Link>
+      </div>
+      <div className="image">
+        <img className="image" src={Goal} alt="Goal" />
+      </div>
     </div>
   );
 }

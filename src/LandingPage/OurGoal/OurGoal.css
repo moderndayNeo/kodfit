@@ -1,10 +1,32 @@
 .OurGoal {
-    text-align: center;
-    margin: 0 20px;
+  --icon-dimensions: 30px;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1rem;
+}
+
+.OurGoal .IconAndText {
+  display: flex;
+  flex-direction: row;
+  margin: 1rem 0;
+}
+
+.OurGoal .slidingText {
+  margin: 0;
+  padding-left: 15px;
+  font-weight: bold;
 }
 
 @media (min-width: 600px) {
-    .OurGoal button {
-        font-size: 20px;
-    }
+  .OurGoal {
+    grid-template-columns: 1fr 1fr;
+    overflow: hidden;
+  }
+  .OurGoal .copy {
+    order: 1;
+  }
+  .OurGoal .icon svg {
+    width: var(--icon-dimensions);
+    height: var(--icon-dimensions);
+  }
 }

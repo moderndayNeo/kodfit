@@ -27,7 +27,7 @@ export default function Login() {
                     <InputBox type="password" placeholder="Password" />
                 </div>
                 <div className="loginButtons">
-                    <button className="signInButton"> Sign In</button>
+                    <button className="button primary rounded-capsule signInButton">Sign In</button>
                     <p> or </p>
                     <GoogleLogin
                         clientId="848040990578-mpvcvg31e99180qb7f28rqvfm708iqp3.apps.googleusercontent.com"
@@ -35,7 +35,7 @@ export default function Login() {
                             <button
                                 onClick={renderProps.onClick}
                                 disabled={renderProps.disabled}
-                                className="btn-google">
+                                className="button btn-transparent rounded-capsule btn-google">
                                     Sign in with Google
                                 </button>
                           )}

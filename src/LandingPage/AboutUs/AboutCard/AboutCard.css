@@ -12,12 +12,11 @@
 .AboutCard .title{
   font-size: 1.5em;
   font-weight: 600;
-  color: crimson
 }
 
 .AboutCard .icon svg {
   fill: #333;
-  font-size: 6em;
+  font-size: 5em;
   padding: 15px
 }
 
