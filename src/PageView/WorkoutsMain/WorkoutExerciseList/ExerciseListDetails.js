@@ -26,7 +26,6 @@ export default class ExerciseListDetails extends React.Component {
                 <div className="containerBottom"> {
                     ExercisesData()
                     .filter(exercise => { 
-                        console.log(this.state.list);
                         return (exercise.category === this.state.list) || (exercise.workout === this.state.list)})
                     .map(exercise => {
                         return (

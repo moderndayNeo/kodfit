@@ -20,18 +20,20 @@ export default function PageView() {
     <Router>
       <div className="PageView">
         <Route path="/" exact component={LandingPage} />
-        <Route path="/login" exact component={Login} />
-        <Route path="/dashboard/calendar" exact component={CalendarApp} />
-        <Route path="/dashboard/near-me" exact component={NearMe} />
-        <Route path="/dashboard/workouts/:view/" exact component={WorkoutList} />
-        <Route path="/dashboard/workouts/home/:listId" exact component={ExerciseListDetails} />
-        <Route path="/dashboard/workouts/workout-list/:listId" exact component={ExerciseListDetails} />
-        <Route path="/dashboard/workout-current" exact component={WorkoutCurrent} />
-        <Route path="/dashboard/tracker" exact component={Tracker} />
-        <Route path="/dashboard/timer" exact component={Timer} />
-        <Route path="/dashboard/stopwatch" exact component={StopWatch} />
-        <Route path="/dashboard/profile" exact component={Profile} />
-        <Route path="/dashboard/elements" exact component={Elements} />
+        <section className="container">
+          <Route path="/login" exact component={Login} />
+          <Route path="/dashboard/calendar" exact component={CalendarApp} />
+          <Route path="/dashboard/near-me" exact component={NearMe} />
+          <Route path="/dashboard/workouts/:view/" exact component={WorkoutList} />
+          <Route path="/dashboard/workouts/home/:listId" exact component={ExerciseListDetails} />
+          <Route path="/dashboard/workouts/workout-list/:listId" exact component={ExerciseListDetails} />
+          <Route path="/dashboard/workout-current" exact component={WorkoutCurrent} />
+          <Route path="/dashboard/tracker" exact component={Tracker} />
+          <Route path="/dashboard/timer" exact component={Timer} />
+          <Route path="/dashboard/stopwatch" exact component={StopWatch} />
+          <Route path="/dashboard/profile" exact component={Profile} />
+          <Route path="/dashboard/elements" exact component={Elements} />
+        </section>
       </div>
         <Route path="/dashboard/:slug" component={Navbar} />
     </Router>

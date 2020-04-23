@@ -23,17 +23,20 @@ export default function AboutUs() {
     },
   ]
   return (
-    <div className='AboutUs'>
-      {
-        properties.map(prop => (
-          <AboutCard 
-            key={prop.title}
-            title={prop.title}
-            desc={prop.description}
-            icon={prop.icon}
-          />
-        ))
-      }
+    <div className="container">
+      <h1 className="block separator-center">About Us</h1>
+      <div className='AboutUs'>
+        {
+          properties.map(prop => (
+            <AboutCard 
+              key={prop.title}
+              title={prop.title}
+              desc={prop.description}
+              icon={prop.icon}
+            />
+          ))
+        }
+      </div>
     </div>
-  )
+  );
 }

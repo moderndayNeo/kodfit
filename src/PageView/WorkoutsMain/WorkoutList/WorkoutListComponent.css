@@ -1,4 +1,3 @@
-
 .containerBottom {
     display: flex;
     flex-direction: column;
@@ -29,6 +28,17 @@
 
 @media (min-width: 600px) {
     .containerBottom {
-        grid-template-columns: repeat(3, 1fr);
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        margin: 30px 2%;
+    }
+    .routine {
+        position: relative;
+        margin-bottom: 40px;
+        box-shadow: 1px 1px 6px silver; 
+        height: 120px;     
+    }
+    .routine img {
+        height: 120px;
     }
 }

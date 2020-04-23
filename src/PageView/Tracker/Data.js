@@ -1,14 +1,14 @@
 const data = {
-  labels: ['1', '2', '3', '4', '5', '6', '7', '8'],
+  labels: ['Sun', 'Mon', 'Tue', 'Wed', 'Thurs', 'Fri', 'Sat'],
   datasets: [
     {
-      label: 'Weight(kg)',
-      backgroundColor: 'rgba(0, 0, 255)',
-      borderColor: 'rgba(0, 0, 255)',
+      label: 'hours',
+      backgroundColor: '#00AAEF',
+      borderColor: '#00AAEF',
       borderWidth: 1,
-      hoverBackgroundColor: 'rgba(0, 0, 255)',
-      hoverBorderColor: 'rgba(0, 0, 255)',
-      data: [65, 59, 60, 70, 66, 76, 77, 60]
+      hoverBackgroundColor: '#00AAEF',
+      hoverBorderColor: '#00AAEF',
+      data: [0, 40, 20, 55, 0, 80, 30, 20]
     }
   ]
 }
@@ -18,18 +18,18 @@ const line = {
   datasets: [
     {
       label: 'Workouts',
-      pointBackgroundColor: 'rgba(0, 0, 255)',
+      pointBackgroundColor: '#00AAEF',
       fill: false,
       lineTension: 0.1,
-      backgroundColor: 'rgba(0, 0, 255)',
-      borderColor: 'rgba(0, 0, 255)',
+      backgroundColor: '#00AAEF',
+      borderColor: '#00AAEF',
       borderCapStyle: 'butt',
       borderDash: [],
       borderDashOffset: 0.0,
       borderJoinStyle: 'miter',
       pointRadius: 5,
       pointHitRadius: 10,
-      data: [65, 59, 60, 65, 66, 66, 56, 80]
+      data: [78, 78, 78.2, 78.5, 79, 78.5, 79, 80]
     }
   ]
 }
@@ -78,7 +78,7 @@ const barOption = {
   },
   layout: {
     padding: {
-      top: 70
+      top: 30
     }
   },
 

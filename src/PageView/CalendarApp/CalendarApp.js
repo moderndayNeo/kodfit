@@ -1,35 +1,16 @@
 import React, { useState } from 'react';
 import Calendar from 'react-calendar';
-import ExercisesData from '../../Data/ExercisesData';
-import ExerciseList from '../WorkoutsMain/WorkoutExerciseList/WorkoutExerciseList';
+import RandomExerciseList from './RandomExerciseGen/RandomExerciseList';
 import './CalendarApp.css';
+import { Link } from 'react-router-dom';
 
 export default function CalendarApp() {
   const [date, setDate] = useState(new Date());
-
   const onChange = date => setDate(date);
-
-  const getRandomNumbersArray = (el) => {
-    let randomNumbersArray = [];
-    for(let i = 0; i < el; i++) {
-      let randomNumber = Math.floor(Math.random() * ExercisesData().length);
-      if(randomNumbersArray.includes(randomNumber)){
-        randomNumber === 0 ?
-          randomNumbersArray.push(randomNumber + 1) :
-          randomNumbersArray.push(randomNumber - 1)
-      } else {
-        randomNumbersArray.push(randomNumber)
-      }
-    }
-    return randomNumbersArray
-  };
-
-  let positions = getRandomNumbersArray(7);
 
   return (
     <div className="calendarAppContainer">
-        <h2 className="calendarTitle">Activity Calendar</h2>
-      
+      <h2 className="separator-center">Activity Calendar</h2>
       <div className="calendarOne">
         <main className="calendarContent">
           <Calendar
@@ -47,20 +28,14 @@ export default function CalendarApp() {
         </main>
       </div>
   
-      <div className="calendarWorkoutContainer">
+      <div className="calendarWorkoutContainer container">
         <div className="ContainerContent">
           <h3 className="title">Daily Workout</h3>
-          <button className="button primary rounded-capsule">Start</button>
+          <Link to='/dashboard/workout-current'>
+            <button className="button primary rounded-capsule">Start</button>
+          </Link>
           <div className="calendarExerciseList"> 
-          {
-            Array.isArray(positions) && positions.map((position, index) => (
-              <ExerciseList
-                key={ExercisesData()[position].exerciseName + index}
-                exerciseName={ExercisesData()[position].exerciseName}
-                reps={ExercisesData()[position].reps}
-              />
-            ))
-          }
+            <RandomExerciseList />
           </div>
         </div>
       </div> 

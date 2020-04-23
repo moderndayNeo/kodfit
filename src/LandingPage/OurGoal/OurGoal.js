@@ -6,7 +6,7 @@ import CentreImage from './CentreImage/CentreImage';
 
 export default function OurGoal() {
   return (
-    <div className="OurGoal">
+    <div className="container OurGoal">
       <div className="copy">
         <h1 className="separator-left">Our Goal</h1>
         <p>

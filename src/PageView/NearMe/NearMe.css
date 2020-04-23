@@ -1,5 +1,4 @@
-.NearMe {
-    padding: 0 20px;
+.NearMe {   
     display: grid;
 }
 
@@ -8,12 +7,19 @@
 }
 
 .NearMe .switch-buttons {
-    display: flex;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 15px;
+    margin-top: 15px;
 }
 
 @media (min-width: 600px) {
     .NearMe {
         grid-template-columns: 2fr 1fr;
+    }
+
+    .NearMe .switch-buttons {
+        margin-top: 0;
     }
 
     .NearMe .map {

@@ -31,23 +31,22 @@
     justify-content: center;
 }
 
-.Login .loginButtons {
+.Login .LoginButtons {
     display: grid;
     justify-content: center;
     gap: 10px;
 }
 
-.Login .loginButtons > * {
+.Login .LoginButtons > * {
     text-transform: uppercase;
-}
-
-.Login .loginButtons p {
-    margin: 0 auto;
+    text-align: center;
+    font-family: 'Play', sans-serif;
 }
 
 .Login .signInButton {
     color: #fff;
-    margin-top: 10px;
+    margin-top: 2rem;
+    margin-bottom: 0rem;
 }
 
 .Login .btn-google {

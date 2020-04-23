@@ -15,10 +15,8 @@ export default function LandingPage() {
                 buttonLabel="Register Now"
                 buttonLink="/login"
             />
-            <div className="container">
-                <AboutUs />
-                <OurGoal />
-            </div>
+            <AboutUs />
+            <OurGoal />
         </main>
     );
 }

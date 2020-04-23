@@ -3,7 +3,7 @@ import './SmallTimer.css';
 import { FaPlay, FaRegStopCircle } from 'react-icons/fa';
 import { MdSettingsBackupRestore } from "react-icons/md";
 
-const SmallTimer = ({ timer }) => {
+const SmallTimer = ({ timer, run }) => {
   const [timeLeft, setTimeLeft] = useState(0)
   const [isRunning, setRunning] = useState(0)
   let intervalId = 0
@@ -41,21 +41,21 @@ const SmallTimer = ({ timer }) => {
     }
   }
   const resetTimer = () => {
-    setRunning(0);
-    setTimeLeft(0);
+      setRunning(0);
+      setTimeLeft(0);
   }
 
   const theTimer = () => {
     if (timeLeft) {
       if (timeLeft < 60) {
-        return `${('0' + secondsToTime(timeLeft).s).slice(-2)}`
+        return `00 : ${('0' + secondsToTime(timeLeft).s).slice(-2)}`
       } else {
         return `${('0' + secondsToTime(timeLeft).m).slice(-2)} :  
                  ${('0' + secondsToTime(timeLeft).s).slice(-2)}`
       }
     } else {
       if (timer < 60) {
-        return `${('0' + secondsToTime(timer).s).slice(-2)}`
+        return `00 : ${('0' + secondsToTime(timer).s).slice(-2)}`
       } else {
         return `${('0' + secondsToTime(timer).m).slice(-2)} :  
                  ${('0' + secondsToTime(timer).s).slice(-2)}`
@@ -65,7 +65,8 @@ const SmallTimer = ({ timer }) => {
 
   useEffect(() => {
     if (!timeLeft) {
-      setRunning(0)
+      setRunning(1)
+      setTimeLeft(timer)
       return
     }
 
@@ -76,11 +77,15 @@ const SmallTimer = ({ timer }) => {
     return () => clearInterval(intervalId)
   }, [timeLeft])
 
+  useEffect(() => {
+    setTimer();
+  }, [])
+
   return (
     <div className='SmallTimer'>
-      <h1 className='full-display'>{theTimer()}</h1>
-      <button className="resetst-btn" onClick={resetTimer}><MdSettingsBackupRestore /></button>
-      <button className="smalltimer-btn" onClick={setTimer}>{isRunning === 1 ? <FaRegStopCircle /> :<FaPlay />}</button>
+      <h2 className='full-display'>{theTimer()}</h2>
+{/*       <button className="resetst-btn" onClick={resetTimer}><MdSettingsBackupRestore /></button>
+      <button className="smalltimer-btn" onClick={setTimer}>{isRunning === 1 ? <FaRegStopCircle /> :<FaPlay />}</button> */}
     </div>
   )
 }

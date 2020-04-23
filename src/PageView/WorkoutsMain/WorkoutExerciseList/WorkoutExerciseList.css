@@ -1,7 +1,7 @@
 .calendarExerciseList .item {
     display: grid;
     grid-template-columns: 3fr 1fr;
-    box-shadow: 2px 2px 2px silver;
+    box-shadow: 2px 2px 5px silver;
     margin-bottom: 8px;
     padding: 0;
     height: 42px;
@@ -13,5 +13,16 @@
 
 .item .detailsReps {
     color: #126195;
+    font-weight: bolder;
 }
 
+.ExercisesList .containerBottom .item {
+    background-color: rgb(243, 240, 240);
+    opacity: 0.6;
+    font-weight: bold;
+}
+
+.ExercisesList .item .detailsName {
+    padding: 0;
+    font-weight: bold;
+}
