@@ -14,9 +14,8 @@ export default function List({ title, data }) {
                 {gym.distance && `Distance: ${gym.distance}m`}
                 <br />
                 {
-                  gym.contacts && gym.contacts[0].phone ?
-                     `Contact: ${gym.contacts[0].phone[0].value}` :
-                     ''
+                  gym?.contacts[0]?.phone[0]?.value &&
+                  `Contact: ${gym.contacts[0].phone[0].value}`
                 }
               </li>
             ))}

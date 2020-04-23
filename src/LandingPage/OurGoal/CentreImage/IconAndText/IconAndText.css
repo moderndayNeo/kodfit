@@ -1,18 +1,14 @@
 .IconAndText .icon {
     --icon-dimensions: 30px;
-    color: lightgoldenrodyellow;
 }
 
 .IconAndText .slidingText {
-    color: lightgoldenrodyellow;
-    font-size: 14px;
-    font-weight: bold;
+    font-size: 16px;
     margin: 0;
 }
 
 @media (min-width: 600px) {
     .IconAndText .slidingText {
-        font-size: 18px;
     }
 
     .IconAndText .icon svg {
