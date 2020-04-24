@@ -4,7 +4,7 @@ import "./List.css";
 export default function List({ title, data }) {
   return (
     <div className="List">
-        <h3>List of {title}</h3>
+        <h3 className="separator-center">List of {title}</h3>
         <ul className="content">
           {data &&
             data.map((gym, index) => (

@@ -21,12 +21,12 @@ export default class ExerciseListDetails extends React.Component {
         return (
             <div className="ExercisesList">
                 <div className="containerTop">
-                <a className="button Two" href="./">Exercise List</a>
+                <a className="button primary rounded-capsule" href="../workout-list">Exercises</a>
                 </div>
-                
                 <div className="containerBottom"> {
                     ExercisesData()
-                    .filter(exercise => exercise.category === this.state.list)
+                    .filter(exercise => { 
+                        return (exercise.category === this.state.list) || (exercise.workout === this.state.list)})
                     .map(exercise => {
                         return (
                         <ExerciseList
@@ -34,6 +34,7 @@ export default class ExerciseListDetails extends React.Component {
                             id={exercise.id}
                             exerciseName={exercise.exerciseName}
                             reps={exercise.reps}
+                            workout={exercise.workout}
                         />
                         );
                     })

@@ -1,11 +1,8 @@
-.List {
-  overflow: scroll;
-  height: 300px;
-}
-
 .List .content {
   display: grid;
+  overflow: scroll;
   padding-left: 0;
+  height: 350px;
 }
 
 .List .item {

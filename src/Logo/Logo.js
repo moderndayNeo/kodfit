@@ -4,7 +4,8 @@ import logo from '../common/images/kodfit_logo_small.svg';
 
 export default function Logo() {
     return (
-        <img src={logo} className="logo" alt="logo" />
+        <a href="/">
+            <img src={logo} className="logo" alt="logo" />
+        </a>
     );
- 
 }

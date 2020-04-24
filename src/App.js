@@ -6,12 +6,15 @@ import './Typography.css';
 import './Buttons.css';
 import PageView from './PageView/PageView';
 import Logo from './Logo/Logo';
+import ExerciseContext from './context/ExerciseContext'
 
 function App() {
 	return (
 			<div className="App">
 				<Logo />
-				<PageView />
+				<ExerciseContext>
+					<PageView />
+				</ExerciseContext>
 			</div>
 	);
 }

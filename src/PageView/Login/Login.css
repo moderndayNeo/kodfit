@@ -31,35 +31,24 @@
     justify-content: center;
 }
 
-.Login .loginButtons {
+.Login .LoginButtons {
     display: grid;
     justify-content: center;
     gap: 10px;
 }
 
-.Login .loginButtons > * {
+.Login .LoginButtons > * {
     text-transform: uppercase;
-}
-
-.Login .loginButtons p {
-    margin: 0 auto;
+    text-align: center;
+    font-family: 'Play', sans-serif;
 }
 
 .Login .signInButton {
-    font-size: 16px;
-    padding: 10px;
-    background-color: #00AAEF;
-    border-radius: 3rem;
-    color: #ffffff;
-    font-weight: bold;
-    margin-top: 10px;
+    color: #fff;
+    margin-top: 2rem;
+    margin-bottom: 0rem;
 }
 
 .Login .btn-google {
-    border-radius: 3rem;
-    padding: 10px;
-    font-size: 16px;
-    font-weight: bold;
-    color:#00AAEF;
-    border: 1px solid #00AAEF;
+    color: #00AAEF;
 }

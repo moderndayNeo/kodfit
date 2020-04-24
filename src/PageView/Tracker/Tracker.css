@@ -10,6 +10,7 @@
 
 .grid-full {
     grid-column: 1/3;
+    position: relative;
 }
 
 .margin-bottom {
@@ -20,4 +21,26 @@
     justify-self: center;
 }
 
- 
+.position {
+    position: absolute;
+    top: 10px;
+    left: 20px;
+}
+.blue-box {
+    background-color: #00AAEF;
+    height: 24px;
+    width: 31px;
+    display: inline-block;
+    top: 4px;
+    position: relative;
+    left: 10px;
+}
+
+@media only screen and (min-width: 700px) {
+      .position {
+        position: absolute;
+        top: 70px;
+        left: 29px;
+      }
+
+}

@@ -1,0 +1,10 @@
+.AboutUs {
+  display: grid;
+  grid-template-columns: 1fr;
+}
+
+@media (min-width: 600px) {
+  .AboutUs {
+    grid-template-columns: repeat(3, minmax(250px, 1fr));
+  }
+}

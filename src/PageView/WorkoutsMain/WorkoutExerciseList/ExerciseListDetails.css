@@ -1,11 +1,6 @@
 
 .containerTop .button {
-    color: white;
-    font-size: 18px;
-    font-weight: bold;
-    padding: 3px 10px;
     width: 180px;
-    border-radius: 35px;
     text-align: center;
     margin-left: 2%;
 }
@@ -40,14 +35,22 @@
 
 
 @media (min-width: 600px) {
-    .WorkoutsMain .containerBottom {
+    .containerBottom {
         grid-template-columns: repeat(3, 1fr);
     }
 }
 
 @media (min-width: 600px) {
-    .WorkoutList .container {
-        grid-template-columns: repeat(3, 1fr);
-        column-gap: 10px;
+    .ExercisesList .containerBottom {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-column-gap: 5%;
+        margin: 30px 2%;
+    }
+    .containerBottom .item {
+        display: flex;
+        flex-direction: row;
+        height: 100px;   
+        margin-bottom: 50px;
     }
 }
