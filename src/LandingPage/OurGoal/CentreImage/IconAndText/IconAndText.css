@@ -1,0 +1,18 @@
+.IconAndText .icon {
+    --icon-dimensions: 30px;
+}
+
+.IconAndText .slidingText {
+    font-size: 16px;
+    margin: 0;
+}
+
+@media (min-width: 600px) {
+    .IconAndText .slidingText {
+    }
+
+    .IconAndText .icon svg {
+        width: var(--icon-dimensions);
+        height: var(--icon-dimensions);
+    }
+}

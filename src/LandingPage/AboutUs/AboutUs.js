@@ -8,17 +8,17 @@ export default function AboutUs() {
   let properties = [
     {
       title: 'WHO WE ARE',
-      description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi eius dignissimos, doloribus quo autem ea aspernatur dolore facere ratione corrupti nisi! Tempora animi, corrupti quas necessitatibus pariatur corporis eveniet saepe?',
+      description: 'We are a team of developers looking to make fitness easy!',
       icon: <GiStairsGoal />,
     },
     {
       title: 'OUR MISSION',
-      description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi eius dignissimos, doloribus quo autem ea aspernatur dolore facere ratione corrupti nisi! Tempora animi, corrupti quas necessitatibus pariatur corporis eveniet saepe?',
+      description: 'To prove to you that a healthy life is right around the corner',
       icon: <IoIosRocket />,
     },
     {
       title: 'OUR TEAM',
-      description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi eius dignissimos, doloribus quo autem ea aspernatur dolore facere ratione corrupti nisi! Tempora animi, corrupti quas necessitatibus pariatur corporis eveniet saepe?',
+      description: 'Part-time tech geeks, part-time athletes. We decided to bring the two together and create KODFIT!',
       icon: <IoIosPeople />,
     },
   ]

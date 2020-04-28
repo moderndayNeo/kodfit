@@ -1,0 +1,13 @@
+.CentreImage {
+    position: relative;
+}
+
+.CentreImage .overlay {
+    position: absolute;
+    height: 100%;
+    margin-left: 5px;
+    width: 200px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
