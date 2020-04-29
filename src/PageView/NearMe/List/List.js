@@ -2,7 +2,6 @@ import React from "react";
 import "./List.css";
 
 export default function List({ title, data }) {
-  console.log(data);
   return (
     <div className="List">
         <h3 className="separator-center">List of {title}</h3>
