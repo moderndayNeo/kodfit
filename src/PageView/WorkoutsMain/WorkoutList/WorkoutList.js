@@ -11,6 +11,7 @@ export default function WorkoutList(props) {
         <div className="containerTop">
           <a className="button primary rounded-capsule" href="./home">Workouts</a>
           <a className="button secondary rounded-capsule" href="./workout-list">Exercises</a>
+          <a className="button secondary rounded-capsule" href="../timer">Timer</a>
         </div>
         <div className="containerBottom">
           {" "}

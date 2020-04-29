@@ -10,22 +10,18 @@ console.log(localStorage)
 
   return (
     <div className='Tracker'>
-      <h2 className='trackerTitle'>Tracker</h2>
+      <h2 className='separator-center trackerTitle'>Tracker</h2>
       <main className='container'>
-        <div className='tracker'>Your weight goals:</div>
-        <div>82kgs</div>
-        <div className='weight'>Your current weight:</div>
-        <div>78kgs</div>
+        <div className='center grid-full'>Your weight goals: 82kgs</div>
+        <div className='center grid-full'>Your current weight: 78kgs </div>
         <div className='line-graph grid-full'>
           <Line data={lineChartData} options={lineStyles} />
         </div>
         <div className='grid-full center'>April</div>
-        <div>Total time spent working out</div>
-        <div>5 hour 27mins</div>
-        <div className='grid-full small-font'>7 days </div>
-        <div>Total consecutive days</div>
-        <div> 2 days </div>
-        <div className='grid-full small-font'> 7 days </div>
+        <div className='center grid-full'>Total time spent working out  5 hour 27mins</div>
+        <div className='grid-full center'>7 days </div>
+        <div className='grid-full center'>Total consecutive days 2 days</div>
+        <div className='grid-full  center small-font'> 7 days </div>
         <div className=' grid-full'>
           <Bar data={barChartData} options={barStyles} />
         </div>

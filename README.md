@@ -6,10 +6,9 @@ The fitness app that keeps you motivated!
 
 Access Kodfit here: https://kodfit.now.sh/
 
-- [x] Content Added
-- [] Component styles aligned
-- [] Desktop-friendly
-- [] Project Completed
+- [x] Mobile-friendly
+- [x] Desktop-friendly
+- [x] Project deployed
 
 ## Technologies Used
 

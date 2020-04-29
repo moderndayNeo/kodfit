@@ -46,7 +46,7 @@
 }
 
 .Stopwatch .active {
-    background: crimson;
+    background: #00AAEF;
     border-radius: 34px;
     height: 334px;
     font-size: 38px;
