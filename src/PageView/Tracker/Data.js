@@ -34,7 +34,7 @@ const line = {
   ]
 }
 
-const option = {
+const lineOptions = {
   legend: {
     display: false
   },
@@ -73,7 +73,7 @@ const option = {
   }
 }
 
-const barOption = {
+const barOptions = {
   legend: {
     display: false
   },
@@ -101,4 +101,4 @@ const barOption = {
   }
 }
 
-export { line, option, barOption, data };
+export { line, lineOptions, barOptions, data };
