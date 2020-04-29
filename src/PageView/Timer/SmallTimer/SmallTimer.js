@@ -22,8 +22,8 @@ const SmallTimer = ({ timer, run }) => {
     }
     return obj
   }
-  // eslint-disable-next-line 
-  /*const setTimer = () => {
+ 
+  /* const setTimer = () => {
     if (isRunning === 0) {
       setRunning(1)
       setTimeLeft(timer)
@@ -39,7 +39,7 @@ const SmallTimer = ({ timer, run }) => {
       setTimeLeft(timeLeft - 1)
     }
   }
-  // eslint-disable-next-line 
+ 
   const resetTimer = () => {
       setRunning(0);
       setTimeLeft(0);
