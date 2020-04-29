@@ -1,7 +1,5 @@
 import React, { useState, useEffect } from 'react'
 import './SmallTimer.css';
-import { FaPlay, FaRegStopCircle } from 'react-icons/fa';
-import { MdSettingsBackupRestore } from "react-icons/md";
 
 const SmallTimer = ({ timer, run }) => {
   const [timeLeft, setTimeLeft] = useState(0)
@@ -24,6 +22,7 @@ const SmallTimer = ({ timer, run }) => {
     }
     return obj
   }
+  // eslint-disable-next-line 
   const setTimer = () => {
     if (isRunning === 0) {
       setRunning(1)
@@ -40,6 +39,7 @@ const SmallTimer = ({ timer, run }) => {
       setTimeLeft(timeLeft - 1)
     }
   }
+  // eslint-disable-next-line 
   const resetTimer = () => {
       setRunning(0);
       setTimeLeft(0);
@@ -76,10 +76,6 @@ const SmallTimer = ({ timer, run }) => {
 
     return () => clearInterval(intervalId)
   }, [timeLeft])
-
-  useEffect(() => {
-    setTimer();
-  }, [])
 
   return (
     <div className='SmallTimer'>

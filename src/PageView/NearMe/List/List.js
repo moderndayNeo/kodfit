@@ -2,10 +2,12 @@ import React from "react";
 import "./List.css";
 
 export default function List({ title, data }) {
+  console.log(data);
   return (
     <div className="List">
         <h3 className="separator-center">List of {title}</h3>
         <ul className="content">
+          
           {data &&
             data.map((gym, index) => (
               <li key={gym.id} className="item">
@@ -14,8 +16,8 @@ export default function List({ title, data }) {
                 {gym.distance && `Distance: ${gym.distance}m`}
                 <br />
                 {
-                  gym.contacts?.[0].phone[0]?.value &&
-                  `Contact: ${gym.contacts[0].phone[0].value}`
+                   gym.contacts?.[0].phone?.[0].value &&
+                   `Contact: ${gym.contacts[0].phone[0].value}`
                 }
               </li>
             ))}
