@@ -6,8 +6,8 @@ const data = {
       backgroundColor: '#00AAEF',
       borderColor: '#00AAEF',
       borderWidth: 1,
-      hoverBackgroundColor: '#00AAEF',
-      hoverBorderColor: '#00AAEF',
+      hoverBackgroundColor: '#0094d0',
+      hoverBorderColor: '#0094d0',
       data: [0, 40, 20, 55, 0, 80, 30, 20]
     }
   ]
@@ -72,6 +72,7 @@ const option = {
     ]
   }
 }
+
 const barOption = {
   legend: {
     display: false
