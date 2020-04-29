@@ -1,7 +1,7 @@
 import React from 'react'
 import './Tracker.css'
 import { Bar, Line } from 'react-chartjs-2'
-import { line, lineOptions, barOptions, data } from './Data'
+import { lineChartData, lineStyles, barStyles, barChartData } from './Data'
 import 'chartjs-plugin-datalabels'
 
 export default function Tracker () {
@@ -17,7 +17,7 @@ console.log(localStorage)
         <div className='weight'>Your current weight:</div>
         <div>78kgs</div>
         <div className='line-graph grid-full'>
-          <Line data={line} options={lineOptions} />
+          <Line data={lineChartData} options={lineStyles} />
         </div>
         <div className='grid-full center'>April</div>
         <div>Total time spent working out</div>
@@ -27,7 +27,7 @@ console.log(localStorage)
         <div> 2 days </div>
         <div className='grid-full small-font'> 7 days </div>
         <div className=' grid-full'>
-          <Bar data={data} options={barOptions} />
+          <Bar data={barChartData} options={barStyles} />
         </div>
         <div className='grid-full center margin-bottom'>April</div>
       </main>

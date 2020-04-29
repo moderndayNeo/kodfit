@@ -1,19 +1,4 @@
-const data = {
-  labels: ['Sun', 'Mon', 'Tue', 'Wed', 'Thurs', 'Fri', 'Sat'],
-  datasets: [
-    {
-      label: 'hours',
-      backgroundColor: '#00AAEF',
-      borderColor: '#00AAEF',
-      borderWidth: 1,
-      hoverBackgroundColor: '#0094d0',
-      hoverBorderColor: '#0094d0',
-      data: [0, 40, 20, 55, 0, 80, 30, 20]
-    }
-  ]
-}
-
-const line = {
+const lineChartData = {
   labels: ['1', '2', '3', '4', '5', '6', '7', '8'],
   datasets: [
     {
@@ -34,7 +19,7 @@ const line = {
   ]
 }
 
-const lineOptions = {
+const lineStyles = {
   legend: {
     display: false
   },
@@ -73,7 +58,22 @@ const lineOptions = {
   }
 }
 
-const barOptions = {
+const barChartData = {
+  labels: ['Sun', 'Mon', 'Tue', 'Wed', 'Thurs', 'Fri', 'Sat'],
+  datasets: [
+    {
+      label: 'hours',
+      backgroundColor: '#00AAEF',
+      borderColor: '#00AAEF',
+      borderWidth: 1,
+      hoverBackgroundColor: '#0094d0',
+      hoverBorderColor: '#0094d0',
+      data: [0, 40, 20, 55, 0, 80, 30, 20]
+    }
+  ]
+}
+
+const barStyles = {
   legend: {
     display: false
   },
@@ -101,4 +101,4 @@ const barOptions = {
   }
 }
 
-export { line, lineOptions, barOptions, data };
+export { lineChartData, lineStyles, barStyles, barChartData };
