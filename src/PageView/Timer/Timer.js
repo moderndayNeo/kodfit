@@ -4,7 +4,7 @@ import './Timer.css';
 import { FaPlay, FaRegStopCircle } from 'react-icons/fa';
 import { MdSettingsBackupRestore } from "react-icons/md";
 import { Link } from 'react-router-dom';
-import SmallTimer from './SmallTimer/SmallTimer';
+
 
 class Timer extends React.Component {
     constructor() {
@@ -51,7 +51,7 @@ class Timer extends React.Component {
             clearInterval(this.timer);
         } else {
             let total = +this.state.inputHours + +this.state.inputMinutes + +this.state.inputSeconds;
-            
+            // eslint-disable-next-line 
             if (total > 0 && this.state.runningTimer === 0 || !this.state.toSeconds) {
                 this.setState({
                     toSeconds: total,
