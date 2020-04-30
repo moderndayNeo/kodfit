@@ -1,30 +1,16 @@
 .Profile {
     text-align: center;
 }
-.Profile .container {
-    display: grid;
-    padding: 0;
-}
 
 .Profile .container-content:first-child {
     background-image: url('../../common/images/profile-background-opacity-fixed.jpg');
     background-size: cover;
 }
-.Profile .profileBox {
-    display: grid;
-    height: 45vh;
-    place-content: center;
-}
 
 .Profile .profileBox-photo img {
     width: 180px;
-    height: 180px;
     border-radius: 100%;
     margin-top: 2rem;
-}
-
-.Profile .profileBox-userInfo {
-    margin-top: 1rem;
 }
 
 .Profile .PersonalInfo {
@@ -39,9 +25,7 @@
     place-content: center;
 }
 
-.Profile .personalInfo-content > * {
-    margin-top: 3px;
-}
+
 
 .Profile .Goal {
     border: .1rem solid #00aaef;
