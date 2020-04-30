@@ -7,4 +7,10 @@
     border-radius: 5%;
     width: 300px;
     height: 400px;
+    display: flex;
+    flex-direction: column;
+}
+
+.Popup input {
+    font-size: 22px;
 }
