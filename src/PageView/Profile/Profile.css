@@ -2,31 +2,6 @@
     text-align: center;
 }
 
-/* .Profile .container-content:first-child {
-    background-image: url('../../common/images/profile-background-opacity-fixed.jpg');
-    background-size: cover;
-}
-
-.Profile .profileBox-photo img {
-    width: 180px;
-    border-radius: 100%;
-    margin-top: 2rem;
-}
-
-.Profile .PersonalInfo {
-    padding: 1rem 0;
-    display: flex;
-}
-
-.Profile .personalInfo-content {
-    flex-basis: 1;
-    display: grid;
-    padding: 0 1rem;
-    place-content: center;
-} */
-
-
-
 .Profile .Goal {
     border: .1rem solid #00aaef;
     border-radius: 2rem;
@@ -42,22 +17,6 @@
     display: grid;
 }
 
-.Profile .container-content:nth-child(2) {
-    margin-top: 2rem;
-}
-
-.Profile .container-content:last-child {
-    display: grid;
-    place-content: center;
-    position: relative;
-    margin: 0 1rem;
-    margin-top: 2rem;
-}
-
-.Profile .text-bold {
-    font-size: 20px;
-    font-weight: bold;
-}
 
 @media (min-width: 600px) {
     .Profile .profileBox {
