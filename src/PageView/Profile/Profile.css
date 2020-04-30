@@ -2,7 +2,7 @@
     text-align: center;
 }
 
-.Profile .container-content:first-child {
+/* .Profile .container-content:first-child {
     background-image: url('../../common/images/profile-background-opacity-fixed.jpg');
     background-size: cover;
 }
@@ -23,7 +23,7 @@
     display: grid;
     padding: 0 1rem;
     place-content: center;
-}
+} */
 
 
 
