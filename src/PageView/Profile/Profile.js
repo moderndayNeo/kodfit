@@ -24,15 +24,6 @@ export default function Profile() {
         <div className="Profile">
             <div className="container">
 
-                {/* <div className="container-content">
-                    <div className="profileBox">
-                        <div className="profileBox-photo">
-                            <img src={userImageUrl} alt={userName} />
-                        </div>
-                        <h2 className="profileBox-userInfo">{userName}</h2>
-                    </div>
-                </div> */}
-
                 <UserProfile />
                 <br />
                 <h1>Weight Markers</h1>
@@ -56,6 +47,7 @@ export default function Profile() {
                 <br />
                 Goal weight is: {goalWeight}
                 <br />
+                
                 <div className="container-content">
                     <Goal />
                 </div>

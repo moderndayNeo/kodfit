@@ -1,0 +1,38 @@
+.UserProfile .container-content:first-child {
+    background-image: url('../../../common/images/profile-background-opacity-fixed.jpg');
+    background-size: cover;
+}
+
+.UserProfile .profileBox-photo img {
+    width: 180px;
+    border-radius: 50%;
+    margin-top: 2rem;
+}
+
+.UserProfile .PersonalInfo {
+    padding: 1rem 0;
+    display: flex;
+}
+
+.UserProfile .personalInfo-content {
+    flex-basis: 1;
+    display: grid;
+    padding: 0 1rem;
+    place-content: center;
+}
+
+@media (min-width: 600px) {
+    .UserProfile .profileBox {
+        height: 52vh;
+    }
+
+    .Profile .profileBox-photo img{
+        height: 200px;
+        width: 200px;
+    }
+
+    .Profile .PersonalInfo > * {
+        margin: 0 5.5rem;
+        font-size: 20px;
+    }
+} 
