@@ -1,8 +1,8 @@
-import React from "react";
-import "./Profile.css";
-import { Bar } from "react-chartjs-2";
-import { barStyles, barChartData } from "../Tracker/Data";
-import Goal from "./Goal/Goal";
+import React from 'react';
+import './Profile.css';
+import { Bar } from 'react-chartjs-2';
+import { barStyles, barChartData } from '../Tracker/Data';
+import Goal from './Goal/Goal';
 
 export default function Profile() {
     const userName = localStorage.getItem("userName");
