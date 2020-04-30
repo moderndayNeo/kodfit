@@ -1,22 +1,16 @@
-import React from "react";
-import "./Profile.css";
-import { Bar } from "react-chartjs-2";
-import { barStyles, barChartData } from "../Tracker/Data";
-import UserProfile from "./UserProfile/UserProfile";
+import React from 'react';
+import './Profile.css';
+import { Bar } from 'react-chartjs-2';
+import { barStyles, barChartData } from '../Tracker/Data';
+import UserProfile from './UserProfile/UserProfile';
 
 export default function Profile() {
     console.log(localStorage);
 
     return (
         <div className="Profile">
-            <div className="container">
-                <UserProfile />
-
-                <h3>Daily Workout Duration</h3>
-                <div className="graph">
-                    <Bar data={barChartData} options={barStyles} />
-                </div>
-            </div>
+            <UserProfile />
+            <Bar className="graph" data={barChartData} options={barStyles} />
         </div>
     );
 }
