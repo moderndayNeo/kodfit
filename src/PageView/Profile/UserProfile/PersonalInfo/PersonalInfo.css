@@ -1,10 +1,21 @@
-.Profile .text-bold {
+.PersonalInfo {
+    padding: 1rem 0;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.PersonalInfo .text-bold {
     font-size: 20px;
     font-weight: bold;
 }
 
 @media (min-width: 600px) {
-    .Profile .text-bold {
+    .PersonalInfo .text-bold {
         font-size: 24px;
+    }
+
+    .PersonalInfo > * {
+        margin: 0 5.5rem;
+        font-size: 20px;
     }
 }

@@ -4,22 +4,22 @@ import './PersonalInfo.css';
 export default function PersonalInfo() {
     return (
         <div className="PersonalInfo">
-            <div className="personalInfo-content">
-                <span>weight</span>
-                <span className="text-bold">78kg</span>
+
+            <div className="detail">
+                <p className="title">Age</p>
+                <p className="value text-bold">25</p>
             </div>
-            <div className="personalInfo-content">
-                <span>height</span>
-                <span className="text-bold">180 cm</span>
+            <div className="detail">
+                <p className="title">Sex</p>
+                <p className="value text-bold">M</p>
             </div>
-            <div className="personalInfo-content">
-                <span>bmi</span>
-                <span className="text-bold">20</span>
+            <div className="detail">
+                <p className="title">Height</p>
+                <p className="value text-bold">186</p>
             </div>
-            <div className="personalInfo-content">
-                <span>sex</span>
-                <span className="text-bold">M</span>
-            </div>
+
+
+
         </div>
-    )
+    );
 }
