@@ -1,6 +1,5 @@
 import React from "react";
 import "./Profile.css";
-import PersonalInfo from "./PersonalInfo/PersonalInfo";
 import { Bar } from "react-chartjs-2";
 import { barStyles, barChartData } from "../Tracker/Data";
 import Goal from "./Goal/Goal";
@@ -31,7 +30,6 @@ export default function Profile() {
                             <img src={userImageUrl} alt={userName} />
                         </div>
                         <h2 className="profileBox-userInfo">{userName}</h2>
-                        <PersonalInfo />
                     </div>
                 </div>
                 <br />
