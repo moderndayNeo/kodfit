@@ -6,25 +6,35 @@ import Goal from "./Goal/Goal";
 import UserProfile from "./UserProfile/UserProfile";
 
 export default function Profile() {
+    // const currentWeight = localStorage.currentWeight;
+    // const goalWeight = localStorage.goalWeight;
 
-    const currentWeight = localStorage.currentWeight;
-    const goalWeight = localStorage.goalWeight;
+    // const setCurrentWeight = (weight) => {
+    //     localStorage.currentWeight = weight;
+    // };
 
-    const setCurrentWeight = (weight) => {
-        localStorage.currentWeight = weight;
-    };
-
-    const setGoalWeight = (weight) => {
-        localStorage.goalWeight = weight;
-    };
+    // const setGoalWeight = (weight) => {
+    //     localStorage.goalWeight = weight;
+    // };
 
     console.log(localStorage);
 
     return (
         <div className="Profile">
             <div className="container">
-
                 <UserProfile />
+
+                <Goal />
+                <h3>Daily Workout Duration</h3>
+                <div className="graph">
+                    <Bar data={barChartData} options={barStyles} />
+                </div>
+            </div>
+        </div>
+    );
+}
+
+/*
                 <br />
                 <h1>Weight Markers</h1>
                 <input
@@ -47,17 +57,4 @@ export default function Profile() {
                 <br />
                 Goal weight is: {goalWeight}
                 <br />
-                
-                <div className="container-content">
-                    <Goal />
-                </div>
-                <div className="container-content">
-                    <h3>Daily Workout Duration</h3>
-                    <div className="graph">
-                        <Bar data={barChartData} options={barStyles} />
-                    </div>
-                </div>
-            </div>
-        </div>
-    );
-}
+*/
