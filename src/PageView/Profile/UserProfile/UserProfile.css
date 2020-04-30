@@ -1,4 +1,4 @@
-.UserProfile .container-content:first-child {
+.UserProfile {
     background-image: url('../../../common/images/profile-background-opacity-fixed.jpg');
     background-size: cover;
 }
@@ -22,7 +22,7 @@
 }
 
 @media (min-width: 600px) {
-    .UserProfile .profileBox {
+    .UserProfile {
         height: 52vh;
     }
 

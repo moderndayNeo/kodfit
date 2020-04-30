@@ -6,16 +6,6 @@ import Goal from "./Goal/Goal";
 import UserProfile from "./UserProfile/UserProfile";
 
 export default function Profile() {
-    // const currentWeight = localStorage.currentWeight;
-    // const goalWeight = localStorage.goalWeight;
-
-    // const setCurrentWeight = (weight) => {
-    //     localStorage.currentWeight = weight;
-    // };
-
-    // const setGoalWeight = (weight) => {
-    //     localStorage.goalWeight = weight;
-    // };
 
     console.log(localStorage);
 
@@ -34,7 +24,25 @@ export default function Profile() {
     );
 }
 
+
+
+
+
+
+
+
 /*
+    // const currentWeight = localStorage.currentWeight;
+    // const goalWeight = localStorage.goalWeight;
+
+    // const setCurrentWeight = (weight) => {
+    //     localStorage.currentWeight = weight;
+    // };
+
+    // const setGoalWeight = (weight) => {
+    //     localStorage.goalWeight = weight;
+    // };
+
                 <br />
                 <h1>Weight Markers</h1>
                 <input
