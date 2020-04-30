@@ -6,7 +6,7 @@ import UserProfile from "./UserProfile/UserProfile";
 import Popup from "./Popup/Popup";
 
 export default function Profile() {
-    const [popup, setPopup] = useState(false);
+    const [popup, setPopup] = useState(true);
     
     console.log(localStorage);
 
