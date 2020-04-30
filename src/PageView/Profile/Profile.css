@@ -1,18 +1,3 @@
 .Profile {
     text-align: center;
 }
-
-.Profile .Goal {
-    border: .1rem solid #00aaef;
-    border-radius: 2rem;
-    margin: 0 1rem;
-    padding: 10px 0;
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    justify-content: center;
-    align-items: center;
-}
-
-.Profile .goal > * {
-    display: grid;
-}

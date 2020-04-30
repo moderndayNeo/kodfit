@@ -9,7 +9,7 @@ export default function UserProfile() {
     return (
         <div className="UserProfile">
             <img className="userImage" src={userImageUrl} alt={userName} />
-            <h2 className="profileBox-userInfo">{userName}</h2>
+            <h2>{userName}</h2>
             <PersonalInfo />
         </div>
     );

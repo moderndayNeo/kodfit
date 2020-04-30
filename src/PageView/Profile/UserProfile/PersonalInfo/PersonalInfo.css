@@ -4,7 +4,7 @@
     justify-content: space-evenly;
 }
 
-.PersonalInfo .text-bold {
+.PersonalInfo .value {
     font-size: 20px;
     font-weight: bold;
 }
