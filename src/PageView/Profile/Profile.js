@@ -47,6 +47,7 @@ export default function Profile() {
                 <br />
                 Goal weight is: {goalWeight}
                 <br />
+                
                 <div className="container-content">
                     <Goal />
                 </div>
