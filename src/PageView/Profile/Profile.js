@@ -2,11 +2,9 @@ import React from "react";
 import "./Profile.css";
 import { Bar } from "react-chartjs-2";
 import { barStyles, barChartData } from "../Tracker/Data";
-import Goal from "./Goal/Goal";
 import UserProfile from "./UserProfile/UserProfile";
 
 export default function Profile() {
-
     console.log(localStorage);
 
     return (
@@ -14,7 +12,6 @@ export default function Profile() {
             <div className="container">
                 <UserProfile />
 
-                <Goal />
                 <h3>Daily Workout Duration</h3>
                 <div className="graph">
                     <Bar data={barChartData} options={barStyles} />
@@ -23,13 +20,6 @@ export default function Profile() {
         </div>
     );
 }
-
-
-
-
-
-
-
 
 /*
     // const currentWeight = localStorage.currentWeight;
