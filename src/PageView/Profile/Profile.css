@@ -16,29 +16,3 @@
 .Profile .goal > * {
     display: grid;
 }
-
-
-@media (min-width: 600px) {
-    .Profile .profileBox {
-        height: 52vh;
-    }
-
-    .Profile .profileBox-photo img{
-        height: 200px;
-        width: 200px;
-    }
-
-    .Profile .PersonalInfo > * {
-        margin: 0 5.5rem;
-        font-size: 20px;
-    }
-
-    .Profile .text-bold {
-        font-size: 24px;
-    }
-
-    .Profile .container-content:last-child {
-        grid-template-columns: 30% 1fr;
-        align-items: center;
-    }
-}
