@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import "./Profile.css";
 import { Bar } from "react-chartjs-2";
 import { barStyles, barChartData } from "../Tracker/Data";
@@ -6,12 +6,17 @@ import UserProfile from "./UserProfile/UserProfile";
 import Popup from "./Popup/Popup";
 
 export default function Profile() {
+    const [popup, setPopup] = useState(false);
+    
     console.log(localStorage);
 
     return (
         <div className="Profile">
-            <Popup />
-            <button className="button primary rounded-capsule update-stats">
+            {popup && <Popup />}
+            <button
+                className="button primary rounded-capsule update-stats"
+                onClick={() => setPopup(!popup)}
+            >
                 Update your stats
             </button>
             <UserProfile />
