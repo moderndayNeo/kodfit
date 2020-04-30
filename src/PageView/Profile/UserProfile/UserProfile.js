@@ -8,10 +8,8 @@ export default function UserProfile() {
 
     return (
         <div className="UserProfile">
-                    <div className="profileBox-photo">
-                        <img src={userImageUrl} alt={userName} />
-                    </div>
-                    <h2 className="profileBox-userInfo">{userName}</h2>
+            <img className="userImage" src={userImageUrl} alt={userName} />
+            <h2 className="profileBox-userInfo">{userName}</h2>
             <PersonalInfo />
         </div>
     );
