@@ -1,27 +1,24 @@
-import React from 'react';
-import './Profile.css';
-import { Bar } from 'react-chartjs-2';
-import { barStyles, barChartData } from '../Tracker/Data';
-import UserProfile from './UserProfile/UserProfile';
+import React from "react";
+import "./Profile.css";
+import { Bar } from "react-chartjs-2";
+import { barStyles, barChartData } from "../Tracker/Data";
+import UserProfile from "./UserProfile/UserProfile";
+import Popup from "./Popup/Popup";
 
 export default function Profile() {
     console.log(localStorage);
 
     return (
         <div className="Profile">
-            <button className="button primary rounded-capsule update-stats">Update your stats</button>
+            <Popup />
+            <button className="button primary rounded-capsule update-stats">
+                Update your stats
+            </button>
             <UserProfile />
             <Bar className="graph" data={barChartData} options={barStyles} />
         </div>
     );
 }
-
-
-
-
-
-
-
 
 /*
     // const currentWeight = localStorage.currentWeight;
