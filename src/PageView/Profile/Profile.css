@@ -1,3 +1,9 @@
 .Profile {
     text-align: center;
+    border: 1px indianred dotted;
+}
+
+.Profile .update-stats {
+    position: absolute;
+    top: 0;
 }

@@ -9,11 +9,19 @@ export default function Profile() {
 
     return (
         <div className="Profile">
+            <button className="button primary rounded-capsule update-stats">Update your stats</button>
             <UserProfile />
             <Bar className="graph" data={barChartData} options={barStyles} />
         </div>
     );
 }
+
+
+
+
+
+
+
 
 /*
     // const currentWeight = localStorage.currentWeight;
