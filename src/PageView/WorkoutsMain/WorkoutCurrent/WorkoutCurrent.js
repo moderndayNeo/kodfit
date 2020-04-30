@@ -17,7 +17,7 @@ export default function WorkoutCurrent() {
             }, time);
             return () => clearInterval(interval);
         }
-   }, [position]);
+   }, [position, exercises.calendarExercisesList.length, time]);
 
     let itemIndex = exercises.calendarExercisesList[position];
 
