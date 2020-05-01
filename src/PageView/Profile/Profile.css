@@ -13,6 +13,6 @@
 }
 
 .Profile.faded {
-    filter: brightness(0.5);  
+    /* filter: brightness(0.5);   */
     transition: 1s ease;
 }
