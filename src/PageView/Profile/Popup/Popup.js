@@ -25,9 +25,9 @@ export default function Popup() {
             <h2 className="title">Update Your Stats</h2>
             <div className="container">
                 <Input title="Age" type="number" placeholder="--" onChange={e => setAge(e.target.value)} />
-                <Input title="Height" type="number" placeholder="--" onChange={e => setHeight(e.target.value)} />
-                <Input title="Current Weight" type="number" placeholder="--" onChange={e => setCurrentWeight(e.target.value)} />
-                <Input title="Goal Weight" type="number" placeholder="--" onChange={e => setGoalWeight(e.target.value)} />
+                <Input title="Height (cm)" type="number" placeholder="--" onChange={e => setHeight(e.target.value)} />
+                <Input title="Current Weight (kg)" type="number" placeholder="--" onChange={e => setCurrentWeight(e.target.value)} />
+                <Input title="Goal Weight (kg)" type="number" placeholder="--" onChange={e => setGoalWeight(e.target.value)} />
             </div>
             <button className="button primary">Update</button>
         </div>
