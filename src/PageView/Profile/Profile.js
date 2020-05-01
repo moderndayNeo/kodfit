@@ -12,7 +12,7 @@ export default function Profile() {
 
     return (
         <div className="Profile">
-            {popup && <Popup />}
+            {popup && <Popup onClick={() => setPopup(!popup)} />}
             <button
                 className="button primary rounded-capsule update-stats"
                 onClick={() => setPopup(!popup)}

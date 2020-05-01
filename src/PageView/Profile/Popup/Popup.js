@@ -1,24 +1,9 @@
 import React from "react";
 import "./Popup.css";
 import Input from "./Input/Input";
+import { setAge, setCurrentWeight, setHeight, setGoalWeight } from './updateSettings';
 
-export default function Popup() {
-
-    const setAge = (age) => {
-        localStorage.age = age;
-    }
-
-    const setHeight = (height) => {
-        localStorage.height = height;
-    }
-
-    const setCurrentWeight = (weight) => {
-        localStorage.currentWeight = weight;
-    }
-
-    const setGoalWeight = (weight) => {
-        localStorage.goalWeight = weight;
-    }
+export default function Popup({ onClick }) {
 
     return (
         <div className="Popup">
@@ -29,7 +14,7 @@ export default function Popup() {
                 <Input title="Current Weight (kg)" type="number" placeholder="--" onChange={e => setCurrentWeight(e.target.value)} />
                 <Input title="Goal Weight (kg)" type="number" placeholder="--" onChange={e => setGoalWeight(e.target.value)} />
             </div>
-            <button className="button primary">Update</button>
+            <button className="button primary" onClick={onClick}>Update</button>
         </div>
     );
 }
