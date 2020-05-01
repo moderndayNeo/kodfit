@@ -1,11 +1,10 @@
-.Input {
-    /* border-top: 1px var(--kodfit-blue) solid; */
+.InputField {
     border-bottom: 1px var(--kodfit-blue) solid;
     display: flex;
     justify-content: space-between;
 }
 
-.Input input {
+.InputField input {
     width: 50px;
-    text-align: center;
+    font-size: 16px;
 }

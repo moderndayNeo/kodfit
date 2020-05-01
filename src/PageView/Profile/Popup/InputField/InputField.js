@@ -1,9 +1,9 @@
 import React from 'react';
-import './Input.css';
+import './InputField.css';
 
-export default function Input({ title, type, placeholder, onChange }) {
+export default function InputField({ title, type, placeholder, onChange }) {
     return (
-        <div className="Input">
+        <div className="InputField">
             <p className="title">{title}</p>
             <input type={type} placeholder={placeholder} onChange={onChange} />
         </div>

@@ -1,6 +1,6 @@
 import React from "react";
 import "./Popup.css";
-import Input from "./Input/Input";
+import InputField from "./InputField/InputField";
 import {
     setAge,
     setCurrentWeight,
@@ -14,13 +14,13 @@ export default function Popup({ onClick }) {
             <div className="popup-box">
                 <h2 className="title">Update Your Stats</h2>
                 <div className="centre-text">
-                    <Input
+                    <InputField
                         title="Age"
                         type="number"
                         placeholder={localStorage.age ? localStorage.age : "--"}
                         onChange={(e) => setAge(e.target.value)}
                     />
-                    <Input
+                    <InputField
                         title="Height (cm)"
                         type="number"
                         placeholder={
@@ -28,7 +28,7 @@ export default function Popup({ onClick }) {
                         }
                         onChange={(e) => setHeight(e.target.value)}
                     />
-                    <Input
+                    <InputField
                         title="Current Weight (kg)"
                         type="number"
                         placeholder={
@@ -38,7 +38,7 @@ export default function Popup({ onClick }) {
                         }
                         onChange={(e) => setCurrentWeight(e.target.value)}
                     />
-                    <Input
+                    <InputField
                         title="Goal Weight (kg)"
                         type="number"
                         placeholder={
