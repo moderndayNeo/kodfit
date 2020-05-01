@@ -1,12 +1,20 @@
 .Popup {
     position: absolute;
-    top: 50px;
-    left: 10vw;
-    background-color: white;
-    border: 2px var(--kodfit-blue) solid;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.837);
+}
+
+.Popup .popup-box {
     border-radius: 5%;
+    position: absolute;
+    top: 50px;
+    left: 10%;
+    margin: auto;
     width: 80%;
     height: 60%;
+    background-color: white;
+    border: 2px var(--kodfit-blue) solid;    
 }
 
 .Popup .container {
@@ -19,6 +27,13 @@
     font-size: 22px;
 }
 
-.Popup .opaque {
-    /* filter: brightness(1); */
-}
+/*
+position: absolute;
+top: 50px;
+left: 10vw;
+background-color: white;
+border: 2px var(--kodfit-blue) solid;
+border-radius: 5%;
+width: 80%;
+height: 60%;
+*/
