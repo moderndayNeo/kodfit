@@ -6,7 +6,7 @@
     border: 2px var(--kodfit-blue) solid;
     border-radius: 5%;
     width: 80%;
-    height: 80%;
+    height: 60%;
 }
 
 .Popup .container {
@@ -17,4 +17,8 @@
 
 .Popup input {
     font-size: 22px;
+}
+
+.Popup .opaque {
+    /* filter: brightness(1); */
 }

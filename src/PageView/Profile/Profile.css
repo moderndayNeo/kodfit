@@ -11,3 +11,8 @@
 .Profile .stats {
     /* text-align: left; */
 }
+
+.Profile.faded {
+    filter: brightness(0.5);  
+    transition: 1s ease;
+}

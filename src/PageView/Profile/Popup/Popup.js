@@ -3,10 +3,10 @@ import "./Popup.css";
 import Input from "./Input/Input";
 import { setAge, setCurrentWeight, setHeight, setGoalWeight } from './updateSettings';
 
-export default function Popup({ onClick }) {
+export default function Popup({ onClick, faded }) {
 
     return (
-        <div className="Popup">
+        <div className={`Popup ${faded && "opaque"}`}>
             <h2 className="title">Update Your Stats</h2>
             <div className="container">
                 <Input title="Age" type="number" placeholder="--" onChange={e => setAge(e.target.value)} />

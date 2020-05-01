@@ -11,8 +11,8 @@ export default function Profile() {
     console.log(localStorage);
 
     return (
-        <div className="Profile">
-            {popup && <Popup onClick={() => setPopup(!popup)} />}
+        <div className={`Profile ${popup && "faded"}`}>
+            {popup && <Popup onClick={() => setPopup(!popup)} faded={!popup} />}
             <button
                 className="button primary rounded-capsule update-stats"
                 onClick={() => setPopup(!popup)}
