@@ -1,0 +1,11 @@
+.Input {
+    border: 1px red solid;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.Input input {
+    border: 1px black solid;
+    width: 50px;
+    text-align: center;
+}
