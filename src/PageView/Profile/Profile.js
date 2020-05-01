@@ -20,43 +20,23 @@ export default function Profile() {
                 Update your stats
             </button>
             <UserProfile />
+            <section className="stats">
+                <h2>Your Stats</h2>
+                <p>Goal weight</p>
+                <p>Current weight</p>
+                <p>BMI</p>
+                <p>Target BMI</p>
+            </section>
             <Bar className="graph" data={barChartData} options={barStyles} />
         </div>
     );
 }
 
 /*
-    // const currentWeight = localStorage.currentWeight;
-    // const goalWeight = localStorage.goalWeight;
-
-    // const setCurrentWeight = (weight) => {
-    //     localStorage.currentWeight = weight;
-    // };
-
-    // const setGoalWeight = (weight) => {
-    //     localStorage.goalWeight = weight;
-    // };
-
-                <br />
-                <h1>Weight Markers</h1>
-                <input
-                    type="number"
-                    onChange={(e) => setCurrentWeight(e.target.value)}
-                    placeholder="Insert Current Weight Here"
-                />
-                <input
-                    type="number"
-                    onChange={(e) => setGoalWeight(e.target.value)}
-                    placeholder="Insert Goal Weight Here"
-                />
                 <button
                     className="button primary"
                     onClick={() => window.location.reload()}
                 >
                     Update weight markers
                 </button>
-                Current weight is: {currentWeight}
-                <br />
-                Goal weight is: {goalWeight}
-                <br />
 */
