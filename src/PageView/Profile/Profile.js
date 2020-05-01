@@ -6,7 +6,7 @@ import UserProfile from "./UserProfile/UserProfile";
 import Popup from "./Popup/Popup";
 
 export default function Profile() {
-    const [popup, setPopup] = useState(true);
+    const [popup, setPopup] = useState(false);
     
     console.log(localStorage);
 
@@ -22,8 +22,8 @@ export default function Profile() {
             <UserProfile />
             <section className="stats">
                 <h2>Your Stats</h2>
-                <p>Goal weight</p>
-                <p>Current weight</p>
+    <p>Goal weight: {localStorage.goalWeight}kg</p>
+                <p>Current weight: {localStorage.currentWeight}kg</p>
                 <p>BMI</p>
                 <p>Target BMI</p>
             </section>
@@ -31,12 +31,3 @@ export default function Profile() {
         </div>
     );
 }
-
-/*
-                <button
-                    className="button primary"
-                    onClick={() => window.location.reload()}
-                >
-                    Update weight markers
-                </button>
-*/
