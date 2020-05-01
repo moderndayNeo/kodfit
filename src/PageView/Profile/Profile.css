@@ -1,13 +1,10 @@
 .Profile {
     text-align: center;
     border: 1px indianred dotted;
+    position: relative;
 }
 
 .Profile .update-stats {
     position: absolute;
     top: 0;
-}
-
-.Profile .stats {
-    /* text-align: left; */
 }

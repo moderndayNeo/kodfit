@@ -13,7 +13,7 @@ export default function Popup({ onClick }) {
         <div className="Popup">
             <div className="popup-box">
                 <h2 className="title">Update Your Stats</h2>
-                <div className="container">
+                <div className="centre-text">
                     <Input
                         title="Age"
                         type="number"
