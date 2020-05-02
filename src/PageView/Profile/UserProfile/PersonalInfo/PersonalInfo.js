@@ -15,7 +15,7 @@ export default function PersonalInfo() {
             </div>
             <div className="detail">
                 <p className="title">Height</p>
-                <p className="value">{localStorage.height}</p>
+                <p className="value">{localStorage.height / 100}m</p>
             </div>
 
         </div>
