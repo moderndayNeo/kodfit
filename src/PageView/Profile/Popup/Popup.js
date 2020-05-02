@@ -12,7 +12,7 @@ export default function Popup({ onClick }) {
     return (
         <div className="Popup">
             <div className="popup-box">
-                <h2 className="title">Update Your Stats</h2>
+                <h2 className="header">Update Your Stats</h2>
                 <div className="centre-text">
                     <InputField
                         title="Age"
@@ -49,7 +49,7 @@ export default function Popup({ onClick }) {
                         onChange={(e) => setGoalWeight(e.target.value)}
                     />
                 </div>
-                <button className="button primary" onClick={onClick}>
+                <button className="update button primary" onClick={onClick}>
                     Update
                 </button>
             </div>

@@ -20,7 +20,15 @@
     border: 2px var(--kodfit-blue) solid;
 }
 
+.Popup .header {
+    margin: 20px;
+}
+
 .Popup .centre-text {
     width: 70%;
     margin: 0 auto;
+}
+
+.Popup .update {
+    margin: 30px;
 }
