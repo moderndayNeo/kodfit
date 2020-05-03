@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import "./Profile.css";
 import { Bar } from "react-chartjs-2";
 import { barStyles, barChartData } from "../Tracker/Data";
@@ -12,10 +12,16 @@ export default function Profile() {
 
     console.log(localStorage);
 
+    const updateStats = () => {
+        setPopup(!popup);
+        window.location.reload();
+    }
+
+
     return (
         <div className="Profile">
             <PopupButton onClick={() => setPopup(!popup)} />
-            {popup && <Popup onClick={() => setPopup(!popup)} />}
+            {popup && <Popup onClick={() => updateStats()} />}
             <UserProfile />
             <Stats />
             <Bar className="graph" data={barChartData} options={barStyles} />

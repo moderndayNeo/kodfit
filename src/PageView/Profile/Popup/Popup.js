@@ -7,6 +7,8 @@ import {
     setHeight,
     setGoalWeight,
 } from "./updateSettings";
+import './UpdateButton/UpdateButton';
+import UpdateButton from "./UpdateButton/UpdateButton";
 
 export default function Popup({ onClick }) {
     return (
@@ -49,9 +51,7 @@ export default function Popup({ onClick }) {
                         onChange={(e) => setGoalWeight(e.target.value)}
                     />
                 </div>
-                <button className="update button primary" onClick={onClick}>
-                    Update
-                </button>
+                <UpdateButton onClick={onClick} />
             </div>
         </div>
     );
