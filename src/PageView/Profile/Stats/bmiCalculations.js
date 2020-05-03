@@ -2,7 +2,7 @@ const heightInM = localStorage.height / 100;
 const currentWeight = localStorage.currentWeight;
 const goalWeight = localStorage.goalWeight;
 
-const calculateBMI = (height, weight) => weight / (height ^ 2);
+const calculateBMI = (height, weight) => weight / Math.pow(height, 2);
 
 const goalBMI = calculateBMI(heightInM, goalWeight);
 const currentBMI = calculateBMI(heightInM, currentWeight);
