@@ -8,15 +8,12 @@ import PopupButton from "./PopupButton/PopupButton";
 import Stats from './Stats/Stats';
 
 export default function Profile() {
-    const [popup, setPopup] = useState(true);
-
-    console.log(localStorage);
-
+    const [popup, setPopup] = useState(false);
+    
     const updateStats = () => {
         setPopup(!popup);
         window.location.reload();
     }
-
 
     return (
         <div className="Profile">
