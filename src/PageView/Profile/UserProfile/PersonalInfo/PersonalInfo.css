@@ -10,12 +10,8 @@
 }
 
 @media (min-width: 600px) {
-    .PersonalInfo .text-bold {
-        font-size: 24px;
-    }
-
-    .PersonalInfo > * {
-        margin: 0 5.5rem;
-        font-size: 20px;
+    .PersonalInfo {
+        width: 700px;
+        margin: auto;
     }
 }

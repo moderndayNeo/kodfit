@@ -7,4 +7,12 @@
 .InputField input {
     width: 50px;
     font-size: 16px;
+    text-align: center;
 }
+/* 
+@media (min-width: 600px) {
+    .InputField {
+        width: 300px;
+        margin: auto;
+    }
+} */

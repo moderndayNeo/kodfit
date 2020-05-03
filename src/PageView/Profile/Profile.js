@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import "./Profile.css";
 import { Bar } from "react-chartjs-2";
 import { barStyles, barChartData } from "../Tracker/Data";
@@ -8,7 +8,7 @@ import PopupButton from "./PopupButton/PopupButton";
 import Stats from './Stats/Stats';
 
 export default function Profile() {
-    const [popup, setPopup] = useState(false);
+    const [popup, setPopup] = useState(true);
 
     console.log(localStorage);
 
