@@ -14,10 +14,10 @@ export default function Stats({ setBmi }) {
             <div className="stats-container">
                 <p>Current weight: {localStorage.currentWeight ? `${localStorage.currentWeight}kg` : '--'}
                     </p>
-                <p>BMI: {roundedCurrentBMI}</p>
+                <p>BMI: {!isNaN(roundedCurrentBMI) ? roundedCurrentBMI : '--'}</p>
                 <p>Goal weight: {localStorage.goalWeight ? `${localStorage.goalWeight}kg` : '--'}
                     </p>
-                <p>Target BMI: {roundedGoalBMI ? roundedGoalBMI : '--'}</p>
+                <p>Target BMI: {!isNaN(roundedGoalBMI) ? roundedGoalBMI : '--'}</p>
             </div>
         </section>
     );
