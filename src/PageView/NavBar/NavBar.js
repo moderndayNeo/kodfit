@@ -10,7 +10,7 @@ export default function NavBar() {
     {name: 'schedule', path: 'calendar', icon: <FaCalendarAlt />},
     {name: 'nearby', path: 'near-me', icon: <MdLocationOn />},
     {name: 'workout', path: 'workouts/home', icon: <FaDumbbell />},
-    {name: 'progress', path: 'tracker', icon: <MdInsertChart />},
+    {name: 'tracker', path: 'tracker', icon: <MdInsertChart />},
     {name: 'profile', path: 'profile', icon: <MdAccountCircle />},
   ]
 
