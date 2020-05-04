@@ -12,8 +12,8 @@ console.log(localStorage)
     <div className='Tracker'>
       <h2 className='separator-center trackerTitle'>Tracker</h2>
       <main className='container'>
-        <div className='center grid-full'>Your weight goals: 82kgs</div>
-        <div className='center grid-full'>Your current weight: 78kgs </div>
+        <div className='center grid-full'>Your weight goals: {localStorage.goalWeight} kg</div>
+        <div className='center grid-full'>Your current weight: {localStorage.currentWeight} kg </div>
         <div className='line-graph grid-full'>
           <Line data={lineChartData} options={lineStyles} />
         </div>

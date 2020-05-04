@@ -1,37 +1,30 @@
-import React from 'react';
-import './Profile.css';
-import PersonalInfo from './PersonalInfo/PersonalInfo';
-import { Bar } from 'react-chartjs-2'
-import { barStyles, barChartData } from '../Tracker/Data';
-import Goal from './Goal/Goal';
+import React, { useState } from "react";
+import "./Profile.css";
+import { Bar } from "react-chartjs-2";
+import { barStyles, barChartData } from "../Tracker/Data";
+import UserProfile from "./UserProfile/UserProfile";
+import Popup from "./Popup/Popup";
+import PopupButton from "./PopupButton/PopupButton";
+import Stats from './Stats/Stats';
 
 export default function Profile() {
+    const [popup, setPopup] = useState(true);
 
-    const userName = localStorage.getItem('userName');
-    const userImageUrl = localStorage.getItem('userImageUrl');
+    console.log(localStorage);
+
+    const updateStats = () => {
+        setPopup(!popup);
+        window.location.reload();
+    }
+
 
     return (
         <div className="Profile">
-            <div className="container">
-                <div className="container-content">
-                    <div className="profileBox">
-                        <div className="profileBox-photo">
-                            <img src={userImageUrl} alt={userName} />
-                        </div>
-                        <h2 className="profileBox-userInfo">{userName}</h2>
-                        <PersonalInfo />
-                    </div>
-                </div>
-                <div className="container-content">
-                    <Goal />
-                </div>
-                <div className="container-content">
-                    <h3>Daily Workout Duration</h3>
-                    <div className="graph">
-                        <Bar data={barChartData} options={barStyles} />
-                    </div>
-                </div>
-            </div>
+            <PopupButton onClick={() => setPopup(!popup)} />
+            {popup && <Popup onClick={() => updateStats()} />}
+            <UserProfile />
+            <Stats />
+            <Bar className="graph" data={barChartData} options={barStyles} />
         </div>
-    )
+    );
 }

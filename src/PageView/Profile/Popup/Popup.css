@@ -1,0 +1,36 @@
+.Popup {
+    background-color: rgba(0, 0, 0, 0.837);
+    height: 100vmax;
+    left: 50%;
+    right: 50%;
+    margin-left: -50vw;
+    margin-right: -50vw;
+    position: absolute;
+}
+
+.Popup .popup-box {
+    position: absolute;
+    top: 10%;
+    left: 5%;
+    width: 90%;
+    background-color: white;
+    border: 2px var(--kodfit-blue) solid;
+    border-radius: 5%;
+}
+
+.Popup .header {
+    margin: 20px;
+}
+
+.Popup .centre-text {
+    width: 70%;
+    margin: 0 auto;
+}
+
+@media (min-width: 600px) {
+    .Popup .popup-box {
+        top: 5%;
+        width: 40%;
+        left: 30%;
+    }
+}

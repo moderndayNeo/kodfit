@@ -1,0 +1,21 @@
+.UserProfile {
+    background-image: url('../../../common/images/profile-background-opacity-fixed.jpg');
+    background-size: cover;
+}
+
+.UserProfile .userImage {
+    width: 180px;
+    border-radius: 50%;
+    margin-top: 2rem;
+}
+
+@media (min-width: 600px) {
+    .UserProfile {
+        height: 65vh;
+    }
+
+    .UserProfile .userImage {
+        height: 200px;
+        width: 200px;
+    }
+}

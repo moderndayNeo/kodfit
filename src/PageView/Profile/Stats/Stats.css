@@ -1,0 +1,15 @@
+.Stats {
+    padding: 20px;
+}
+
+.Stats .stats-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+@media (min-width: 600px) {
+    .Stats {
+        width: 70%;
+        margin: auto;
+    }
+}

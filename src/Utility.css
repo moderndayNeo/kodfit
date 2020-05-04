@@ -1,3 +1,7 @@
+html {
+    --kodfit-blue: #00AAEF;   
+}
+
 .text-center {
     text-align: center;
 }
