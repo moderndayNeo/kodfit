@@ -12,10 +12,12 @@ export default function Stats({ setBmi }) {
         <section className="Stats">
             <h2>Your Stats</h2>
             <div className="stats-container">
-                <p>Current weight: {localStorage.currentWeight}kg</p>
+                <p>Current weight: {localStorage.currentWeight ? `${localStorage.currentWeight}kg` : '--'}
+                    </p>
                 <p>BMI: {roundedCurrentBMI}</p>
-                <p>Goal weight: {localStorage.goalWeight}kg</p>
-                <p>Target BMI: {roundedGoalBMI}</p>
+                <p>Goal weight: {localStorage.goalWeight ? `${localStorage.goalWeight}kg` : '--'}
+                    </p>
+                <p>Target BMI: {roundedGoalBMI ? roundedGoalBMI : '--'}</p>
             </div>
         </section>
     );
