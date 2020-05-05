@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React from 'react';
 import './Popup.css';
 import InputField from './InputField/InputField';
 import {
@@ -6,19 +6,13 @@ import {
     setCurrentWeight,
     setHeight,
     setGoalWeight,
-    setSex,
 } from './updateSettings';
 import './UpdateButton/UpdateButton';
 import UpdateButton from './UpdateButton/UpdateButton';
+import './SelectGender/SelectGender';
+import SelectGender from './SelectGender/SelectGender';
 
 export default function Popup({ onClick }) {
-    let [gender, setGender] = useState('M');
-
-    const handleChange = (sex) => {
-        setGender(sex);
-        setSex(sex);
-    };
-
     console.log(localStorage);
 
     return (
@@ -60,15 +54,7 @@ export default function Popup({ onClick }) {
                         }
                         onChange={(e) => setGoalWeight(e.target.value)}
                     />
-
-                    <select
-                        value={gender}
-                        onChange={(e) => handleChange(e.target.value)}
-                    >
-                        <option value="M">Male</option>
-                        <option value="F">Female</option>
-                        <option value="Other">Other</option>
-                    </select>
+                    <SelectGender />
                 </div>
                 <UpdateButton onClick={onClick} />
             </div>
