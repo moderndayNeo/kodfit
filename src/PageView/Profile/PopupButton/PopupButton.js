@@ -1,5 +1,5 @@
-import React from "react";
-import "./PopupButton.css";
+import React from 'react';
+import './PopupButton.css';
 
 export default function PopupButton({ onClick }) {
     return (
