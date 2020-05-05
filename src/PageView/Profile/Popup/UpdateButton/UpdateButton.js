@@ -1,5 +1,5 @@
-import React from "react";
-import "./UpdateButton.css";
+import React from 'react';
+import './UpdateButton.css';
 
 export default function UpdateButton({ onClick }) {
     return (

@@ -14,4 +14,8 @@ const setGoalWeight = (weight) => {
     localStorage.goalWeight = weight;
 }
 
-export { setAge, setHeight, setCurrentWeight, setGoalWeight }
+const setSex = (sex) => {
+    localStorage.sex = sex;
+}
+
+export { setAge, setHeight, setCurrentWeight, setGoalWeight, setSex }

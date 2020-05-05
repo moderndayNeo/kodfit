@@ -1,16 +1,26 @@
-import React from "react";
-import "./Popup.css";
-import InputField from "./InputField/InputField";
+import React, { useState } from 'react';
+import './Popup.css';
+import InputField from './InputField/InputField';
 import {
     setAge,
     setCurrentWeight,
     setHeight,
     setGoalWeight,
-} from "./updateSettings";
+    setSex,
+} from './updateSettings';
 import './UpdateButton/UpdateButton';
-import UpdateButton from "./UpdateButton/UpdateButton";
+import UpdateButton from './UpdateButton/UpdateButton';
 
 export default function Popup({ onClick }) {
+    let [gender, setGender] = useState('M');
+
+    const handleChange = (sex) => {
+        setGender(sex);
+        setSex(sex);
+    };
+
+    console.log(localStorage);
+
     return (
         <div className="Popup">
             <div className="popup-box">
@@ -19,14 +29,14 @@ export default function Popup({ onClick }) {
                     <InputField
                         title="Age"
                         type="number"
-                        placeholder={localStorage.age ? localStorage.age : "--"}
+                        placeholder={localStorage.age ? localStorage.age : '--'}
                         onChange={(e) => setAge(e.target.value)}
                     />
                     <InputField
                         title="Height (cm)"
                         type="number"
                         placeholder={
-                            localStorage.height ? localStorage.height : "--"
+                            localStorage.height ? localStorage.height : '--'
                         }
                         onChange={(e) => setHeight(e.target.value)}
                     />
@@ -36,7 +46,7 @@ export default function Popup({ onClick }) {
                         placeholder={
                             localStorage.currentWeight
                                 ? localStorage.currentWeight
-                                : "--"
+                                : '--'
                         }
                         onChange={(e) => setCurrentWeight(e.target.value)}
                     />
@@ -46,10 +56,19 @@ export default function Popup({ onClick }) {
                         placeholder={
                             localStorage.goalWeight
                                 ? localStorage.goalWeight
-                                : "--"
+                                : '--'
                         }
                         onChange={(e) => setGoalWeight(e.target.value)}
                     />
+
+                    <select
+                        value={gender}
+                        onChange={(e) => handleChange(e.target.value)}
+                    >
+                        <option value="M">Male</option>
+                        <option value="F">Female</option>
+                        <option value="Other">Other</option>
+                    </select>
                 </div>
                 <UpdateButton onClick={onClick} />
             </div>
