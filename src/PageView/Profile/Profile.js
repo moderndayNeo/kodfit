@@ -8,7 +8,7 @@ import PopupButton from './PopupButton/PopupButton';
 import Stats from './Stats/Stats';
 
 export default function Profile() {
-    const [popup, setPopup] = useState(true);
+    const [popup, setPopup] = useState(false);
 
     const updateStats = () => {
         setPopup(!popup);
