@@ -11,14 +11,16 @@ export default function SelectGender() {
     };
 
     return (
-        <select
-            className="SelectGender"
-            value={sexDisplayed}
-            onChange={(e) => handleChange(e.target.value)}
-        >
-            <option value="M">Male</option>
-            <option value="F">Female</option>
-            <option value="Other">Other</option>
-        </select>
+        <div className="SelectGender">
+            <p className="title">Sex</p>
+            <select
+                value={sexDisplayed}
+                onChange={(e) => handleChange(e.target.value)}
+            >
+                <option value="M">Male</option>
+                <option value="F">Female</option>
+                <option value="Other">Other</option>
+            </select>
+        </div>
     );
 }
