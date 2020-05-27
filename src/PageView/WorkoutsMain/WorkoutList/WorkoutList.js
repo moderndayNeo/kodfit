@@ -7,11 +7,13 @@ import WorkoutsData from '../../../Data/WorkoutsData'
 import WorkoutMenuButtons from './WorkoutMenuButtons/WorkoutMenuButtons'
 
 export default function WorkoutList(props) {
+    const urlSlug = props.match.params.view
+
     return (
         <div className="WorkoutsList">
-            <WorkoutMenuButtons />
+            <WorkoutMenuButtons urlSlug={urlSlug} />
             <div className="list-container">
-                {props.match.params.view === 'home'
+                {urlSlug === 'home'
                     ? WorkoutsData().map((workout) => {
                           return (
                               <WorkoutListComponent
