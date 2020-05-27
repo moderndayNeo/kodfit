@@ -96,3 +96,12 @@
 .calendarExerciseList::-webkit-scrollbar {
     display: none;
   }
+
+  @media (min-width: 600px) {
+      .calendarWorkoutContainer .ContainerContent {
+          height: 470px;
+      }
+      .calendarExerciseList {
+          overflow: hidden;
+      }
+  }
