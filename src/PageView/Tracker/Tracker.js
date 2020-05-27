@@ -1,11 +1,10 @@
 import React from 'react'
 import './Tracker.css'
-import { Bar, Line } from 'react-chartjs-2'
-import { lineChartData, lineStyles, barStyles, barChartData } from './Data'
 import 'chartjs-plugin-datalabels'
 import WeightDetails from './WeightDetails/WeightDetails'
 import UserWorkoutStats from './UserWorkoutStats/UserWorkoutStats'
 import LineChartContainer from './LineChartContainer/LineChartContainer'
+import BarChartContainer from './BarChartContainer/BarChartContainer'
 
 export default function Tracker() {
 
@@ -16,8 +15,7 @@ export default function Tracker() {
             <WeightDetails />
             <LineChartContainer />
             <UserWorkoutStats />
-            <Bar data={barChartData} options={barStyles} />
-            <p className="bar-chart-title">This Week</p>
+            <BarChartContainer />
         </div>
     )
 }
