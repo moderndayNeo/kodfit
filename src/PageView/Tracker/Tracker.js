@@ -5,16 +5,15 @@ import { lineChartData, lineStyles, barStyles, barChartData } from './Data'
 import 'chartjs-plugin-datalabels'
 import WeightDetails from './WeightDetails/WeightDetails'
 
-export default function Tracker () {
+export default function Tracker() {
+    console.log(localStorage)
 
-console.log(localStorage)
-
-  return (
-    <div className='Tracker'>
-      <h2 className='separator-center trackerTitle'>Tracker</h2>
-      <WeightDetails />
-          <Line data={lineChartData} options={lineStyles} />
-          <Bar data={barChartData} options={barStyles} />
-    </div>
-  )
+    return (
+        <div className="Tracker">
+            <h2 className="separator-center trackerTitle">Tracker</h2>
+            <WeightDetails />
+            <Line data={lineChartData} options={lineStyles} />
+            <Bar data={barChartData} options={barStyles} />
+        </div>
+    )
 }
