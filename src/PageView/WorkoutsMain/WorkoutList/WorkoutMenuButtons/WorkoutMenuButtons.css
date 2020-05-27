@@ -1,0 +1,19 @@
+.WorkoutMenuButtons {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+.WorkoutMenuButtons .button {
+    color: white;
+    font-size: 18px;
+    padding: 3px 10px;
+    width: 120px;
+}
+
+@media (min-width: 600px) {
+    .WorkoutMenuButtons {
+        width: 500px;
+        margin: auto;
+    }
+}

@@ -10,8 +10,7 @@ export default function WorkoutList(props) {
     return (
       <div className="WorkoutsList">
         <WorkoutMenuButtons />
-        <div className="containerBottom">
-          {" "}
+        <div className="list-container">
           {props.match.params.view === "home" ? WorkoutsData().map(workout => {
             return (
               <WorkoutListComponent
