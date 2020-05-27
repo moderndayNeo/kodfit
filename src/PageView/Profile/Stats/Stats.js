@@ -1,11 +1,8 @@
-import React, { useEffect } from 'react';
+import React from 'react';
 import './Stats.css';
 import { roundedGoalBMI, roundedCurrentBMI } from './bmiCalculations';
 
 export default function Stats({ setBmi }) {
-    useEffect(() => {
-        console.log('Page refreshed');
-    }, [setBmi]);
 
     return (
         <section className="Stats">

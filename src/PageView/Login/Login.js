@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import './Login.css';
-import InputBox from './InputBox/InputBox';
+// import InputBox from './InputBox/InputBox';
 import kodfit_logo from './../../common/images/kodfit_logo_large.svg';
 import { Redirect } from 'react-router-dom';
 import LoginButtons from './LoginButtons/LoginButtons';
