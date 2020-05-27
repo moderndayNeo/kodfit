@@ -9,13 +9,14 @@ import { months } from './months'
 export default function Tracker() {
     const today = new Date()
     const currentMonth = months[today.getMonth()]
+    const year = today.getFullYear()
 
     return (
         <div className="Tracker">
             <h2 className="separator-center">Tracker</h2>
             <WeightDetails />
             <Line data={lineChartData} options={lineStyles} />
-            <p className="line-chart-title">{currentMonth}</p>
+    <p className="line-chart-title">{currentMonth} {year}</p>
             <Bar data={barChartData} options={barStyles} />
         </div>
     )
