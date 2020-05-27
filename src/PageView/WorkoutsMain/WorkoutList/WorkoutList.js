@@ -4,15 +4,12 @@ import ExercisesListComponent from './ExercisesListComponent';
 import ExercisesListData from '../../../Data/ExercisesListData';
 import WorkoutListComponent from './WorkoutListComponent';
 import WorkoutsData from '../../../Data/WorkoutsData';
+import WorkoutMenuButtons from './WorkoutMenuButtons/WorkoutMenuButtons'
 
 export default function WorkoutList(props) {
     return (
       <div className="WorkoutsList">
-        <div className="containerTop">
-          <a className="button primary rounded-capsule" href="./home">Workouts</a>
-          <a className="button secondary rounded-capsule" href="./workout-list">Exercises</a>
-          <a className="button secondary rounded-capsule" href="../timer">Timer</a>
-        </div>
+        <WorkoutMenuButtons />
         <div className="containerBottom">
           {" "}
           {props.match.params.view === "home" ? WorkoutsData().map(workout => {
