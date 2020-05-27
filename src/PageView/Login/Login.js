@@ -21,10 +21,10 @@ export default function Login() {
             </div>
             <main className="container">
                 <div className="inputBox">
-                    <InputBox type="text" placeholder="Username" onSignIn={handleUserName}/>
-                    <InputBox type="password" placeholder="Password" />
+                    {/* <InputBox type="text" placeholder="Username" onSignIn={handleUserName}/> */}
+                    {/* <InputBox type="password" placeholder="Password" /> */}
                 </div>
-                <LoginButtons onSignIn={handleUserName}/>
+                <LoginButtons onSignIn={(e) => handleUserName(e)}/>
             </main>
         </div>
     )

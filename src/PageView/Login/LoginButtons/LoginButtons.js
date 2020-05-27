@@ -12,8 +12,8 @@ export default function LoginButtons(props) {
 
     return (
         <div className="LoginButtons">
-            <button className="button primary rounded-capsule signInButton">Sign In</button>
-            <span>or</span>
+            {/* <button className="button primary rounded-capsule signInButton">Sign In</button>
+            <span>or</span> */}
             <GoogleLogin
                 clientId="848040990578-mpvcvg31e99180qb7f28rqvfm708iqp3.apps.googleusercontent.com"
                 render={renderProps => (

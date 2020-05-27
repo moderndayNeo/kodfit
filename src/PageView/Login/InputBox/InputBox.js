@@ -7,7 +7,7 @@ export default function InputBox({ type, placeholder, onSignIn }) {
         setTimeout(() => {
             localStorage.setItem('userName', value);
             localStorage.setItem('userImageUrl', defaultUserImage);
-            onSignIn(value);
+            onSignIn(value)
         }, 3000);
     }
     return (
