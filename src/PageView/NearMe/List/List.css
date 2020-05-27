@@ -1,12 +1,17 @@
+.List {
+    height: 270px;
+    padding-bottom: 100px;
+}
+
 .List .content {
-  display: grid;
-  overflow: scroll;
-  padding-left: 0;
-  height: 350px;
+    display: grid;
+    overflow: scroll;
+    padding-left: 0;
+    height: 100%;
 }
 
 .List .item {
-  align-items: center;
-  box-shadow: 2px 2px 2px silver;
-  margin-bottom: 8px;
+    align-items: center;
+    box-shadow: 2px 2px 2px silver;
+    margin-bottom: 8px;
 }
