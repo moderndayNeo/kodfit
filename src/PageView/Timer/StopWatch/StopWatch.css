@@ -6,19 +6,14 @@
 
 .Stopwatch .grid-container {
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-gap: 10px 6px;
-    width: 100%;
 }
 
 .Stopwatch .display-timer {
-    grid-column: 1 / 4;
     justify-self: center;
     font-size: 120px;
 }
 
 .Stopwatch .display-buttons {
-    grid-column: 1 / 4;
     justify-self: center;
 }
 
@@ -37,7 +32,6 @@
 
 .Stopwatch .titles {
     font-size: 42px;
-    grid-column: 1 / 4;
     justify-self: center;
 }
 
