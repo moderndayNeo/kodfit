@@ -75,7 +75,8 @@
 .calendarWorkoutContainer .ContainerContent {
     display: flex;
     flex-direction: column;
-    position: relative; 
+    position: relative;
+    height: 335px;
 }
 
 .ContainerContent .button {
@@ -89,7 +90,6 @@
     margin-bottom: 0;
     overflow: scroll;
     overflow-y: scroll;
-    height: 380px;
     -ms-overflow-style: none;
 }
 
