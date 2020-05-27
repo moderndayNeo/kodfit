@@ -5,4 +5,8 @@
 }
 
 @media (min-width: 600px) {
+    .Profile .BarChartContainer {
+        width: 70%;
+        margin: auto;
+    }
 }
