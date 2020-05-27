@@ -9,7 +9,7 @@ export default function WorkoutMenuButtons() {
             </a>
             <a
                 className="button secondary rounded-capsule"
-                href="./workout-list"
+                href="./exercise-list"
             >
                 Exercises
             </a>

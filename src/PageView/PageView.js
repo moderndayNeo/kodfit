@@ -26,7 +26,7 @@ export default function PageView() {
           <Route path="/dashboard/near-me" exact component={NearMe} />
           <Route path="/dashboard/workouts/:view/" exact component={WorkoutList} />
           <Route path="/dashboard/workouts/home/:listId" exact component={ExerciseListDetails} />
-          <Route path="/dashboard/workouts/workout-list/:listId" exact component={ExerciseListDetails} />
+          <Route path="/dashboard/workouts/exercise-list/:listId" exact component={ExerciseListDetails} />
           <Route path="/dashboard/workout-current" exact component={WorkoutCurrent} />
           <Route path="/dashboard/tracker" exact component={Tracker} />
           <Route path="/dashboard/timer" exact component={Timer} />

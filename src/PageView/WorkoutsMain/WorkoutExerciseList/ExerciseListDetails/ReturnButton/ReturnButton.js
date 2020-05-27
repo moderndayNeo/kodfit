@@ -6,7 +6,7 @@ export default function ReturnButton() {
         <div className="ReturnButton">
             <a
                 className="button primary rounded-capsule"
-                href="../workout-list"
+                href="../exercise-list"
             >
                 Back To Exercises
             </a>
