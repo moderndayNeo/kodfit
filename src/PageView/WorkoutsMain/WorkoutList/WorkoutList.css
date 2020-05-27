@@ -6,6 +6,10 @@
     position: relative;
 }
 
+.WorkoutsList {
+    padding-bottom: 60px;
+}
+
 .WorkoutsList .list-container {
     display: flex;
     flex-direction: column;
@@ -14,7 +18,7 @@
 
 .WorkoutsList .list {
     position: relative;  
-    height: 90px;  
+    height: 90px;
 }
 
 .list {
