@@ -25,7 +25,7 @@ const lineStyles = {
   },
   layout: {
     padding: {
-      top: 70,
+      top: 50,
       left: 10,
       right: 10
     }
