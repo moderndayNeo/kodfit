@@ -1,7 +1,7 @@
 import React from 'react';
 import './ExerciseListDetails.css';
-import ExerciseList from './WorkoutExerciseList';
-import ExercisesData from '../../../Data/ExercisesData';
+import ExerciseList from '../WorkoutExerciseList';
+import ExercisesData from '../../../../Data/ExercisesData';
 
 
 export default class ExerciseListDetails extends React.Component {
@@ -21,7 +21,7 @@ export default class ExerciseListDetails extends React.Component {
         return (
             <div className="ExercisesList">
                 <div className="containerTop">
-                <a className="button primary rounded-capsule" href="../workout-list">Exercises</a>
+                <a className="button primary rounded-capsule" href="../workout-list">Back To Exercises</a>
                 </div>
                 <div className="containerBottom"> {
                     ExercisesData()

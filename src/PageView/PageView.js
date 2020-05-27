@@ -3,7 +3,7 @@ import { BrowserRouter as Router, Route } from 'react-router-dom';
 import CalendarApp from './CalendarApp/CalendarApp';
 import NearMe from './NearMe/NearMe';
 import WorkoutList from './WorkoutsMain/WorkoutList/WorkoutList';
-import ExerciseListDetails from './WorkoutsMain/WorkoutExerciseList/ExerciseListDetails';
+import ExerciseListDetails from './WorkoutsMain/WorkoutExerciseList/ExerciseListDetails/ExerciseListDetails';
 import WorkoutCurrent from './WorkoutsMain/WorkoutCurrent/WorkoutCurrent';
 import Tracker from './Tracker/Tracker';
 import Login from './Login/Login';
