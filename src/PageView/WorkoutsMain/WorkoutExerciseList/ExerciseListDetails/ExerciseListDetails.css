@@ -1,8 +1,7 @@
 .ExercisesList .containerBottom {
     display: flex;
     flex-direction: column;
-    margin: 30px 2%;
-    padding-bottom: 40px;
+    padding-bottom: 60px;
 }
 
 .containerBottom .item {
