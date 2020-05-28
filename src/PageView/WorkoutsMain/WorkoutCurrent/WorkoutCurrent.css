@@ -10,6 +10,8 @@
 
 .WorkoutCurrent .workoutAction {
     background-color: #ddd;
+    border: 1px var(--kodfit-blue) solid;
+    border-radius: 5px;
     height: 54vh;
     display: flex;
     flex-direction: column;
@@ -21,26 +23,6 @@
     margin-bottom: 50px;
 }
 
-.WorkoutCurrent .timer {
-    display: grid;
-    margin: 40px 10px;
-}
-
-.WorkoutCurrent .containerTwo {
-    display: flex;
-    justify-content: flex-end;
-    margin: 20px 0px;
-}
-
-.WorkoutCurrent .timerButton {
-    border: none;
-    background-color: transparent;
-    font-size: 20px;
-    font-weight: bold;
-    cursor: pointer;
-    text-transform: uppercase;
-}
-
 @media (min-width: 600px) {
     .WorkoutCurrent .containerOne {
         grid-template-columns: 2fr 1fr;
@@ -48,9 +30,5 @@
 
     .containerOne-content:last-child {
         align-self: center;
-    }
-
-    .WorkoutCurrent .containerTwo {
-        justify-content: center;
     }
 }

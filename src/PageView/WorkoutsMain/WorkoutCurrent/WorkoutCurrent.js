@@ -24,7 +24,7 @@ export default function WorkoutCurrent() {
     return (
         <div className="WorkoutCurrent container">
             <h2 className="separator-center">
-                Current Workout
+                Current Exercise
             </h2>
             <main>
                 <div className="containerOne-content workoutAction">
