@@ -7,8 +7,8 @@ import OurGoal from './OurGoal/OurGoal';
 
 export default function LandingPage() {
     return (
-        <>
-            <main className="LandingPage">
+        <div className="LandingPage">
+            <main>
                 <HeroBanner 
                     title="Train & Feel Better Together :)" 
                     image={heroImage}
@@ -20,11 +20,9 @@ export default function LandingPage() {
                 <OurGoal />
             </main>
             <footer>
-                <section className="container">
-                    <p>© Kodfit, All rights reserved.</p>
-                </section>
+                    <p>© Kodfit. All rights reserved.</p>
             </footer>
-        </>
+        </div>
     );
 }
 

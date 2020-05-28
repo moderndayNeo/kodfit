@@ -1,9 +1,5 @@
-footer {
+.LandingPage footer {
     margin-top: 2rem;
-}
-footer .container {
-    padding: 1rem 0 0;
-}
-footer section {
+    text-align: center;
     border-top: 1px solid #767676;
 }
