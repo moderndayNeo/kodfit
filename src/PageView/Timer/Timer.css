@@ -67,3 +67,9 @@
 .Timer span a {
      color: black;
 }
+
+@media (min-width: 600px) {
+    .Timer {
+        margin-top: 0;
+    }
+}

@@ -35,3 +35,9 @@
 .Stopwatch span a {
      color: black;
 }
+
+@media (min-width: 600px) {
+    .Stopwatch {
+        margin-top: 0;
+    }
+}
