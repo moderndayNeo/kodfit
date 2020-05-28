@@ -37,9 +37,9 @@ export default function PageView() {
             <Route path="/dashboard/elements" exact component={Elements} />
           </section>
         </div>
-        <Route path="/dashboard/:slug" component={Navbar} />
-        {/* <Route path="/:random" exact component={NotFound} /> */}
       <Switch />
+        <Route path="/dashboard/:slug" component={Navbar} />
+        <Route path="/:notfound" exact component={NotFound} />
     </Router>
   );
 }
