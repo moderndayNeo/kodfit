@@ -24,7 +24,6 @@ export default function LoginButtons(props) {
                             Sign in with Google
                     </button>
                 )}
-                buttonText="Sign in with Google"
                 onSuccess={responseGoogle}
                 onFailure={responseGoogle}
                 cookiePolicy={'single_host_origin'}
