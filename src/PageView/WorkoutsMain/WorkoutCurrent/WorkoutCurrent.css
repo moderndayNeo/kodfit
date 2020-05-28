@@ -24,6 +24,11 @@
 }
 
 @media (min-width: 600px) {
+    .WorkoutCurrent {
+        margin-top: -40px;
+        width: 60%;
+    }
+
     .WorkoutCurrent .containerOne {
         grid-template-columns: 2fr 1fr;
     }
