@@ -5,7 +5,7 @@ import { FaPlay, FaRegStopCircle } from 'react-icons/fa'
 import { MdSettingsBackupRestore } from 'react-icons/md'
 import { Link } from 'react-router-dom'
 
-class Timer extends React.Component {
+export default class Timer extends React.Component {
     constructor() {
         super()
         this.state = {
@@ -119,23 +119,27 @@ class Timer extends React.Component {
     }
 
     render() {
+        const hoursToDisplay = ('0' + this.state.timerObject.h).slice(-2)
+        const minutesToDisplay = ('0' + this.state.timerObject.m).slice(-2)
+        const secondsToDisplay = ('0' + this.state.timerObject.s).slice(-2)
+
         return (
             <div className="Timer">
                 <div className="grid-container">
                     <div className="titles">
-                        <span className="active">Timer </span>
+                        <span className="active">Timer</span>
                         <span>
                             <Link to="/dashboard/stopwatch">Stopwatch</Link>
                         </span>
                     </div>
-
                     <div className="display-timer">
                         <span>
-                            {('0' + this.state.timerObject.h).slice(-2)} :
-                            {('0' + this.state.timerObject.m).slice(-2)} :
-                            {('0' + this.state.timerObject.s).slice(-2)}
+                            {hoursToDisplay} :
+                            {minutesToDisplay} :
+                            {secondsToDisplay}
                         </span>
                     </div>
+                    <h3>Set time:</h3>
                     <div className="inputs">
                         <div className="input-hours column">
                             <TimerInput
@@ -206,5 +210,3 @@ class Timer extends React.Component {
         )
     }
 }
-
-export default Timer

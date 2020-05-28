@@ -1,13 +1,12 @@
-
-
 .Timer .grid-container {
     display: grid;
+    grid-template-rows: 5;
 }
 
 .Timer .display-timer {
     grid-column: 1 / 4;
     justify-self: center;
-    font-size: 120px;
+    font-size: 50px;
 }
 
 .Timer .column {
@@ -60,44 +59,14 @@
     border-radius: 34px;
     font-size: 38px;
     padding: 14px;
-    padding-right: 12px;
     color: white;
 }
-.Timer span a {
-     color: black;
+
+.Timer .titles, 
+.Timer .active {
+    font-size: 24px;
 }
 
-@media only screen and (max-width: 640px) {
-    .Timer .display-timer {
-        font-size: 16vw;
-        margin: 20px 0px;
-    }
-    
-    .Timer .titles, 
-    .Timer .active {
-        font-size: 24px;
-    }
-
-    .Timer input {
-        width: 98px;
-        font-size: 58px;
-        margin: 2px 4px;
-    }
-
-    .Timer .column {
-        margin: 10px 2%;
-    }
-
-    .Timer .display-timer {
-        font-size: 16vw;
-    }
-
-    .Timer .grid-container {
-        width: 100%;
-        margin-top: 0;
-    }
-
-    .Timer {
-        margin: 20px;
-    }
+.Timer span a {
+     color: black;
 }
