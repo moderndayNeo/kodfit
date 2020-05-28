@@ -24,13 +24,14 @@ export default function WorkoutCurrent() {
     return (
         <div className="WorkoutCurrent container">
             <h2 className="separator-center">
-                Current Exercise
+                Workout Generator!
             </h2>
             <main>
                 <div className="containerOne-content workoutAction">
                     {
                         itemIndex && 
-                        <>
+                        <>  
+                            <h2>#{itemIndex}</h2>
                             <h2 className='title'>
                                 {ExercisesData()[itemIndex].exerciseName}
                             </h2>

@@ -3,7 +3,7 @@ import './SmallTimer.css'
 import { FaRegStopCircle, FaPlay } from 'react-icons/fa'
 import { MdSettingsBackupRestore } from 'react-icons/md'
 
-const SmallTimer = ({ timer, run }) => {
+const SmallTimer = ({ timer }) => {
     const [timeLeft, setTimeLeft] = useState(0)
     const [isRunning, setRunning] = useState(0)
     let intervalId = 0
@@ -67,7 +67,7 @@ const SmallTimer = ({ timer, run }) => {
 
     useEffect(() => {
         if (timeLeft < 0) {
-            // setRunning(1)
+            setRunning(1)
             setTimeLeft(timer)
             return
 		}
