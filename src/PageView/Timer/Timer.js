@@ -134,8 +134,7 @@ export default class Timer extends React.Component {
                     </div>
                     <div className="display-timer">
                         <span>
-                            {hoursToDisplay} :
-                            {minutesToDisplay} :
+                            {hoursToDisplay}:{minutesToDisplay}:
                             {secondsToDisplay}
                         </span>
                     </div>
