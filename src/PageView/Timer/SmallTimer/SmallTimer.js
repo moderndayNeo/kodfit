@@ -1,29 +1,29 @@
 import React, { useState, useEffect } from 'react'
-import './SmallTimer.css';
+import './SmallTimer.css'
 
 const SmallTimer = ({ timer, run }) => {
-  const [timeLeft, setTimeLeft] = useState(0)
-  const [isRunning, setRunning] = useState(0)
-  let intervalId = 0
+    const [timeLeft, setTimeLeft] = useState(0)
+    // const [isRunning, setRunning] = useState(0)
+    let intervalId = 0
 
-  const secondsToTime = secs => {
-    let hours = Math.floor(secs / (60 * 60))
+    const secondsToTime = (secs) => {
+        let hours = Math.floor(secs / (60 * 60))
 
-    let divisorForMinutes = secs % (60 * 60)
-    let minutes = Math.floor(divisorForMinutes / 60)
+        let divisorForMinutes = secs % (60 * 60)
+        let minutes = Math.floor(divisorForMinutes / 60)
 
-    let divisorForSeconds = divisorForMinutes % 60
-    let seconds = Math.ceil(divisorForSeconds)
+        let divisorForSeconds = divisorForMinutes % 60
+        let seconds = Math.ceil(divisorForSeconds)
 
-    let obj = {
-      h: hours,
-      m: minutes,
-      s: seconds
+        let obj = {
+            h: hours,
+            m: minutes,
+            s: seconds,
+        }
+        return obj
     }
-    return obj
-  }
- 
-  /* const setTimer = () => {
+
+    /* const setTimer = () => {
     if (isRunning === 0) {
       setRunning(1)
       setTimeLeft(timer)
@@ -45,45 +45,45 @@ const SmallTimer = ({ timer, run }) => {
       setTimeLeft(0);
   }
  */
-  const theTimer = () => {
-    if (timeLeft > -1) {
-      if (timeLeft < 60) {
-        return `00 : ${('0' + secondsToTime(timeLeft).s).slice(-2)}`
-      } else {
-        return `${('0' + secondsToTime(timeLeft).m).slice(-2)} :  
+    const theTimer = () => {
+        if (timeLeft > -1) {
+            if (timeLeft < 60) {
+                return `00 : ${('0' + secondsToTime(timeLeft).s).slice(-2)}`
+            } else {
+                return `${('0' + secondsToTime(timeLeft).m).slice(-2)} :  
                 ${('0' + secondsToTime(timeLeft).s).slice(-2)}`
-      }
-    } else {
-      if (timer < 60) {
-        return `00 : ${('0' + secondsToTime(timer).s).slice(-2)}`
-      } else {
-        return `${('0' + secondsToTime(timer).m).slice(-2)} :  
+            }
+        } else {
+            if (timer < 60) {
+                return `00 : ${('0' + secondsToTime(timer).s).slice(-2)}`
+            } else {
+                return `${('0' + secondsToTime(timer).m).slice(-2)} :  
                  ${('0' + secondsToTime(timer).s).slice(-2)}`
-      }
-    }
-  }
-
-  useEffect(() => {
-    if (timeLeft < 0) {
-      setRunning(1)
-      setTimeLeft(timer)
-      return
+            }
+        }
     }
 
-    intervalId = setInterval(() => {
-      setTimeLeft(timeLeft - 1)
-    }, 1000)
+    useEffect(() => {
+        if (timeLeft < 0) {
+            // setRunning(1)
+            setTimeLeft(timer)
+            return
+        }
 
-    return () => clearInterval(intervalId)
-  }, [timeLeft])
+        intervalId = setInterval(() => {
+            setTimeLeft(timeLeft - 1)
+        }, 1000)
 
-  return (
-    <div className='SmallTimer'>
-      <h2 className='full-display'>{theTimer()}</h2>
-{/*       <button className="resetst-btn" onClick={resetTimer}><MdSettingsBackupRestore /></button>
+        return () => clearInterval(intervalId)
+    }, [timeLeft])
+
+    return (
+        <div className="SmallTimer">
+            <h2 className="full-display">{theTimer()}</h2>
+            {/*       <button className="resetst-btn" onClick={resetTimer}><MdSettingsBackupRestore /></button>
       <button className="smalltimer-btn" onClick={setTimer}>{isRunning === 1 ? <FaRegStopCircle /> :<FaPlay />}</button> */}
-    </div>
-  )
+        </div>
+    )
 }
 
 export default SmallTimer

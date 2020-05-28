@@ -119,7 +119,6 @@ class Timer extends React.Component {
     }
 
     render() {
-        console.log(this.state.runningTimer)
         return (
             <div className="Timer">
                 <div className="grid-container">

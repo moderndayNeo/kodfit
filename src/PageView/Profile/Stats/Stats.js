@@ -2,7 +2,7 @@ import React from 'react';
 import './Stats.css';
 import { roundedGoalBMI, roundedCurrentBMI } from './bmiCalculations';
 
-export default function Stats({ setBmi }) {
+export default function Stats() {
 
     return (
         <section className="Stats">
