@@ -1,7 +1,11 @@
+.Timer {
+    margin-top: 50px;
+}
+
 .Timer .grid-container {
     display: grid;
     grid-gap: 10px;
-    grid-template-rows: 5;
+    grid-template-rows: 0.5fr 0.5fr 0fr 1.5fr 1fr;
     justify-items: center;
 }
 
@@ -24,20 +28,13 @@
 }
 
 .Timer input {
-    font-size: 65px;
-}
-
-.Timer .center {
+    font-size: 50px;
 }
 
 .Timer .buttons {
     display: flex;
     justify-content: space-between;
     width: 200px;
-}
-
-.Timer .inline {
-
 }
 
 .Timer .time-buttons {
@@ -48,14 +45,18 @@
     padding-top: 12px;
 }
 
-.Timer .titles {
-}
-
 .Timer .active {
     background: #00AAEF;
     border-radius: 34px;
     padding: 14px;
     color: white;
+}
+
+.Timer .titles {
+    display: flex;
+    align-items: center;
+    width: 220px;
+    justify-content: space-between;
 }
 
 .Timer .titles, 
