@@ -10,12 +10,6 @@
     padding-bottom: 60px;
 }
 
-.WorkoutsList .list-container {
-    display: flex;
-    flex-direction: column;
-    margin: 10px 2%;
-}
-
 .WorkoutsList .list {
     position: relative;  
     height: 90px;
@@ -47,6 +41,16 @@
         grid-template-columns: 1fr 1fr;
         grid-column-gap: 60px;
         margin: 30px 2%;
+    }
+
+    .WorkoutsList {
+        margin-top: -10px;
+    }
+
+    .WorkoutsList .list-container {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-gap: 10px;
     }
     
     .WorkoutsList .list {
