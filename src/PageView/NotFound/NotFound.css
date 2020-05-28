@@ -1,4 +1,14 @@
-.notfound {
-	font-size: 37px;
-    padding: 35px;
+.NotFound .main {
+    display: flex;
+    flex-direction: column;
+    height: 500px;
+    align-items: center;
+    justify-content: space-between;
+    text-align: center;
+    margin-top: 60px;
+}
+
+.NotFound .chevron {
+    color: var(--kodfit-blue);
+    font-size: 50px;
 }

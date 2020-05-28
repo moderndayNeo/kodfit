@@ -13,6 +13,7 @@ import StopWatch from './Timer/StopWatch/StopWatch';
 import Profile from './Profile/Profile';
 import Navbar from './NavBar/NavBar';
 import Elements from './Elements/Elements';
+import NotFound from './NotFound/NotFound'
 import './PageView.css'
 
 export default function PageView() {
@@ -35,7 +36,7 @@ export default function PageView() {
           <Route path="/dashboard/elements" exact component={Elements} />
         </section>
       </div>
-        <Route path="/dashboard/:slug" component={Navbar} />
+        <Route path="/dashboard/:slug" component={NotFound} />
     </Router>
   );
 }

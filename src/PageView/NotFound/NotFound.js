@@ -1,10 +1,16 @@
-import React from 'react';
-import './NotFound.css';
+import React from 'react'
+import './NotFound.css'
+import NavBar from '../NavBar/NavBar'
+import { FiChevronDown } from 'react-icons/fi'
 
 export default function Elements() {
     return (
         <div className="NotFound">
-             <h1 className='notfound'>Sorry page is not found. </h1>
+            <div className="main">
+                <h1 className="message">Sorry, page not found.</h1>
+                <FiChevronDown className="chevron" />
+            </div>
+            <NavBar />
         </div>
     )
 }
