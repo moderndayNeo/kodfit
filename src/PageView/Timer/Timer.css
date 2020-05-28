@@ -1,14 +1,7 @@
-.Timer {
-    display: flex;
-    justify-content: center;
-    margin: 50px;
-}
+
 
 .Timer .grid-container {
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-gap: 10px 6px;
-    margin-top: -50px;
 }
 
 .Timer .display-timer {
@@ -17,19 +10,10 @@
     font-size: 120px;
 }
 
-.Timer input {
-    width: 37px;
-}
-
-.Timer span {
-    padding-right: 5px;
-}
-
 .Timer .column {
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin: 10px 34px;
 }
 
 
