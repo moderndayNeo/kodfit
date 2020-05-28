@@ -13,7 +13,6 @@ import './SelectGender/SelectGender';
 import SelectGender from './SelectGender/SelectGender';
 
 export default function Popup({ onClick }) {
-    console.log(localStorage);
 
     return (
         <div className="Popup">

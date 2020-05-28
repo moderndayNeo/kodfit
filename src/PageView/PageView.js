@@ -13,7 +13,6 @@ import StopWatch from './Timer/StopWatch/StopWatch';
 import Profile from './Profile/Profile';
 import Navbar from './NavBar/NavBar';
 import Elements from './Elements/Elements';
-import NotFound from './NotFound/NotFound'
 import './PageView.css'
 
 export default function PageView() {
@@ -21,7 +20,6 @@ export default function PageView() {
     <Router>
       <Switch />
         <div className="PageView">
-          <Route path="/" exact component={LandingPage} />
           <section className="container">
             <Route path="/login" exact component={Login} />
             <Route path="/dashboard/calendar" exact component={CalendarApp} />
@@ -36,10 +34,10 @@ export default function PageView() {
             <Route path="/dashboard/profile" exact component={Profile} />
             <Route path="/dashboard/elements" exact component={Elements} />
           </section>
+          <Route path="/" exact component={LandingPage} />
         </div>
       <Switch />
         <Route path="/dashboard/:slug" component={Navbar} />
-        <Route path="/:notfound" exact component={NotFound} />
     </Router>
   );
 }
