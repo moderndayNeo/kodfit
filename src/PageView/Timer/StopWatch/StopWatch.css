@@ -1,24 +1,8 @@
 .Stopwatch {
-    display: flex;
-    justify-content: center;
-    margin: 50px;
-}
-
-.Stopwatch .grid-container {
     display: grid;
-}
-
-.Stopwatch .display-timer {
-    justify-self: center;
-    font-size: 120px;
-}
-
-.Stopwatch .display-buttons {
-    justify-self: center;
-}
-
-.Stopwatch span {
-    padding-right: 5px;
+    justify-items: center;
+    height: 400px;
+    margin-top: 70px;
 }
 
 .Stopwatch .time-buttons {
@@ -27,42 +11,27 @@
     border-radius: 134px;
     font-size: 42px;
     padding-top: 12px;
-    margin: 0px 12px;
-}
-
-.Stopwatch .titles {
-    font-size: 42px;
-    justify-self: center;
-}
-
-.Stopwatch .titles span {
-    margin:10px;
 }
 
 .Stopwatch .active {
     background: #00AAEF;
     border-radius: 34px;
-    height: 334px;
-    font-size: 38px;
-    padding: 10px 17px 16px 25px;
+    padding: 12px;
     color: white;
 }
-.Stopwatch span a {
-     color: black;
+
+.Stopwatch .titles {
+    font-size: 24px;
+    display: flex;
+    width: 220px;
+    align-items: center;
+    justify-content: space-between;
 }
 
-@media only screen and (max-width: 950px) {
-    .Stopwatch .display-timer {
-        font-size: 10vw;
-        margin: 50px 0px;
-    }
+.Stopwatch .display-timer {
+    font-size: 50px;
+}
 
-    .Stopwatch .titles, 
-    .Stopwatch .active {
-        font-size: 32px;
-    }
-
-    .Stopwatch .titles span {
-        margin: 3px;
-    }
+.Stopwatch span a {
+     color: black;
 }
