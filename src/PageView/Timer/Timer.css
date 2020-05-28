@@ -24,11 +24,8 @@
 }
 
 .Timer input {
-    width: 108px;
-    height: 77px;
     font-size: 65px;
     text-align: center;
-    padding-left: 2px;
 }
 
 .Timer .center {
@@ -50,7 +47,6 @@
     border-radius: 134px;
     font-size: 42px;
     padding-top: 12px;
-    padding-left: 8px;
 }
 
 .Timer .titles {
@@ -59,16 +55,12 @@
     justify-self: center;
 }
 
-.Timer .titles span {
-    margin:10px;
-}
-
 .Timer .active {
     background: #00AAEF;
     border-radius: 34px;
-    height: 334px;
     font-size: 38px;
-    padding: 10px 17px 16px 25px;
+    padding: 14px;
+    padding-right: 12px;
     color: white;
 }
 .Timer span a {
