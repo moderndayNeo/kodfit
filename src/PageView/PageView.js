@@ -13,25 +13,25 @@ import StopWatch from './Timer/StopWatch/StopWatch';
 import Profile from './Profile/Profile';
 import Navbar from './NavBar/NavBar';
 import Elements from './Elements/Elements';
-import './PageView.css'
+import './PageView.css';
 
 export default function PageView() {
   return (
     <Router>
       <Switch />
-        <div className="PageView">
-          <section className="container">
-            <Route path="/login" exact component={Login} />
-            <Route path="/dashboard/calendar" exact component={CalendarApp} />
-            <Route path="/dashboard/near-me" exact component={NearMe} />
-            <Route path="/dashboard/workouts/:view/" exact component={WorkoutList} />
-            <Route path="/dashboard/workouts/home/:listId" exact component={ExerciseListDetails} />
-            <Route path="/dashboard/workouts/exercise-list/:listId" exact component={ExerciseListDetails} />
-            <Route path="/dashboard/workout-current" exact component={WorkoutCurrent} />
-            <Route path="/dashboard/tracker" exact component={Tracker} />
-            <Route path="/dashboard/timer" exact component={Timer} />
-            <Route path="/dashboard/stopwatch" exact component={StopWatch} />
-            <Route path="/dashboard/profile" exact component={Profile} />
+      <div className="PageView">
+        <section className="container">
+          <Route path="/login" exact component={Login} />
+          <Route path="/dashboard/calendar" exact component={CalendarApp} />
+          <Route path="/dashboard/near-me" exact component={NearMe} />
+          <Route path="/dashboard/workouts/:view/" exact component={WorkoutList} />
+          <Route path="/dashboard/workouts/home/:listId" exact component={ExerciseListDetails} />
+          <Route path="/dashboard/workouts/exercise-list/:listId" exact component={ExerciseListDetails} />
+          <Route path="/dashboard/workout-current" exact component={WorkoutCurrent} />
+          <Route path="/dashboard/tracker" exact component={Tracker} />
+          <Route path="/dashboard/timer" exact component={Timer} />
+          <Route path="/dashboard/stopwatch" exact component={StopWatch} />
+          <Route path="/dashboard/profile" exact component={Profile} />
           <Route path="/dashboard/elements" exact component={Elements} />
         </section>
         <Route exact path="/dashboard/:slug" component={Navbar} />
