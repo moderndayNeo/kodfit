@@ -32,12 +32,15 @@ export default function PageView() {
             <Route path="/dashboard/timer" exact component={Timer} />
             <Route path="/dashboard/stopwatch" exact component={StopWatch} />
             <Route path="/dashboard/profile" exact component={Profile} />
-            <Route path="/dashboard/elements" exact component={Elements} />
-          </section>
-          <Route path="/" exact component={LandingPage} />
-        </div>
+          <Route path="/dashboard/elements" exact component={Elements} />
+        </section>
+        <Route exact path="/dashboard/:slug" component={Navbar} />
+        <Route exact path="/dashboard/" component={Navbar} />
+        <Route exact path="/dashboard/workouts/:slug" component={Navbar} />
+        <Route exact path="/dashboard/workouts/home/:slug" component={Navbar} />
+        <Route path="/" exact component={LandingPage} />
+      </div>
       <Switch />
-        <Route path="/dashboard/:slug" component={Navbar} />
     </Router>
   );
 }
