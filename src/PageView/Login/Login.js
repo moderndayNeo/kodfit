@@ -15,6 +15,14 @@ export default function Login() {
         setClicked(!clicked);
     };
 
+        const responseGoogle = response => {
+        const googeleName = response.profileObj.name
+        localStorage.setItem('userName', googeleName);
+        localStorage.setItem('userImageUrl', response.profileObj.imageUrl);
+        setUserName(googeleName)
+        setClicked(!clicked)
+    }
+
     return (
         <div className="Login">
             {clicked && <Redirect to="/dashboard/workouts/home" />}
@@ -31,7 +39,7 @@ export default function Login() {
                     <InputBox type="password" placeholder="Password" />
                 </div>
                 <LoginLocal onClick={handleSubmit} />
-                <LoginGoogle onClick={handleSubmit} />
+                <LoginGoogle onClick={handleSubmit} onSuccess={responseGoogle} />
             </main>
         </div>
     );
