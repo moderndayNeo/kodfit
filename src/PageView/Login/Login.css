@@ -52,3 +52,13 @@
 .Login .btn-google {
     color: #00AAEF;
 }
+
+@media (min-width: 600px) {
+    .Login .logoBox {
+        margin: 0px;
+    }
+
+    .Login .container {
+        padding: 20px;
+    }
+}
