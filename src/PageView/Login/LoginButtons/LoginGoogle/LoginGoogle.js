@@ -18,9 +18,10 @@ export default function LoginGoogle({ onClick }) {
                 cookiePolicy={'single_host_origin'}
                 render={renderProps => (
                     <button
+                        className="LoginButtons"
                         onClick={renderProps.onClick}
                         disabled={renderProps.disabled}
-                        className="button btn-transparent rounded-capsule btn-google">
+                        className="button btn-transparent rounded-capsule LoginGoogle">
                             Sign in with Google
                     </button>
                 )}
