@@ -9,12 +9,15 @@ export default function LoginGoogle({ onClick }) {
     //     localStorage.setItem('userImageUrl', response.profileObj.imageUrl);
     //     const userName = localStorage.getItem('userName')
     // }
+    const responseGoogle = response => {
+        console.log(response)
+    }
 
     return (
             <GoogleLogin
                 clientId="848040990578-mpvcvg31e99180qb7f28rqvfm708iqp3.apps.googleusercontent.com"
-                // onSuccess={responseGoogle} //
-                // onFailure={responseGoogle}
+                onSuccess={responseGoogle} //
+                onFailure={responseGoogle}
                 cookiePolicy={'single_host_origin'}
                 render={renderProps => (
                     <button
