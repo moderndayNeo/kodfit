@@ -10,7 +10,8 @@ export default function Map({ data, location }) {
     <div className="Map">
         <LoadScript
           id="load-script"
-          googleMapsApiKey="AIzaSyAHs3RiKCGgJhll5xXKjLFqprAi6-LW3Rc"
+          // googleMapsApiKey="AIzaSyAHs3RiKCGgJhll5xXKjLFqprAi6-LW3Rc"
+          googleMapsApiKey="AIzaSyAwS-wAPcJZ3sDxJ9Dfi0ilBqOEO2ZQfxA"
         >
           <GoogleMap
             id="gmap"
