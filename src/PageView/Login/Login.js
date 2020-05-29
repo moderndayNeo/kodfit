@@ -4,6 +4,8 @@ import InputBox from './InputBox/InputBox';
 import kodfit_logo from './../../common/images/kodfit_logo_large.svg';
 import { Redirect } from 'react-router-dom';
 import LoginButtons from './LoginButtons/LoginButtons';
+import LoginLocal from './LoginButtons/LoginLocal/LoginLocal'
+import LoginGoogle from './LoginButtons/LoginGoogle/LoginGoogle'
 
 export default function Login() {
 
@@ -26,7 +28,10 @@ export default function Login() {
                     <InputBox type="text" placeholder="Username" onChange={(e) => setUserName(e.target.value)}/>
                     <InputBox type="password" placeholder="Password" />
                 </div>
-                <LoginButtons onClick={handleSubmit}/>
+                {/* <LoginButtons onClick={handleSubmit}/> */}
+                <LoginLocal onClick={handleSubmit} />
+                <LoginGoogle onClick={handleSubmit} />
+
             </main>
         </div>
     )
