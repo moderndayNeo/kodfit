@@ -15,11 +15,15 @@ export default function Login() {
         setClicked(!clicked);
     };
 
-        const responseGoogle = response => {
-        const googeleName = response.profileObj.name
+    const responseGoogle = (response) => {
+        const googeleName = response.profileObj.name;
         localStorage.setItem('userName', googeleName);
         localStorage.setItem('userImageUrl', response.profileObj.imageUrl);
-        setUserName(googeleName)
+        setUserName(googeleName);
+        setClicked(!clicked);
+    };
+
+    const handleFailure = response => {
         setClicked(!clicked)
     }
 
@@ -39,7 +43,12 @@ export default function Login() {
                     <InputBox type="password" placeholder="Password" />
                 </div>
                 <LoginLocal onClick={handleSubmit} />
-                <LoginGoogle onClick={handleSubmit} onSuccess={responseGoogle} />
+                <p className="subtext">OR</p>
+                <LoginGoogle
+                    onClick={handleSubmit}
+                    onSuccess={responseGoogle}
+                    onFailure={handleFailure}
+                />
             </main>
         </div>
     );

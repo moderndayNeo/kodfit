@@ -1,33 +1,34 @@
-.Login input {
-    padding: 10px;
-    border: 0;
-    border-bottom: 1px solid;
+.Login {
+    --login-button-width: 200px;
+    --login-button-font-size: 14px;
+    --login-button-padding: 0;
+    --login-button-height: 30px;
+}
+
+.Login .subtext {
+    margin: 0 auto;
+}
+
+.Login .container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 300px;
 }
 
 .Login .logoBox {
-    margin: 50px;
+    margin: 20px;
     display: flex;
     justify-content: center;
 }
 
 .Login .logo {
     width: 150px;
+    margin: 0;
 }
 
 .Login .container {
     display: grid;
-}
-
-.Login .inputBox-content {
-    margin: 10px;
-    display: flex;
-    justify-content: center;
-}
-
-.Login .LoginButtons > * {
-    text-transform: uppercase;
-    text-align: center;
-    font-family: 'Play', sans-serif;
 }
 
 @media (min-width: 600px) {

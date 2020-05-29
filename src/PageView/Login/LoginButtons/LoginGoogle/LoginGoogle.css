@@ -1,3 +1,8 @@
 .LoginGoogle {
     color: var(--kodfit-blue);
+    width: var(--login-button-width);
+    font-size: var(--login-button-font-size);
+    padding: var(--login-button-padding);
+    height: var(--login-button-height);
+    margin: 0;
 }

@@ -1,0 +1,11 @@
+.InputBox {
+    display: flex;
+    justify-content: center;
+}
+
+.InputBox input {
+    padding: 10px;
+    border: 0;
+    border-bottom: 1px solid;
+    font-size: 14px;
+}
