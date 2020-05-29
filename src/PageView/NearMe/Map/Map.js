@@ -2,8 +2,7 @@ import React, { useState } from "react";
 import "./Map.css";
 import { GoogleMap, LoadScript, Marker } from "@react-google-maps/api";
 import InfoWindows from "./InfoWindows/InfoWindows";
-const ADAM_API_KEY =`${process.env.REACT_APP_API_KEY_GOOGLE_LOGIN_ADAM}`
-const MARIAN_API_KEY =`${process.env.REACT_APP_API_KEY_GOOGLE_LOGIN_MARIAN}`
+const map_key = "AIzaSyAwS-wAPcJZ3sDxJ9Dfi0ilBqOEO2ZQfxA"
 
 export default function Map({ data, location }) {
     const [markerId, setMarkerId] = useState('');
@@ -12,7 +11,7 @@ export default function Map({ data, location }) {
     <div className="Map">
         <LoadScript
           id="load-script"
-          googleMapsApiKey={ADAM_API_KEY}
+          googleMapsApiKey={map_key}
         >
           <GoogleMap
             id="gmap"
