@@ -5,7 +5,7 @@ import './LoginGoogle.css';
 export default function LoginGoogle({ onClick, onSuccess, onFailure }) {
     return (
         <GoogleLogin
-            clientId="848040990578-mpvcvg31e99180qb7f28rqvfm708iqp3.apps.googleusercontent.com"
+            clientId="1097196745693-qh7n4kj5j6hc5nsrrhgdak0dm5kav4pb.apps.googleusercontent.com"
             onSuccess={onSuccess}
             onFailure={onFailure}
             cookiePolicy={'single_host_origin'}
