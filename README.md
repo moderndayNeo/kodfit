@@ -5,7 +5,7 @@
 Access Kodfit here: https://kodfit-adamzdrzalka.now.sh/
 
 # Mobile View
-![kodfit-mobile](-- mobile gif --)
+![kodfit-mobile-gyms](https://user-images.githubusercontent.com/57966028/83323922-b921a380-a259-11ea-9b26-b15b8d8c534d.gif)
 
 # Desktop View
 ![kodfit-desktop](-- desktop gif --)
