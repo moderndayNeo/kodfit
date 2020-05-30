@@ -15,14 +15,14 @@ Access Kodfit here: https://kodfit-adamzdrzalka.now.sh/
 * [Outline](#outline)
 * [Technologies](#technologies)
 * [The Code](#some-snippets-from-the-code)
-* [Authors](#some-snippets-from-the-code)
+* [Authors](#authors)
 
 ## Outline
 
 This is Kodfit - the fitness app that keeps you motivated! My aim is to show you that staying fit and healthy is easier than ever before.
 Want to find nearby gyms and personal trainers in your area? Head to the Nearby page of the app.
 Want to do a workout but not sure where to start? Head to the Schedule page, press Start and the random workout generator will provide one for you.
-Need to keep track of your progress? Simply enter your current weight and your goals and let us do the work for you!
+Need to keep track of your progress? Simply enter your current weight and your goals and let Kodfit do the work.
 
 Kodfit - The fitter, stronger you is closer than you think.
 
@@ -115,7 +115,7 @@ Each sub-component has it's own CSS file. Use of CSS Variables results in scalab
 }
 ```
 ### Modern Javascript and React Practices
-##### Componentizing the app and using React Hooks allows for easily maintainable code. Asynchronous Javascript results in a smooth user experience even if an API call fails on the backend.
+Componentizing the app and using React Hooks allows for easily maintainable code. Asynchronous Javascript results in a smooth user experience even if an API call fails on the backend.
 
 ```js
 import React, { useState, useEffect } from 'react';
