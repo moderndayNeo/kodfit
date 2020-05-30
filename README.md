@@ -90,7 +90,8 @@ Features:
     };
 }
 ```
-### Clean CSS - Each sub-component has it's own CSS file. CSS Variables aid scalability
+### Clean CSS
+Each sub-component has it's own CSS file. Use of CSS Variables results in scalability
 ```css
 .NotFound .main {
     display: flex;
