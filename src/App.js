@@ -25,8 +25,6 @@ export default App;
 To Do:
 1. Google Login - errorHandle. Pause. If doesn't work provide a message:
 This is a demo. Google Login not necessary. Redirecting to the app.
-2. If user signs in with random account, tracker page must display dashes 
-where weight and goals would be.
 3. Profile - if user has not provided any stats, make the update your stats button
 bounce every 3 seconds
 */
