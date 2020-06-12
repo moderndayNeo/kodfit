@@ -2,6 +2,12 @@ import React from 'react';
 import './PopupButton.css';
 
 export default function PopupButton({ onClick, infoProvided }) {
+    
+
+    setInterval(() => {
+        
+    }, 5000);
+
     return (
         <button
             className={`PopupButton button primary rounded-capsule update-stats ${!infoProvided && "bouncing"}`}

@@ -2,15 +2,22 @@
     position: absolute;
     top: -80px;
     right: 0;
+    /* Desktop :
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    */
 }
 
 .bouncing {
-    /* animation: 1s ease 0s infinite normal none running tada; */
     animation-name: tada;
-    animation-duration: 1s;
-    animation-delay: 3s;
+    animation-duration: 1s; 
+    animation-delay: 5s;
     animation-timing-function: ease;
     animation-iteration-count: infinite;
+    animation-play-state: running;
+    animation-fill-mode: none;
+    animation-direction: normal;
 }
 
 @keyframes tada {
