@@ -11,7 +11,8 @@
 
 @media (min-width: 600px) {
     .PersonalInfo {
-        width: 700px;
+        /* width: 700px; */
+        /* width: 100%; */
         margin: auto;
     }
 }

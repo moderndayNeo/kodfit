@@ -12,9 +12,8 @@
 .bouncing {
     animation-name: tada;
     animation-duration: 1s; 
-    animation-delay: 5s;
     animation-timing-function: ease;
-    animation-iteration-count: infinite;
+    animation-iteration-count: 1;
     animation-play-state: running;
     animation-fill-mode: none;
     animation-direction: normal;
