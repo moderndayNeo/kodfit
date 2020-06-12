@@ -2,14 +2,14 @@
     position: fixed;
     top: 20px;
     right: 20px;
-   
 }
 
-.bouncing {
+.call-user-attention {
     animation-name: tada;
     animation-duration: 1s; 
     animation-timing-function: ease;
     animation-iteration-count: 1;
+    /* animation-iteration-count: infinite; */
     animation-play-state: running;
     animation-fill-mode: none;
     animation-direction: normal;
