@@ -1,12 +1,8 @@
 .PopupButton {
-    position: absolute;
-    top: -80px;
-    right: 0;
-    /* Desktop :
     position: fixed;
     top: 20px;
     right: 20px;
-    */
+   
 }
 
 .bouncing {
