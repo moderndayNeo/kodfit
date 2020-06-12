@@ -12,24 +12,28 @@ export default function Login() {
 
     const handleSubmit = () => {
         localStorage.userName = userName;
+        console.log('Google Login Succeeded')
         setClicked(!clicked);
     };
+
+    // Dynamically display username if user uses local signin
 
     const responseGoogle = (response) => {
         const googeleName = response.profileObj.name;
         localStorage.setItem('userName', googeleName);
         localStorage.setItem('userImageUrl', response.profileObj.imageUrl);
         setUserName(googeleName);
-        setClicked(!clicked);
+        // setClicked(!clicked);
     };
 
     const handleFailure = response => {
-        setClicked(!clicked)
+        console.log('Google Login Failed')
+        // setClicked(!clicked)
     }
 
     return (
         <div className="Login">
-            {clicked && <Redirect to="/dashboard/workouts/home" />}
+            {/* {clicked && <Redirect to="/dashboard/workouts/home" />} */}
             <div className="logoBox">
                 <img src={kodfit_logo} className="logo" alt="logo" />
             </div>

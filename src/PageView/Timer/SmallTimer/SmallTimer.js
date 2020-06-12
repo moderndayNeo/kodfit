@@ -71,7 +71,7 @@ const SmallTimer = ({ timer }) => {
             setTimeLeft(timer)
             return
 		}
-
+        // eslint-disable-next-line
         intervalId = setInterval(() => {
             setTimeLeft(timeLeft - 1)
         }, 1000)

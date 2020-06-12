@@ -15,9 +15,23 @@ import Navbar from './NavBar/NavBar';
 import Elements from './Elements/Elements';
 import './PageView.css';
 
+class DebugRouter extends Router {
+  constructor(props){
+    super(props);
+    console.log('initial history is: ', JSON.stringify(this.history, null,2))
+    this.history.listen((location, action)=>{
+      console.log(
+        `The current URL is ${location.pathname}${location.search}${location.hash}`
+      )
+      console.log(`The last navigation action was ${action}`, JSON.stringify(this.history, null,2));
+    });
+  }
+}
+
 export default function PageView() {
   return (
-    <Router>
+    <DebugRouter>
+     {/* <Router> */}
       <Switch />
       <div className="PageView">
         <section className="container">
@@ -41,6 +55,7 @@ export default function PageView() {
         <Route path="/" exact component={LandingPage} />
       </div>
       <Switch />
-    </Router>
+    {/* </Router> */}
+  </DebugRouter >
   );
 }

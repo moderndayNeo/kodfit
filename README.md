@@ -203,4 +203,4 @@ Initial Authors:
 Continuing Author:
 * Adam Zdrzalka - [moderndayNeo](https://github.com/moderndayNeo)
 
-Kodfit began as a team project for the Kodiri coding internship. At the conclusion of the internship the members of the group went on to other projects. The following three weeks I continued working solely on the project, as I enjoyed working on the app and it had a number of areas for improvement, mostly with cleaning up the code and improving the layout for desktop users. At the end of the three weeks, this is the final result.
+Kodfit began as a team project for the Kodiri coding internship. At the conclusion of the internship the members of the group went on to other projects. The following three weeks I continued working solely on the project as I enjoyed working on the app and it had a number of areas for improvement - notably cleaning up the code, improving the layout for desktop users, fixing bugs and improving user functionality. At the end of the three weeks, this is the final result.
