@@ -1,39 +1,40 @@
-import React, { useState } from 'react';
-import './Login.css';
-import InputBox from './InputBox/InputBox';
-import kodfit_logo from './../../common/images/kodfit_logo_large.svg';
-import { Redirect } from 'react-router-dom';
-import LoginLocal from './LoginButtons/LoginLocal/LoginLocal';
-import LoginGoogle from './LoginButtons/LoginGoogle/LoginGoogle';
+import React, { useState } from 'react'
+import './Login.css'
+import InputBox from './InputBox/InputBox'
+import kodfit_logo from './../../common/images/kodfit_logo_large.svg'
+import { Redirect } from 'react-router-dom'
+import LoginLocal from './LoginButtons/LoginLocal/LoginLocal'
+import LoginGoogle from './LoginButtons/LoginGoogle/LoginGoogle'
 
 export default function Login() {
-    const [userName, setUserName] = useState('');
-    const [clicked, setClicked] = useState(false);
+    const [userName, setUserName] = useState('')
+    const [clicked, setClicked] = useState(false)
 
-    const handleSubmit = () => {
-        localStorage.userName = userName;
-        console.log('Google Login Succeeded')
-        setClicked(!clicked);
-    };
+    const handleLocalLogin = () => {
+        localStorage.userName = userName
+        console.log('Local Login Succeeded')
+        console.log('userName is:' + userName)
+        setClicked(!clicked)
+    }
 
     // Dynamically display username if user uses local signin
 
     const responseGoogle = (response) => {
-        const googeleName = response.profileObj.name;
-        localStorage.setItem('userName', googeleName);
-        localStorage.setItem('userImageUrl', response.profileObj.imageUrl);
-        setUserName(googeleName);
+        const googeleName = response.profileObj.name
+        localStorage.setItem('userName', googeleName)
+        localStorage.setItem('userImageUrl', response.profileObj.imageUrl)
+        setUserName(googeleName)
         // setClicked(!clicked);
-    };
+    }
 
-    const handleFailure = response => {
+    const handleFailure = (response) => {
         console.log('Google Login Failed')
         // setClicked(!clicked)
     }
 
     return (
         <div className="Login">
-            {/* {clicked && <Redirect to="/dashboard/workouts/home" />} */}
+            {clicked && <Redirect to="/dashboard/workouts/home" />}
             <div className="logoBox">
                 <img src={kodfit_logo} className="logo" alt="logo" />
             </div>
@@ -46,14 +47,15 @@ export default function Login() {
                     />
                     <InputBox type="password" placeholder="Password" />
                 </div>
-                <LoginLocal onClick={handleSubmit} />
+                {/* <LoginLocal onClick={handleLocalLogin} /> */}
+                <LoginLocal onClick={ userName ? handleLocalLogin : null } />
                 <p className="subtext">OR</p>
                 <LoginGoogle
-                    onClick={handleSubmit}
+                    // onClick={handleSubmit}
                     onSuccess={responseGoogle}
                     onFailure={handleFailure}
                 />
             </main>
         </div>
-    );
+    )
 }
