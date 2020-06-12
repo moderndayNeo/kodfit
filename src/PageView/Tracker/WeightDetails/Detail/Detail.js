@@ -5,7 +5,7 @@ export default function Detail({ title, value }) {
     return (
         <div className="Detail separator-center">
             <p>{title}</p>
-            <p>{value} kg</p>
+            <p>{value}</p>
         </div>
     )
 }

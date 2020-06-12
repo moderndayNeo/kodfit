@@ -4,12 +4,30 @@ import Detail from './Detail/Detail'
 
 export default function WeightDetails() {
     const difference = localStorage.goalWeight - localStorage.currentWeight
-    const target = difference > 0 ? `+ ${difference}` : `${difference}`
+    const target = difference ?
+        difference > 0 ?
+            `+ ${difference}` :
+            `${difference}`
+        : '--'
 
     return (
         <div className="WeightDetails">
-            <Detail title="Goal Weight" value={localStorage.goalWeight} />
-            <Detail title="Current Weight" value={localStorage.currentWeight} />
+            <Detail
+                title="Goal Weight"
+                value={
+                    localStorage.goalWeight
+                        ? `${localStorage.goalWeight}kg`
+                        : '--'
+                }
+            />
+            <Detail
+                title="Current Weight"
+                value={
+                    localStorage.currentWeight
+                        ? `${localStorage.currentWeight}kg`
+                        : '--'
+                }
+            />
             <Detail title="Target" value={target} />
         </div>
     )
