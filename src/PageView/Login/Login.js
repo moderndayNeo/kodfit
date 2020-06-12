@@ -12,8 +12,6 @@ export default function Login() {
 
     const handleLocalLogin = () => {
         localStorage.userName = userName
-        console.log('Local Login Succeeded')
-        console.log('userName is:' + userName)
         setClicked(!clicked)
     }
 

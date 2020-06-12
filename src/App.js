@@ -29,4 +29,5 @@ This is a demo. Google Login not necessary. Redirecting to the app.
 where weight and goals would be.
 3. Profile - if user has not provided any stats, make the update your stats button
 bounce every 3 seconds
+4. Display default profile picture if no user image available
 */
