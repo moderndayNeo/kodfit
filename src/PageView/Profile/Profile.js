@@ -8,15 +8,21 @@ import BarChartContainer from '../Tracker/BarChartContainer/BarChartContainer'
 
 export default function Profile() {
     const [popup, setPopup] = useState(false);
+    const [infoProvided, setInfoProvided] = useState(false)
 
     const updateStats = () => {
         setPopup(!popup);
         window.location.reload();
     };
 
+    const handleClick = () => {
+        setPopup(!popup)
+        setInfoProvided(true)
+    }
+
     return (
         <div className="Profile">
-            <PopupButton onClick={() => setPopup(!popup)} />
+            <PopupButton onClick={handleClick} infoProvided={infoProvided} />
             {popup && <Popup onClick={() => updateStats()} />}
             <UserProfile />
             <Stats />
