@@ -8,8 +8,7 @@ const API_clientID =
 export default function LoginGoogle({ onSuccess, onFailure }) {
     return (
         <GoogleLogin
-            // clientId={API_clientID}
-            clientId={'false id'}
+            clientId={API_clientID}
             onSuccess={onSuccess}
             onFailure={onFailure}
             cookiePolicy={'single_host_origin'}
