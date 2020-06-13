@@ -37,11 +37,18 @@
 }
 
 @media (min-width: 600px) {
+    .Login .container {
+        height: 250px;
+        padding: 20px;
+    }
+
     .Login .logoBox {
         margin: 0px;
     }
+}
 
-    .Login .container {
-        padding: 20px;
+@media (min-width: 1000px) {
+    .Login .logoBox {
+        margin: 30px;
     }
 }
