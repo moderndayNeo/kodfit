@@ -24,4 +24,5 @@ export default App;
 To Do:
 1. Google Login - errorHandle. Pause. If doesn't work provide a message:
 This is a demo. Google Login not necessary. Redirecting to the app.
+2. Add start button on exercises page
 */

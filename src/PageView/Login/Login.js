@@ -15,8 +15,6 @@ export default function Login() {
         setClicked(!clicked)
     }
 
-    // Dynamically display username if user uses local signin
-
     const responseGoogle = (response) => {
         const googeleName = response.profileObj.name
         localStorage.setItem('userName', googeleName)
@@ -45,7 +43,6 @@ export default function Login() {
                     />
                     <InputBox type="password" placeholder="Password" />
                 </div>
-                {/* <LoginLocal onClick={handleLocalLogin} /> */}
                 <LoginLocal onClick={ userName ? handleLocalLogin : null } />
                 <p className="subtext">OR</p>
                 <LoginGoogle

@@ -5,7 +5,7 @@ const API_clientID = `${process.env.REACT_APP_GOOGLE_LOGIN_CLIENT_ID}`
 
 export default function LoginGoogle({ onClick, onSuccess, onFailure }) {
 
-    console.log(API_clientID)
+    console.log(`API Client ID is: ${API_clientID}`)
     return (
         <GoogleLogin
             clientId={API_clientID}
@@ -19,6 +19,7 @@ export default function LoginGoogle({ onClick, onSuccess, onFailure }) {
                 >
                     Sign in with Google
                 </button>
+                
             )}
         />
     );
