@@ -12,12 +12,14 @@
 .Login .container {
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: space-between;
     height: 300px;
+    padding: 0;
+    height: 220px;
 }
 
 .Login .logoBox {
-    margin: 20px;
+    margin-bottom: 20px;
     display: flex;
     justify-content: center;
 }
@@ -27,10 +29,6 @@
     margin: 0;
 }
 
-.Login .container {
-    display: grid;
-    position: relative;
-}
 
 .Login .error-message {
     font-size: 14px;
