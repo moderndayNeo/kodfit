@@ -4,7 +4,7 @@ import PersonalInfo from './PersonalInfo/PersonalInfo';
 import profileImage from '../../../common/images/default-profile-image.png'
 
 export default function UserProfile() {
-    let { userName, userImage, userEmail, userGoogleId } = localStorage
+    let { userName, userImage } = localStorage
 
     return (
         <div className="UserProfile">

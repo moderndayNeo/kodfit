@@ -10,6 +10,7 @@ import { sendToLocalStorage } from './sendToLocalStorage'
 export default function Login() {
     const [userName, setUserName] = useState('')
     const [redirect, setRedirect] = useState(false)
+    const [displayMessage, setDisplayMessage] = useState(false)
 
     const handleLocalLogin = () => {
         localStorage.userName = userName
@@ -22,7 +23,7 @@ export default function Login() {
     }
 
     const handleFailure = () => {
-        // setRedirect(!redirect)
+        setDisplayMessage(true)
         console.log('Google login failed')
     }
 
@@ -47,6 +48,12 @@ export default function Login() {
                     onSuccess={handleSuccess}
                     onFailure={handleFailure}
                 />
+                {displayMessage && (
+                    <p className="error-message">
+                        Google Login is currently unavailable. Please enter a
+                        Username and click SIGN IN
+                    </p>
+                )}
             </main>
         </div>
     )
