@@ -5,6 +5,7 @@ import kodfit_logo from './../../common/images/kodfit_logo_large.svg'
 import { Redirect } from 'react-router-dom'
 import LoginLocal from './LoginButtons/LoginLocal/LoginLocal'
 import LoginGoogle from './LoginButtons/LoginGoogle/LoginGoogle'
+import { sendToLocalStorage } from './sendToLocalStorage'
 
 export default function Login() {
     const [userName, setUserName] = useState('')
@@ -12,19 +13,15 @@ export default function Login() {
 
     const handleLocalLogin = () => {
         localStorage.userName = userName
-        setClicked(!clicked)
+        setClicked(true)
     }
 
-    const responseGoogle = (response) => {
-        const googeleName = response.profileObj.name
-        localStorage.setItem('userName', googeleName)
-        localStorage.setItem('userImageUrl', response.profileObj.imageUrl)
-        setUserName(googeleName)
-        // setClicked(!clicked);
+    const handleSuccess = (response) => {
+        sendToLocalStorage(response)
+        setClicked(true)
     }
 
-    const handleFailure = (response) => {
-        console.log('Google Login Failed')
+    const handleFailure = () => {
         // setClicked(!clicked)
     }
 
@@ -43,11 +40,10 @@ export default function Login() {
                     />
                     <InputBox type="password" placeholder="Password" />
                 </div>
-                <LoginLocal onClick={ userName ? handleLocalLogin : null } />
+                <LoginLocal onClick={userName ? handleLocalLogin : null} />
                 <p className="subtext">OR</p>
                 <LoginGoogle
-                    // onClick={handleSubmit}
-                    onSuccess={responseGoogle}
+                    onSuccess={handleSuccess}
                     onFailure={handleFailure}
                 />
             </main>
