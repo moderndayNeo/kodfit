@@ -13,18 +13,18 @@ export default function WeightDetails() {
     return (
         <div className="WeightDetails">
             <Detail
-                title="Goal Weight"
-                value={
-                    localStorage.goalWeight
-                        ? `${localStorage.goalWeight}kg`
-                        : '--'
-                }
-            />
-            <Detail
                 title="Current Weight"
                 value={
                     localStorage.currentWeight
                         ? `${localStorage.currentWeight}kg`
+                        : '--'
+                }
+            />
+            <Detail
+                title="Goal Weight"
+                value={
+                    localStorage.goalWeight
+                        ? `${localStorage.goalWeight}kg`
                         : '--'
                 }
             />
