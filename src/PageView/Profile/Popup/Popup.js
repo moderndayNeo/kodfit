@@ -11,12 +11,14 @@ import './UpdateButton/UpdateButton';
 import UpdateButton from './UpdateButton/UpdateButton';
 import './SelectGender/SelectGender';
 import SelectGender from './SelectGender/SelectGender';
+import ExitButton from './ExitButton/ExitButton'
 
 export default function Popup({ onClick }) {
 
     return (
         <div className="Popup">
             <div className="popup-box">
+                <ExitButton />
                 <h2 className="header">Update Your Stats</h2>
                 <div className="centre-text">
                     <InputField
