@@ -1,5 +1,4 @@
 .Timer {
-    margin-top: 50px;
 }
 
 .Timer .grid-container {
@@ -29,6 +28,7 @@
 
 .Timer input {
     font-size: 50px;
+    width: 80px;
 }
 
 .Timer .buttons {
