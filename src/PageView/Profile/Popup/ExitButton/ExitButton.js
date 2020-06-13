@@ -1,9 +1,9 @@
 import React from 'react'
 import './ExitButton.css'
 
-export default function ExitButton() {
+export default function ExitButton({ onClick }) {
     return (
-        <button className="ExitButton">
+        <button className="ExitButton" onClick={onClick}>
             X
         </button>
     )

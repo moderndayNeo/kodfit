@@ -18,7 +18,7 @@ export default function Popup({ onClick }) {
     return (
         <div className="Popup">
             <div className="popup-box">
-                <ExitButton />
+                <ExitButton onClick={onClick} />
                 <h2 className="header">Update Your Stats</h2>
                 <div className="centre-text">
                     <InputField

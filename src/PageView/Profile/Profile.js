@@ -7,7 +7,7 @@ import Stats from './Stats/Stats';
 import BarChartContainer from '../Tracker/BarChartContainer/BarChartContainer'
 
 export default function Profile() {
-    const [popup, setPopup] = useState(true); // false
+    const [popup, setPopup] = useState(false);
     const [infoProvided, setInfoProvided] = useState(false)
 
     const updateStats = () => {
