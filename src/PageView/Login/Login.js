@@ -9,25 +9,26 @@ import { sendToLocalStorage } from './sendToLocalStorage'
 
 export default function Login() {
     const [userName, setUserName] = useState('')
-    const [clicked, setClicked] = useState(false)
+    const [redirect, setRedirect] = useState(false)
 
     const handleLocalLogin = () => {
         localStorage.userName = userName
-        setClicked(true)
+        setRedirect(true)
     }
 
     const handleSuccess = (response) => {
         sendToLocalStorage(response)
-        setClicked(true)
+        setRedirect(true)
     }
 
     const handleFailure = () => {
-        // setClicked(!clicked)
+        // setRedirect(!redirect)
+        console.log('Google login failed')
     }
 
     return (
         <div className="Login">
-            {clicked && <Redirect to="/dashboard/workouts/home" />}
+            {redirect && <Redirect to="/dashboard/workouts/home" />}
             <div className="logoBox">
                 <img src={kodfit_logo} className="logo" alt="logo" />
             </div>

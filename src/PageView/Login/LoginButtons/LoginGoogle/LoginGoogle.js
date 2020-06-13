@@ -15,14 +15,14 @@ export default function LoginGoogle({ onSuccess, onFailure }) {
             onSuccess={onSuccess}
             onFailure={onFailure}
             cookiePolicy={'single_host_origin'}
-            // render={(renderProps) => (
-            //     <button
-            //         onClick={onClick}
-            //         className="button btn-transparent rounded-capsule LoginGoogle"
-            //     >
-            //         Sign in with Google
-            //     </button>
-            // )}
+            render={(renderProps) => (
+                <button
+                    onClick={renderProps.onClick}
+                    className="button btn-transparent rounded-capsule LoginGoogle"
+                >
+                    Sign in with Google
+                </button>
+            )}
         />
     );
 }
