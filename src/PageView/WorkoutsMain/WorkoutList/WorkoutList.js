@@ -9,6 +9,8 @@ import WorkoutMenuButtons from './WorkoutMenuButtons/WorkoutMenuButtons'
 export default function WorkoutList(props) {
     const urlSlug = props.match.params.view
 
+    console.log(props)
+
     return (
         <div className="WorkoutsList">
             <WorkoutMenuButtons urlSlug={urlSlug} />

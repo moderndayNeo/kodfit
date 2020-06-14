@@ -23,5 +23,4 @@ export default App;
 /*
 To Do:
 2. Add start button on exercises page
-improve timer on mobile
 */
