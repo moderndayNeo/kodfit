@@ -1,15 +1,13 @@
 import React from 'react'
 import './ReturnButton.css'
 
-export default function ReturnButton() {
+export default function ReturnButton({ onClick }) {
     return (
-        <div className="ReturnButton">
-            <a
-                className="button primary rounded-capsule"
-                href="../exercise-list"
-            >
-                Back To Exercises
-            </a>
+        <div
+            className="ReturnButton button primary rounded-capsule"
+            onClick={onClick}
+        >
+                Go Back
         </div>
     )
 }

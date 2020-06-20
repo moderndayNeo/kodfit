@@ -7,7 +7,9 @@ import ReturnButton from './ReturnButton/ReturnButton'
 export default class ExerciseListDetails extends React.Component {
     constructor() {
         super()
-        this.state = { listId: {} }
+        this.state = { 
+            listId: {},
+        }
     }
 
     componentDidMount() {
@@ -16,11 +18,11 @@ export default class ExerciseListDetails extends React.Component {
             list: listId,
         })
     }
-
+    
     render() {
         return (
             <div className="ExercisesList">
-                <ReturnButton />
+                <ReturnButton onClick={() => this.props.history.goBack()} />
                 <div className="containerBottom">
                     {ExercisesData()
                         .filter((exercise) => {
