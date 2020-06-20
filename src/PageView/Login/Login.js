@@ -24,7 +24,6 @@ export default function Login() {
 
     const handleFailure = () => {
         setDisplayMessage(true)
-        console.log('Google login failed')
     }
 
     return (
