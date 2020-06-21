@@ -10,7 +10,6 @@
     animation-timing-function: ease;
     animation-iteration-count: 2;
     animation-delay: 5s;
-    /* animation-iteration-count: infinite; */
     animation-play-state: running;
     animation-fill-mode: none;
     animation-direction: normal;
