@@ -3,6 +3,7 @@
     flex-direction: column;
     position: relative;
     height: 335px;
+    margin-bottom: 150px;
 }
 
 .CalendarWorkoutSection .button {
