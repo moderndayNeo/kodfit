@@ -24,7 +24,7 @@ export default class ExerciseListDetails extends React.Component {
         return (
             <div className="ExercisesList">
                 <ReturnButton onClick={() => this.props.history.goBack()} />
-                <StartButton />
+                <StartButton  href="potato"/>
 
                 <div className="containerBottom">
                     {ExercisesData()

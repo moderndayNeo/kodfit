@@ -1,10 +1,17 @@
 import React from 'react'
 import './StartButton.css'
+import { Link } from 'react-router-dom'
 
-export default function StartButton() {
+export default function StartButton({ href }) {
     return (
-        <div className="StartButton button primary rounded-capsule">
-            Start
-        </div>
+        <Link to={`/dashboard/workout-current/${href}`}>
+            <div
+                className="StartButton button primary rounded-capsule"
+            >
+                Start
+            </div>
+        </Link>
     )
 }
+
+// Link to={/dashboard/workouts/workout-current/listId}

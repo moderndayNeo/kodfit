@@ -45,7 +45,7 @@ export default function PageView() {
                     />
                     <Route
                         // exact
-                        path="/dashboard/workout-current/:listId"
+                        path="/dashboard/workout-current"
                         component={WorkoutCurrent}
                     />
                     <Route
