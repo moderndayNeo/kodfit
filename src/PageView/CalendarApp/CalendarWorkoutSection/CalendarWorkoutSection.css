@@ -1,0 +1,43 @@
+.CalendarWorkoutSection  {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    height: 335px;
+}
+
+.CalendarWorkoutSection .button {
+    width: 100px;
+}
+
+.CalendarWorkoutSection .title-and-button {
+    display: flex;
+    justify-content: space-between;
+}
+
+
+
+.calendarExerciseList {
+    text-align: left;
+    margin-bottom: 0;
+    overflow: scroll;
+    overflow-y: scroll;
+    -ms-overflow-style: none;
+}
+
+
+
+.calendarExerciseList::-webkit-scrollbar {
+    display: none;
+}
+
+@media (min-width: 600px) {
+    .CalendarWorkoutSection {
+        height: 470px;
+    }
+    .calendarExerciseList {
+        overflow: hidden;
+    }
+    .ContainerContent .button {
+        width: 180px;
+    }
+}

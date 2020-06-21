@@ -1,8 +1,7 @@
 import React, { useState } from 'react';
 import Calendar from 'react-calendar';
-import RandomExerciseList from './RandomExerciseGen/RandomExerciseList';
 import './CalendarApp.css';
-import { Link } from 'react-router-dom';
+import CalendarWorkoutSection from './CalendarWorkoutSection/CalendarWorkoutSection'
 
 export default function CalendarApp() {
   const [date, setDate] = useState(new Date());
@@ -27,23 +26,7 @@ export default function CalendarApp() {
           />
         </main>
       </div>
-  
-      <div className="calendarWorkoutContainer container">
-        <div className="ContainerContent">
-          <h3 className="title">Daily Workout</h3>
-          <Link to='/dashboard/workout-current'>
-            <button className="button primary rounded-capsule">Start</button>
-          </Link>
-          <div className="calendarExerciseList"> 
-            <RandomExerciseList />
-          </div>
-        </div>
-      </div> 
+      <CalendarWorkoutSection />
     </div>  
   );  
 }
-
-
-
-
-  
