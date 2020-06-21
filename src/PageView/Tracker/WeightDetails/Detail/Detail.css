@@ -1,3 +1,13 @@
 .Detail p {
     margin: 0;
 }
+
+.Detail .title {
+    font-size: 15px;
+}
+
+@media (min-width: 600px) {
+    .Detail .title {
+        font-size: 16px;
+    }
+}
