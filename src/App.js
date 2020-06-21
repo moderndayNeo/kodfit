@@ -22,9 +22,7 @@ export default App;
 
 /*
 To Do:
-1. Click back button, go back to previous page
 2. Add start button on exercises page
-
 x button hover mouse pointer
 
 */
