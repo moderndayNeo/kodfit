@@ -6,7 +6,6 @@
     padding: 10px;
 }
 
-
 @media (min-width: 800px) {
     .Tracker {
         margin-top: -10px;
@@ -20,7 +19,7 @@
         margin-top: 30px;
         margin: auto;
     }
-    
+
     .Tracker .LineChartContainer {
         grid-area: 1/1/2/2;
         margin-right: 20px;
