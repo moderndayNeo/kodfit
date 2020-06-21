@@ -1,11 +1,11 @@
-.calendarExerciseList .item {
+/* .calendarExerciseList .item {
     display: grid;
     grid-template-columns: 3fr 1fr;
     box-shadow: 2px 2px 5px silver;
     margin-bottom: 8px;
     padding: 0;
     height: 42px;
-}
+} */
 
 .item .detailsName {
     padding: 0;

@@ -13,6 +13,7 @@ export default function RandomExerciseList() {
       {
         Array.isArray(calendarExercisesList) && calendarExercisesList.map((position, index) => (
           <ExerciseList
+            className="RandomExerciseList"
             key={ExercisesData()[position].exerciseName + index}
             exerciseName={ExercisesData()[position].exerciseName}
             reps={ExercisesData()[position].reps}

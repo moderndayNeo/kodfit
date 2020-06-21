@@ -1,4 +1,4 @@
-.CalendarWorkoutSection  {
+.CalendarWorkoutSection {
     display: flex;
     flex-direction: column;
     position: relative;
@@ -7,16 +7,16 @@
 
 .CalendarWorkoutSection .button {
     width: 100px;
+    margin: 0;
 }
 
 .CalendarWorkoutSection .title-and-button {
     display: flex;
     justify-content: space-between;
+    padding: 10px 5px;
 }
 
-
-
-.calendarExerciseList {
+.CalendarWorkoutSection .RandomExerciseList {
     text-align: left;
     margin-bottom: 0;
     overflow: scroll;
@@ -24,9 +24,16 @@
     -ms-overflow-style: none;
 }
 
+.calendarExerciseList .item {
+    display: grid;
+    grid-template-columns: 3fr 1fr;
+    box-shadow: 2px 2px 5px silver;
+    margin-bottom: 8px;
+    padding: 0;
+    height: 42px;
+}
 
-
-.calendarExerciseList::-webkit-scrollbar {
+.CalendarWorkoutSection .RandomExerciseList::-webkit-scrollbar {
     display: none;
 }
 
@@ -34,7 +41,7 @@
     .CalendarWorkoutSection {
         height: 470px;
     }
-    .calendarExerciseList {
+    .CalendarWorkoutSection .RandomExerciseList {
         overflow: hidden;
     }
     .ContainerContent .button {

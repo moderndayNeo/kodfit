@@ -6,8 +6,6 @@ import { Link } from 'react-router-dom'
 export default function CalendarWorkoutSection() {
     return (
         <div className="CalendarWorkoutSection">
-            <div className="ContainerContent">
-
                 <div className="title-and-button">
                     <h3 className="title">Daily Workout</h3>
                     <Link to="/dashboard/workout-current">
@@ -16,13 +14,9 @@ export default function CalendarWorkoutSection() {
                         </button>
                     </Link>
                 </div>
-
-
-
                 <div className="calendarExerciseList">
                     <RandomExerciseList />
                 </div>
-            </div>
         </div>
     )
 }

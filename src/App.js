@@ -27,4 +27,12 @@ Simply provide the list of 7 exercises required. It will start the timer and run
 
 Click Start => Trigger workoutCurrent
 Doesn't matter if coming from Calendar, workout or exercises
+
+
+Start Button - takes href as props
+
+Calendar => href to workout-current
+Workouts/Exercises => href to workout-current/listId
+
+
 */
