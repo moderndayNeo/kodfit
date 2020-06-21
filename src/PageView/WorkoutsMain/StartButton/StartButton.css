@@ -1,0 +1,11 @@
+.StartButton {
+    color: white;
+    margin-top: 10px;
+    margin-left: 5px;
+}
+
+@media (min-width: 600px) {
+    .StartButton {
+        margin-left: 10px;
+    }
+}

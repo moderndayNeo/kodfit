@@ -3,11 +3,12 @@ import './ExerciseListDetails.css'
 import ExerciseList from '../WorkoutExerciseList'
 import ExercisesData from '../../../../Data/ExercisesData'
 import ReturnButton from './ReturnButton/ReturnButton'
+import StartButton from '../../StartButton/StartButton'
 
 export default class ExerciseListDetails extends React.Component {
     constructor() {
         super()
-        this.state = { 
+        this.state = {
             listId: {},
         }
     }
@@ -18,11 +19,12 @@ export default class ExerciseListDetails extends React.Component {
             list: listId,
         })
     }
-    
+
     render() {
         return (
             <div className="ExercisesList">
                 <ReturnButton onClick={() => this.props.history.goBack()} />
+                <StartButton />
 
                 <div className="containerBottom">
                     {ExercisesData()
