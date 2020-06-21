@@ -16,10 +16,9 @@ export default class ExerciseListDetails extends React.Component {
     componentDidMount() {
         let listId = this.props.match.params.listId
         this.setState({
-            list: listId,
+            listId: listId,
         })
     }
-    
 
     render() {
         return (
@@ -31,8 +30,8 @@ export default class ExerciseListDetails extends React.Component {
                     {ExercisesData()
                         .filter((exercise) => {
                             return (
-                                exercise.category === this.state.list ||
-                                exercise.workout === this.state.list
+                                exercise.category === this.state.listId ||
+                                exercise.workout === this.state.listId
                             )
                         })
                         .map((exercise) => {

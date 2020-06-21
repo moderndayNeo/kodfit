@@ -3,8 +3,12 @@ import { ExerciseContext } from '../../../context/ExerciseContext'
 import ExercisesData from '../../../Data/ExercisesData';
 import SmallTimer from '../../Timer/SmallTimer/SmallTimer';
 import './WorkoutCurrent.css';
+import { useLocation } from 'react-router-dom'
 
 export default function WorkoutCurrent() {
+    const location = useLocation()
+    const slug = location.pathname.split('/').pop()
+    console.log(slug)
 
     const exercises = useContext(ExerciseContext); // An array of seven random numbers
     // const exercises = slug === 'random' ? useContext(ExerciseContext) : an array from 0 - 6
