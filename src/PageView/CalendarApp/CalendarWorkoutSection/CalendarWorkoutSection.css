@@ -40,7 +40,8 @@
 
 @media (min-width: 600px) {
     .CalendarWorkoutSection {
-        height: 470px;
+        /* height: 400px; */
+        margin-bottom: 0;
     }
     .CalendarWorkoutSection .RandomExerciseList {
         overflow: hidden;

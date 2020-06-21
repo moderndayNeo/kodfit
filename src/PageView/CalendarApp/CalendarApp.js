@@ -8,10 +8,9 @@ export default function CalendarApp() {
   const onChange = date => setDate(date);
 
   return (
-    <div className="calendarAppContainer">
+    <div className="CalendarApp">
       <h2 className="separator-center">Activity Calendar</h2>
       <div className="calendarOne">
-        <main className="calendarContent">
           <Calendar
             minDate={new Date(2020, 0, 1)}
             maxDate={new Date(2020, 11, 31)}
@@ -24,7 +23,6 @@ export default function CalendarApp() {
             onChange={onChange}
             value={date}
           />
-        </main>
       </div>
       <CalendarWorkoutSection />
     </div>  

@@ -1,28 +1,7 @@
-.calendarTitle {
-    padding-bottom: 2px;
-    margin: 0;
-    text-align: start;
-    margin-left: 2%;
-}
-
 .calendarOne {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    align-items: flex-start;
     box-shadow: 0 0 8px silver;
     margin: 5px 0;
-    padding: 5px;
-}
-
-.calendarContent {
-    display: flex;
-    max-width: 100%;
-    flex-basis: 420px;
-    flex-direction: column;
-    flex-grow: 100;
-    align-items: stretch;
-    padding: 1%;
+    padding: 6px;
 }
 
 .react-calendar__navigation__arrow {
