@@ -11,7 +11,6 @@ export default class ExerciseListDetails extends React.Component {
         this.state = {
             listId: {},
         }
-        
     }
 
     componentDidMount() {

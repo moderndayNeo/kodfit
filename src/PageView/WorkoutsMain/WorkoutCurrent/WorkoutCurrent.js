@@ -6,8 +6,9 @@ import './WorkoutCurrent.css';
 
 export default function WorkoutCurrent() {
 
-    const exercises = useContext(ExerciseContext);
-    console.log(exercises)
+    const exercises = useContext(ExerciseContext); // An array of seven random numbers
+    // const exercises = slug === 'random' ? useContext(ExerciseContext) : an array from 0 - 6
+
     let [position, setPosition] = useState(0);
     let time = 30000;
 
@@ -35,6 +36,12 @@ export default function WorkoutCurrent() {
                             <h2>#{itemIndex}</h2>
                             <h2 className='workout-name'>
                                 {ExercisesData()[itemIndex].exerciseName}
+                                {/* {
+                                    slug === 'random' ?
+                                    ExercisesData()[itemIndex].exerciseName :
+                                    ExercisesData().filter(exercise => exercise.category === listID || exercise.workout === listID)[itemIndex].exerciseName
+                                } */}
+
                             </h2>
                             <SmallTimer timer={time / 1000}/>
                         </>
