@@ -70,18 +70,7 @@ export default function PageView() {
                         component={Elements}
                     />
                 </section>
-                <Route exact path="/dashboard/:slug" component={Navbar} />
-                <Route exact path="/dashboard/" component={Navbar} />
-                <Route
-                    exact
-                    path="/dashboard/workouts/:slug"
-                    component={Navbar}
-                />
-                <Route
-                    exact
-                    path="/dashboard/workouts/home/:slug"
-                    component={Navbar}
-                />
+                <Route path="/dashboard/:slug" component={Navbar} />
                 <Route path="/" exact component={LandingPage} />
             </div>
             <Switch />
