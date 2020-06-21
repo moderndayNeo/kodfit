@@ -7,6 +7,7 @@ import './WorkoutCurrent.css';
 export default function WorkoutCurrent() {
 
     const exercises = useContext(ExerciseContext);
+    console.log(exercises)
     let [position, setPosition] = useState(0);
     let time = 30000;
 

@@ -22,7 +22,9 @@ export default App;
 
 /*
 To Do:
-2. Add start button on exercises page
-x button hover mouse pointer
+WorkoutCurrent should be a re-usable component.
+Simply provide the list of 7 exercises required. It will start the timer and run through the list, regardless of where the data came from.
 
+Click Start => Trigger workoutCurrent
+Doesn't matter if coming from Calendar, workout or exercises
 */
