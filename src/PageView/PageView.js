@@ -21,57 +21,57 @@ export default function PageView() {
             <Switch />
             <div className="PageView">
                 <section className="container">
-                    <Route path="/login" exact component={Login} />
+                    <Route exact path="/login" component={Login} />
                     <Route
-                        path="/dashboard/calendar"
                         exact
+                        path="/dashboard/calendar"
                         component={CalendarApp}
                     />
-                    <Route path="/dashboard/near-me" exact component={NearMe} />
+                    <Route exact path="/dashboard/near-me" component={NearMe} />
                     <Route
-                        path="/dashboard/workouts/:view/"
                         exact
+                        path="/dashboard/workouts/:view/"
                         component={WorkoutList}
                     />
                     <Route
+                        exact
                         path="/dashboard/workouts/home/:listId"
-                        exact
                         component={ExerciseListDetails}
                     />
                     <Route
+                        exact
                         path="/dashboard/workouts/exercise-list/:listId"
-                        exact
                         component={ExerciseListDetails}
                     />
                     <Route
-                        path="/dashboard/workout-current"
                         exact
+                        path="/dashboard/workout-current"
                         component={WorkoutCurrent}
                     />
                     <Route
-                        path="/dashboard/tracker"
                         exact
+                        path="/dashboard/tracker"
                         component={Tracker}
                     />
-                    <Route path="/dashboard/timer" exact component={Timer} />
+                    <Route exact path="/dashboard/timer" component={Timer} />
                     <Route
-                        path="/dashboard/stopwatch"
                         exact
+                        path="/dashboard/stopwatch"
                         component={StopWatch}
                     />
                     <Route
-                        path="/dashboard/profile"
                         exact
+                        path="/dashboard/profile"
                         component={Profile}
                     />
                     <Route
-                        path="/dashboard/elements"
                         exact
+                        path="/dashboard/elements"
                         component={Elements}
                     />
                 </section>
                 <Route path="/dashboard/:slug" component={Navbar} />
-                <Route path="/" exact component={LandingPage} />
+                <Route exact path="/" component={LandingPage} />
             </div>
             <Switch />
         </Router>
