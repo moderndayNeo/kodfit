@@ -7,25 +7,26 @@ import { useLocation } from 'react-router-dom'
 
 export default function WorkoutCurrent() {
     const location = useLocation()
-    const slug = location.pathname.split('/').pop()
-    console.log(slug)
+    const slug = location.pathname.split('/').pop() // random, CoreAbs, shoulders
 
-    const exercises = useContext(ExerciseContext); // An array of seven random numbers
-    // const exercises = slug === 'random' ? useContext(ExerciseContext) : an array from 0 - 6
+    const randomExercises = useContext(ExerciseContext); // An array of seven random numbers
+    // const randomValues = useContext(ExerciseContext)
+    // const randomExercises = slug === 'random' ? randomValues : [0,1,2,3,4,5,6]
+    // console.log(randomExercises)
 
     let [position, setPosition] = useState(0);
     let time = 30000;
 
   useEffect(() => {
-        if(position <= exercises.calendarExercisesList.length) { 
+        if(position <= randomExercises.calendarExercisesList.length) { 
             const interval = setInterval(() => {
                 setPosition(position + 1);
             }, time);
             return () => clearInterval(interval);
         }
-   }, [position, exercises.calendarExercisesList.length, time]);
+   }, [position, randomExercises.calendarExercisesList.length, time]);
 
-    let itemIndex = exercises.calendarExercisesList[position];
+    let itemIndex = randomExercises.calendarExercisesList[position];
 
     return (
         <div className="WorkoutCurrent container">
@@ -34,6 +35,9 @@ export default function WorkoutCurrent() {
             </h2>
             <main>
                 <div className="containerOne-content workoutAction">
+
+                   
+                    
                     {
                         itemIndex && 
                         <>  
@@ -50,8 +54,18 @@ export default function WorkoutCurrent() {
                             <SmallTimer timer={time / 1000}/>
                         </>
                     }
+
+
+
+
+
                 </div >
             </main>  
         </div>
     )
 }
+
+
+/*
+Context: calendarExercisesList: getRandomNumbersArray(7)
+*/
