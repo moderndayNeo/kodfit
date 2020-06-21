@@ -1,8 +1,3 @@
-.WorkoutCurrent .WorkoutCurrentTitle {
-    text-align: left;
-    margin: 30px 20px;
-}
-
 .WorkoutCurrent .containerOne {
     display: grid;
     margin: 20px;
@@ -19,8 +14,9 @@
     justify-content: center;
 }
 
-.WorkoutCurrent .title {
+.WorkoutCurrent .workout-name {
     margin-bottom: 50px;
+    text-align: center;
 }
 
 @media (min-width: 600px) {

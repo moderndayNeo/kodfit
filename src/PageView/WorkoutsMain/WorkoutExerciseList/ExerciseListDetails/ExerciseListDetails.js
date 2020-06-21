@@ -11,6 +11,7 @@ export default class ExerciseListDetails extends React.Component {
         this.state = {
             listId: {},
         }
+        
     }
 
     componentDidMount() {
@@ -19,12 +20,13 @@ export default class ExerciseListDetails extends React.Component {
             list: listId,
         })
     }
+    
 
     render() {
         return (
             <div className="ExercisesList">
                 <ReturnButton onClick={() => this.props.history.goBack()} />
-                <StartButton  href="potato"/>
+                <StartButton listId="CoreAbs" />
 
                 <div className="containerBottom">
                     {ExercisesData()

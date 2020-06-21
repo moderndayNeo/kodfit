@@ -1,21 +1,11 @@
 import React, { useState } from 'react';
 import Calendar from 'react-calendar';
-import { useLocation, useHistory, useRouteMatch, useParams } from 'react-router-dom'
 import './CalendarApp.css';
 import CalendarWorkoutSection from './CalendarWorkoutSection/CalendarWorkoutSection'
 
 export default function CalendarApp() {
   const [date, setDate] = useState(new Date());
   const onChange = date => setDate(date);
-  // console.log(window.location.pathname)
-  let location = useLocation()
-  let history = useHistory()
-  let params = useParams()
-  let routeMatch = useRouteMatch()
-  // console.log(location)
-  console.log(history)
-  // console.log(params)
-  // console.log(routeMatch)
 
   return (
     <div className="calendarAppContainer">

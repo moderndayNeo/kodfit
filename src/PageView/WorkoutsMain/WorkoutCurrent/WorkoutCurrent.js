@@ -33,7 +33,7 @@ export default function WorkoutCurrent() {
                         itemIndex && 
                         <>  
                             <h2>#{itemIndex}</h2>
-                            <h2 className='title'>
+                            <h2 className='workout-name'>
                                 {ExercisesData()[itemIndex].exerciseName}
                             </h2>
                             <SmallTimer timer={time / 1000}/>
