@@ -44,7 +44,7 @@
     .CalendarWorkoutSection .RandomExerciseList {
         overflow: hidden;
     }
-    .ContainerContent .button {
+    .CalendarWorkoutSection .button {
         width: 180px;
     }
 }
