@@ -50,76 +50,6 @@ Features:
 
 ## Some Snippets From The Code
 
-### Separation of concerns
-Each function serves a single purpose
-```js
-    countDown = () => {
-        let countDownSeconds = this.state.toSeconds - 1;
-        this.setState({
-            timerObject: this.secondsToTime(countDownSeconds),
-            toSeconds: countDownSeconds,
-        });
-
-        if (countDownSeconds === 0) {
-            clearInterval(this.timer);
-        }
-    };
-
-    secondsToTime = (secs) => {
-        let hours = Math.floor(secs / (60 * 60));
-        let divisorForMinutes = secs % (60 * 60);
-        let minutes = Math.floor(divisorForMinutes / 60);
-        let divisorForSeconds = divisorForMinutes % 60;
-        let seconds = Math.ceil(divisorForSeconds);
-
-        let obj = {
-            h: hours,
-            m: minutes,
-            s: seconds,
-        };
-        return obj;
-    };
-
-    resetTimer = () => {
-        if (this.state.isRunning || this.state.toSeconds > 0) {
-            this.setState({
-                timerObject: {
-                    h: '00',
-                    m: '00',
-                    s: '00',
-                },
-                toSeconds: 0,
-                runningTimer: 0,
-            });
-            clearInterval(this.timer);
-        }
-    };
-}
-```
-### Clean CSS
-Each sub-component has it's own CSS file. Use of CSS Variables results in scalability
-```css
-.NotFound .main {
-    display: flex;
-    flex-direction: column;
-    height: 500px;
-    align-items: center;
-    justify-content: space-between;
-    text-align: center;
-    margin-top: 60px;
-}
-
-.NotFound .chevron {
-    color: var(--kodfit-blue);
-    font-size: 50px;
-}
-
-@media (min-width: 600px) {
-    .NotFound .main {
-        height: 350px;
-    }
-}
-```
 ### Modern Javascript and React Practices
 Asynchronous Javascript results in a smooth user experience even if an API call fails.
 
@@ -192,11 +122,82 @@ export default function NearMe() {
 }
 
 ```
+### Clean CSS
+Each sub-component has it's own CSS file. Use of CSS Variables results in scalability
+```css
+.NotFound .main {
+    display: flex;
+    flex-direction: column;
+    height: 500px;
+    align-items: center;
+    justify-content: space-between;
+    text-align: center;
+    margin-top: 60px;
+}
+
+.NotFound .chevron {
+    color: var(--kodfit-blue);
+    font-size: 50px;
+}
+
+@media (min-width: 600px) {
+    .NotFound .main {
+        height: 350px;
+    }
+}
+```
+
+### Separation of concerns
+Each function serves a single purpose
+```js
+    countDown = () => {
+        let countDownSeconds = this.state.toSeconds - 1;
+        this.setState({
+            timerObject: this.secondsToTime(countDownSeconds),
+            toSeconds: countDownSeconds,
+        });
+
+        if (countDownSeconds === 0) {
+            clearInterval(this.timer);
+        }
+    };
+
+    secondsToTime = (secs) => {
+        let hours = Math.floor(secs / (60 * 60));
+        let divisorForMinutes = secs % (60 * 60);
+        let minutes = Math.floor(divisorForMinutes / 60);
+        let divisorForSeconds = divisorForMinutes % 60;
+        let seconds = Math.ceil(divisorForSeconds);
+
+        let obj = {
+            h: hours,
+            m: minutes,
+            s: seconds,
+        };
+        return obj;
+    };
+
+    resetTimer = () => {
+        if (this.state.isRunning || this.state.toSeconds > 0) {
+            this.setState({
+                timerObject: {
+                    h: '00',
+                    m: '00',
+                    s: '00',
+                },
+                toSeconds: 0,
+                runningTimer: 0,
+            });
+            clearInterval(this.timer);
+        }
+    };
+}
+```
 
 ### Componentization
 Componentizing the app and using React Hooks allows for easily maintainable code
 
-```
+```js
 export default function Profile() {
     const [popup, setPopup] = useState(false);
     const [infoProvided, setInfoProvided] = useState(false)
