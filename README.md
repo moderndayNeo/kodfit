@@ -6,8 +6,10 @@ Access Kodfit here: https://kodfit-adamzdrzalka.now.sh/
 
 # Mobile View
 ![kodfit-mobile-gyms](https://user-images.githubusercontent.com/57966028/83323922-b921a380-a259-11ea-9b26-b15b8d8c534d.gif) 
-![kodfit-mobile-timer](https://user-images.githubusercontent.com/57966028/83324502-85e11380-a25d-11ea-9dbe-41ed19b0f6f4.gif)
-![kodfit-mobile-profile](https://user-images.githubusercontent.com/57966028/83324619-64345c00-a25e-11ea-9868-650b20812e30.gif)
+![kodfit-mobile-stats](https://user-images.githubusercontent.com/57966028/85385344-17306680-b53a-11ea-8b9f-115909e78e98.gif)
+![kodfit-mobile-workout-generator](https://user-images.githubusercontent.com/57966028/85385436-3929e900-b53a-11ea-8217-fdd90dde7f4d.gif)
+![kodfit-mobile-workouts](https://user-images.githubusercontent.com/57966028/85385491-4646d800-b53a-11ea-9a87-ecb3c1d95f90.gif)
+
 
 # Desktop View
 ![kodfit-desktop](-- desktop gif --)
