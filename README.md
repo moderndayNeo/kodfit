@@ -5,12 +5,11 @@
 Access Kodfit here: https://kodfit-adamzdrzalka.now.sh/
 
 # Mobile View
-![kodfit-mobile-gyms](https://user-images.githubusercontent.com/57966028/83323922-b921a380-a259-11ea-9b26-b15b8d8c534d.gif) 
+
+![kodfit-mobile-nearby-gyms](https://user-images.githubusercontent.com/57966028/85389682-aa1fcf80-b53f-11ea-9e69-21d50b247b61.gif)
 ![kodfit-mobile-stats](https://user-images.githubusercontent.com/57966028/85385344-17306680-b53a-11ea-8b9f-115909e78e98.gif)
 ![kodfit-mobile-workout-generator](https://user-images.githubusercontent.com/57966028/85385436-3929e900-b53a-11ea-8217-fdd90dde7f4d.gif)
 ![kodfit-mobile-workouts](https://user-images.githubusercontent.com/57966028/85385491-4646d800-b53a-11ea-9a87-ecb3c1d95f90.gif)
-![kodfit-mobile-nearby-gyms](https://user-images.githubusercontent.com/57966028/85389682-aa1fcf80-b53f-11ea-9e69-21d50b247b61.gif)
-
 
 # Desktop View
 ![kodfit-desktop-login](https://user-images.githubusercontent.com/57966028/85386357-6aef7f80-b53b-11ea-8a6f-21ebf3357734.gif)
@@ -121,7 +120,7 @@ Each sub-component has it's own CSS file. Use of CSS Variables results in scalab
 }
 ```
 ### Modern Javascript and React Practices
-Componentizing the app and using React Hooks allows for easily maintainable code. Asynchronous Javascript results in a smooth user experience even if an API call fails on the backend.
+Asynchronous Javascript results in a smooth user experience even if an API call fails.
 
 ```js
 import React, { useState, useEffect } from 'react';
@@ -192,6 +191,37 @@ export default function NearMe() {
 }
 
 ```
+
+### Componentization
+Componentizing the app and using React Hooks allows for easily maintainable code
+
+```
+export default function Profile() {
+    const [popup, setPopup] = useState(false);
+    const [infoProvided, setInfoProvided] = useState(false)
+
+    const updateStats = () => {
+        setPopup(!popup);
+        window.location.reload();
+    };
+
+    const handleClick = () => {
+        setPopup(!popup)
+        setInfoProvided(true)
+    }
+
+    return (
+        <div className="Profile">
+            <PopupButton onClick={handleClick} infoProvided={infoProvided} />
+            {popup && <Popup onClick={() => updateStats()} />}
+            <UserProfile />
+            <Stats />
+            <BarChartContainer />
+        </div>
+    );
+}
+```
+
 
 
 ## Authors
