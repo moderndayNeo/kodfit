@@ -50,7 +50,8 @@ Features:
 
 ## Some Snippets From The Code
 
-### Each function serves a single purpose
+### Separation of concerns
+Each function serves a single purpose
 ```js
     countDown = () => {
         let countDownSeconds = this.state.toSeconds - 1;
