@@ -9,6 +9,7 @@ Access Kodfit here: https://kodfit-adamzdrzalka.now.sh/
 ![kodfit-mobile-stats](https://user-images.githubusercontent.com/57966028/85385344-17306680-b53a-11ea-8b9f-115909e78e98.gif)
 ![kodfit-mobile-workout-generator](https://user-images.githubusercontent.com/57966028/85385436-3929e900-b53a-11ea-8217-fdd90dde7f4d.gif)
 ![kodfit-mobile-workouts](https://user-images.githubusercontent.com/57966028/85385491-4646d800-b53a-11ea-9a87-ecb3c1d95f90.gif)
+![kodfit-mobile-nearby-gyms](https://user-images.githubusercontent.com/57966028/85389682-aa1fcf80-b53f-11ea-9e69-21d50b247b61.gif)
 
 
 # Desktop View
@@ -31,9 +32,10 @@ Need to keep track of your progress? Simply enter your current weight and your g
 Kodfit - The fitter, stronger you is closer than you think.
 
 Features:
-* Login System
+* Google Login System
 * Random workout generator
 * Google Maps displays nearby gyms and trainers
+* Select workouts by category
 * Timer & Stopwatch
 * & more!
 
@@ -205,4 +207,4 @@ Initial Authors:
 Continuing Author:
 * Adam Zdrzalka - [moderndayNeo](https://github.com/moderndayNeo)
 
-Kodfit began as a team project for the Kodiri coding internship. At the conclusion of the internship the members of the group went on to other projects. The following three weeks I continued working solely on the project as I enjoyed working on the app and it had a number of areas for improvement - notably cleaning up the code, improving the layout for desktop users, fixing bugs and improving user functionality. At the end of the three weeks, this is the final result.
+Kodfit began as a team project for the Kodiri coding internship. At the conclusion of the internship the members of the group went on to other projects. For the following five weeks I continued working alone on the project as I enjoyed working on the app and it had a number of areas for improvement - notably new features, cleaning up the code, improving the layout for desktop users, fixing bugs and improving user functionality. Having completed those tasks, this is the final result.
