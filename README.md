@@ -12,7 +12,7 @@ Access Kodfit here: https://kodfit-adamzdrzalka.now.sh/
 
 
 # Desktop View
-![kodfit-desktop](-- desktop gif --)
+![kodfit-desktop-login](https://user-images.githubusercontent.com/57966028/85386357-6aef7f80-b53b-11ea-8a6f-21ebf3357734.gif)
 
 
 # Table Of Contents
