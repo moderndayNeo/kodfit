@@ -26,7 +26,7 @@ Want to find nearby gyms and personal trainers in your area? Head to the Nearby 
 Want to do a workout but not sure where to start? Head to the Schedule page, press Start and the random workout generator will provide one for you.
 Need to keep track of your progress? Simply enter your current weight and your goals and let Kodfit do the work.
 
-Kodfit - The fitter, stronger you is closer than you think.
+Kodfit - _The fitter, stronger you is closer than you think._
 
 Features:
 
@@ -42,8 +42,8 @@ Features:
 -   HTML5
 -   CSS3
 -   ES6 JavaScript
--   React.js
--   Node.js
+-   React.js v16.13.1
+-   Node.js v12.14.0
 -   Google Maps & Google Login APIs
 
 ## Some Snippets From The Code
