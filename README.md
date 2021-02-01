@@ -2,24 +2,22 @@
 
 ## Live Demo
 
-Access Kodfit here: https://kodfit-adamzdrzalka.now.sh/
+Access Kodfit Here: https://kodfit-adamzdrzalka.now.sh/
 
 # Mobile View
 
 ![kodfit-mobile-nearby-gyms](https://user-images.githubusercontent.com/57966028/85389682-aa1fcf80-b53f-11ea-9e69-21d50b247b61.gif)
-![kodfit-mobile-stats](https://user-images.githubusercontent.com/57966028/85385344-17306680-b53a-11ea-8b9f-115909e78e98.gif)
-![kodfit-mobile-workout-generator](https://user-images.githubusercontent.com/57966028/85385436-3929e900-b53a-11ea-8217-fdd90dde7f4d.gif)
-![kodfit-mobile-workouts](https://user-images.githubusercontent.com/57966028/85385491-4646d800-b53a-11ea-9a87-ecb3c1d95f90.gif)
 
 # Desktop View
+
 ![kodfit-desktop-login](https://user-images.githubusercontent.com/57966028/85386357-6aef7f80-b53b-11ea-8a6f-21ebf3357734.gif)
 
-
 # Table Of Contents
-* [Outline](#outline)
-* [Technologies](#technologies)
-* [The Code](#some-snippets-from-the-code)
-* [Authors](#authors)
+
+-   [Outline](#outline)
+-   [Technologies](#technologies)
+-   [The Code](#some-snippets-from-the-code)
+-   [Authors](#authors)
 
 ## Outline
 
@@ -31,69 +29,66 @@ Need to keep track of your progress? Simply enter your current weight and your g
 Kodfit - The fitter, stronger you is closer than you think.
 
 Features:
-* Google Login System
-* Random workout generator
-* Google Maps displays nearby gyms and trainers
-* Select workouts by category
-* Timer & Stopwatch
-* & more!
+
+-   Integrated Google Maps API with geolocation-based searching to display location of nearby gyms and personal trainers
+-   Applied CSS media queries, grid, and flexbox to create a fully responsive UI for both desktop, tablet, and mobile users that flows seamlessly when resizing the page
+-   Google Login System
+-   Created a category dashboard that allows users to select workouts by category
+-   Timer & Stopwatch
+-   & more!
 
 ## Technologies
 
-* HTML
-* CSS
-* JavaScript
-* ReactJS
-* NodeJS
-* Google API
-
+-   HTML5
+-   CSS3
+-   ES6 JavaScript
+-   React.js
+-   Node.js
+-   Google Maps & Google Login APIs
 
 ## Some Snippets From The Code
 
 ### Modern Javascript and React Practices
-Asynchronous Javascript results in a smooth user experience even if an API call fails.
+
+Asynchronous JavaScript results in a smooth user experience even if an API call fails.
 
 ```js
-import React, { useState, useEffect } from 'react';
-import './NearMe.css';
-import Map from './Map/Map';
-import List from './List/List';
-import SwitchButton from './SwitchButton/SwitchButton';
+import React, { useState, useEffect } from 'react'
+import './NearMe.css'
+import Map from './Map/Map'
+import List from './List/List'
+import SwitchButton from './SwitchButton/SwitchButton'
 
 export default function NearMe() {
-    const [data, setData] = useState([]);
-    const [location, setLocation] = useState({ lat: 51.5007, lng: -0.1246 });
-    const [query, setQuery] = useState('gym');
-    const [title, setTitle] = useState('Gyms');
-    let endpoint = 'https://discover.search.hereapi.com/v1/discover';
-    let queryParams = `at=${location.lat},${location.lng}&q=${query}&limit=15`;
-    let apiKEy = // HIDDEN
-
-    useEffect(() => {
+    const [data, setData] = useState([])
+    const [location, setLocation] = useState({ lat: 51.5007, lng: -0.1246 })
+    const [query, setQuery] = useState('gym')
+    const [title, setTitle] = useState('Gyms')
+    let endpoint = 'https://discover.search.hereapi.com/v1/discover'
+    let queryParams = `at=${location.lat},${location.lng}&q=${query}&limit=15`
+    let apiKEy = useEffect(() => { // HIDDEN
         let successPosition = (position) => {
             setLocation({
                 lat: position.coords.latitude,
                 lng: position.coords.longitude,
-            });
-        };
-        let errorHandle = () => setLocation({ lat: 51.5007, lng: -0.1246 });
-        navigator.geolocation.getCurrentPosition(successPosition, errorHandle);
-    }, []);
+            })
+        }
+        let errorHandle = () => setLocation({ lat: 51.5007, lng: -0.1246 })
+        navigator.geolocation.getCurrentPosition(successPosition, errorHandle)
+    }, [])
 
     useEffect(() => {
-        (async () => {
-            const response = await fetch(
-                `${endpoint}?${queryParams}&${apiKEy}`
-            );
-            const result = await response.json();
-            setData(result.items);
-        })();
-    }, [queryParams, endpoint, apiKEy]);
+        ;(async () => {
+            const response = await fetch(`${endpoint}?${queryParams}&${apiKEy}`)
+            const result = await response.json()
+            setData(result.items)
+        })()
+    }, [queryParams, endpoint, apiKEy])
 
     const updateQuery = (query, title) => {
-        setQuery(query);
-        setTitle(title);
-    };
+        setQuery(query)
+        setTitle(title)
+    }
 
     return (
         <div className="NearMe">
@@ -118,12 +113,14 @@ export default function NearMe() {
                 <List title={title} data={data} />
             </div>
         </div>
-    );
+    )
 }
-
 ```
+
 ### Clean CSS
-Each sub-component has it's own CSS file. Use of CSS Variables results in scalability
+
+Give each sub-component it's own CSS file. Emply CSS Variables for maintainable styling
+
 ```css
 .NotFound .main {
     display: flex;
@@ -148,7 +145,9 @@ Each sub-component has it's own CSS file. Use of CSS Variables results in scalab
 ```
 
 ### Separation of concerns
-Each function serves a single purpose
+
+Modularise code so each file and function serves a single purpose
+
 ```js
     countDown = () => {
         let countDownSeconds = this.state.toSeconds - 1;
@@ -195,17 +194,18 @@ Each function serves a single purpose
 ```
 
 ### Componentization
+
 Componentizing the app and using React Hooks allows for easily maintainable code
 
 ```js
 export default function Profile() {
-    const [popup, setPopup] = useState(false);
+    const [popup, setPopup] = useState(false)
     const [infoProvided, setInfoProvided] = useState(false)
 
     const updateStats = () => {
-        setPopup(!popup);
-        window.location.reload();
-    };
+        setPopup(!popup)
+        window.location.reload()
+    }
 
     const handleClick = () => {
         setPopup(!popup)
@@ -220,23 +220,23 @@ export default function Profile() {
             <Stats />
             <BarChartContainer />
         </div>
-    );
+    )
 }
 ```
-
-
 
 ## Authors
 
 Initial Authors:
-* Adam Zdrzalka - [moderndayNeo](https://github.com/moderndayNeo)
-* Dan Arango - [Darango84](https://github.com/Darango84)
-* Minji Jeong - [casey-minzi](https://github.com/casey-minzi)
-* Ian Molocea - [marianmolocea](https://github.com/marianmolocea)
-* Panos Hapsides - [phapsides](https://github.com/phapsides)
-* Ebrima Conta - [ebrimaconta](https://github.com/ebrimaconta)
+
+-   Adam Zdrzalka - [moderndayNeo](https://github.com/moderndayNeo)
+-   Dan Arango - [Darango84](https://github.com/Darango84)
+-   Minji Jeong - [casey-minzi](https://github.com/casey-minzi)
+-   Ian Molocea - [marianmolocea](https://github.com/marianmolocea)
+-   Panos Hapsides - [phapsides](https://github.com/phapsides)
+-   Ebrima Conta - [ebrimaconta](https://github.com/ebrimaconta)
 
 Continuing Author:
-* Adam Zdrzalka - [moderndayNeo](https://github.com/moderndayNeo)
+
+-   Adam Zdrzalka - [moderndayNeo](https://github.com/moderndayNeo)
 
 Kodfit began as a team project for the Kodiri coding internship. At the conclusion of the internship the members of the group went on to other projects. For the following five weeks I continued working alone on the project as I enjoyed working on the app and it had a number of areas for improvement - notably new features, cleaning up the code, improving the layout for desktop users, fixing bugs and improving user functionality. Having completed those tasks, this is the final result.
